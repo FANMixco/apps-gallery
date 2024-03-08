@@ -18,7 +18,7 @@ const iconSpan = "<span class='oneLineIcon' style='width: auto;' {0}>{1}</span>"
 let apps, panesOptions, tabsOptions;
 
 window.addEventListener('DOMContentLoaded', () => {
-    fetchData(`../js/data/translations/en-us/external/apps.min.json`)
+    fetchData('js/data/translations/en-us/external/apps.min.json')
     .then(data => {
         apps = data.apps;
         panesOptions = data.panesOptions;
