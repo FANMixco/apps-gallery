@@ -4984,14 +4984,6 @@
               {
                 "id": "unsupportedVB",
                 "subTitle": "<i class='fab fa-windows'></i> Windows XP"
-              },
-              {
-                "id": "unSuppportedJsLibStore",
-                "subTitle": "<i class='fab fa-js-square'></i> JavaScript"
-              },
-              {
-                "id": "unsupportedUwpLibStore",
-                "subTitle": "<i class='fab fa-microsoft'></i> Windows 11"
               }
             ]
           },
@@ -5001,6 +4993,14 @@
               {
                 "id": "unsupportedNuget",
                 "subTitle": "<img class='icons' src='img/icons/nuget.svg' /> NuGet"
+              },
+              {
+                "id": "unSuppportedJsLibStore",
+                "subTitle": "<i class='fab fa-js-square'></i> JavaScript"
+              },
+              {
+                "id": "unsupportedUwpLibStore",
+                "subTitle": "<i class='fab fa-microsoft'></i> Windows 11"
               }
             ]
           }
