@@ -212,7 +212,7 @@ function setApps(appCollection, control, techs, customIcons) {
         let years = appCollection[item].yearStart;
 
         if (appCollection[item].yearStart !== appCollection[item].yearEnd) {
-            years += appCollection[item].yearEnd !== undefined ? ` - ${appCollection[item].yearEnd}` : " - now";
+            years += appCollection[item].yearEnd !== null ? ` - ${appCollection[item].yearEnd}` : " - now";
         }
         
         let tooltip = `${years}<br><br>${appCollection[item].description}`;
