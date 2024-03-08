@@ -50,7 +50,7 @@ function load() {
     let nugetSupported = [];
     let libsSupportedTechs = [];
     let jsLibSupported = [];
-    let uwpLibSupported = [];
+    //let uwpLibSupported = [];
     
     let androidUnsupported = [];
     let w10Unsupported = [];
@@ -61,6 +61,8 @@ function load() {
     let nugetUnsupported = [];
     let xamarinFormsUnsupported = [];
     let unsupportedTechs = [];
+    let jsLibUnsupported = [];
+    let uwpLibUnsupported = [];
 
     let customIconsArray = [];
 
@@ -102,11 +104,15 @@ function load() {
 
         filterElem(apps[item], 'js_lib', true, jsLibSupported);
 
-        filterElem(apps[item], 'uwp_lib', true, uwpLibSupported);
+        //filterElem(apps[item], 'uwp_lib', true, uwpLibSupported);
 
         filterElem(apps[item], 'nuget', false, nugetUnsupported);
 
         filterElem(apps[item], 'xamarin_forms', false, xamarinFormsUnsupported);
+
+        filterElem(apps[item], 'uwp_lib', false, uwpLibUnsupported);
+
+        filterElem(apps[item], 'js_lib', false, jsLibUnsupported);
     }
 
     setApps(androidSupported.sort(sortByProperty('order')), "playStore", androidSupportedTechs, customIconsArray);
@@ -117,7 +123,7 @@ function load() {
     setApps(webSupported.sort(sortByProperty('order')), "webStore", webSupportedTechs, customIconsArray);
     setApps(nugetSupported.sort(sortByProperty('order')), "nugetsStore", libsSupportedTechs, customIconsArray);
     setApps(jsLibSupported.sort(sortByProperty('order')), "jsLibStore", libsSupportedTechs, customIconsArray);
-    setApps(uwpLibSupported.sort(sortByProperty('order')), "uwpLibStore", libsSupportedTechs, customIconsArray);
+    //setApps(uwpLibSupported.sort(sortByProperty('order')), "uwpLibStore", libsSupportedTechs, customIconsArray);
 
     setApps(xamarinFormsUnsupported.sort(sortByProperty('order')), "unsupportedXamarinForms", unsupportedTechs, customIconsArray);
     setApps(androidUnsupported.sort(sortByProperty('order')), "unsupportedAndroid", unsupportedTechs, customIconsArray);
@@ -127,6 +133,9 @@ function load() {
     setApps(webUnsupported.sort(sortByProperty('order')), "unsupportedWeb", unsupportedTechs, customIconsArray);
     setApps(wXPUnsupported.sort(sortByProperty('order')), "unsupportedVB", unsupportedTechs, customIconsArray);
     setApps(nugetUnsupported.sort(sortByProperty('order')), "unsupportedNuget", unsupportedTechs, customIconsArray);
+
+    setApps(jsLibUnsupported.sort(sortByProperty('order')), "unSuppportedJsLibStore", libsSupportedTechs, customIconsArray);
+    setApps(uwpLibUnsupported.sort(sortByProperty('order')), "unsupportedUwpLibStore", libsSupportedTechs, customIconsArray);
 
     setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
     setTechUsed(w10SupportedTechs, "techsMSStore", customIconsArray);

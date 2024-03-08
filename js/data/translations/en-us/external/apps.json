@@ -4363,7 +4363,7 @@
             "yearStart": 2018,
             "yearEnd": null,
             "mainTech": "js_lib",
-            "isSupported": true,
+            "isSupported": false,
             "storeLink": "",
             "preview": "",
             "technologies": [
@@ -4415,7 +4415,7 @@
             "yearStart": 2015,
             "yearEnd": null,
             "mainTech": "uwp_lib",
-            "isSupported": true,
+            "isSupported": false,
             "storeLink": "",
             "preview": "",
             "technologies": [
@@ -4712,6 +4712,33 @@
         ]
       },
       {
+        "app": "RPA Calculator",
+        "link": "https://bit.ly/3TqZayh",
+        "description": "A simple for RPA calculator.",
+        "logo": "rpa.png",
+        "edition": [
+          {
+            "yearStart": 2020,
+            "yearEnd": null,
+            "storeLink": "https://bit.ly/3Vci2Cm",
+            "mainTech": "web",
+            "isSupported": false,
+            "link": "",
+            "preview": "",
+            "technologies": [
+              "fab fa-angular",
+              "fab fa-html5",
+              "fab fa-css3-alt",
+              "fab fa-js-square",
+              "fab fa-bootstrap",
+              "fab fa-git",
+              "mdi mdi-github"
+            ],
+            "order": 98
+          }
+        ]
+      },
+      {
         "app": "Save that Power",
         "link": "",
         "description": "A solution to save electricity in the Netherlands.",
@@ -4915,10 +4942,6 @@
               {
                 "id": "jsLibStore",
                 "subTitle": "<i class='fab fa-js-square'></i> JavaScript"
-              },
-              {
-                "id": "uwpLibStore",
-                "subTitle": "<i class='fab fa-microsoft'></i> Windows 11"
               }
             ]
           }
@@ -4961,6 +4984,14 @@
               {
                 "id": "unsupportedVB",
                 "subTitle": "<i class='fab fa-windows'></i> Windows XP"
+              },
+              {
+                "id": "unSuppportedJsLibStore",
+                "subTitle": "<i class='fab fa-js-square'></i> JavaScript"
+              },
+              {
+                "id": "unsupportedUwpLibStore",
+                "subTitle": "<i class='fab fa-microsoft'></i> Windows 11"
               }
             ]
           },
