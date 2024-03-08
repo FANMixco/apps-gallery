@@ -2,7 +2,7 @@
 
 const cardTemplate = 
 `<div class="card border-0 transform-on-hover" style="padding-right: 0px; padding-left: 0px;">
-   <img src="../img/apps/{0}" alt="{1}" class="card-img-top">
+   <img src="img/apps/{0}" alt="{1}" class="card-img-top">
    <div class="card-body">
       <h6><a href="#" class="text-decoration-none">{2}</a></h6>
       <p class="card-text">{3}<a tabindex="0" data-bs-trigger="focus" data-bs-html="true" data-bs-placement="top" data-bs-toggle="popover" data-bs-container="body" title="{4}" data-bs-content="{5}" role="button" class="popMore btn btn-warning btn-circle text-white"><i class="fas fa-ellipsis-h"></i></a></p>
@@ -185,11 +185,11 @@ function getTechPrint(tech, extra, noSpaces) {
             case "mix-right-icon":
                 return `${iconSpan.format(tooltip, `<span class='storeIcon'>${tech[0].text}</span><i class="${tech[0].icon}"></i>${extra}`)}${totalSpaces}`;
             case "mix-left-img":
-                return `${iconSpan.format(tooltip, `<img class='icons' src='../img/icons/${tech[0].icon}' alt='icon' /><span class='storeIcon'>${tech[0].text}</span>${extra}`)}${totalSpaces}`;
+                return `${iconSpan.format(tooltip, `<img class='icons' src='img/icons/${tech[0].icon}' alt='icon' /><span class='storeIcon'>${tech[0].text}</span>${extra}`)}${totalSpaces}`;
             case "mix-right-img":
                 return `${iconSpan.format(tooltip, `<span class='storeIcon'>${tech[0].text}</span><img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}`)}${totalSpaces}`;
             case "img":
-                return `${iconSpan.format(tooltip, `<img class='icons' src='../img/icons/${tech[0].icon}' alt='icon' />${extra}`)}${totalSpaces}`;
+                return `${iconSpan.format(tooltip, `<img class='icons' src='img/icons/${tech[0].icon}' alt='icon' />${extra}`)}${totalSpaces}`;
             case "icon":
                 return `${iconSpan.format(tooltip, `<i class="${tech[0].icon}"></i>${extra}`)}${totalSpaces}`;
         }
