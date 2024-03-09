@@ -4381,7 +4381,7 @@
       },
       {
         "app": "OpenAI API Wrapper",
-        "link": "https://bit.ly/3Tu2Wag",
+        "link": "https://bit.ly/492YrYR",
         "description": "A simple wrapper for the latest OpenAI APIs for OutSystems.",
         "logo": "libs/openai.png",
         "edition": [
@@ -4390,7 +4390,7 @@
             "yearEnd": null,
             "mainTech": "out_lib",
             "isSupported": true,
-            "storeLink": "",
+            "storeLink": "https://bit.ly/3Tu2Wag",
             "preview": "",
             "technologies": [
               [
@@ -4416,7 +4416,7 @@
       },
       {
         "app": "Scrollable Tabs",
-        "link": "https://bit.ly/3FiWFnu",
+        "link": "https://bit.ly/3TtghQ0",
         "description": "A simple plugin to create scrollable tabs with Bootstrap 5.",
         "logo": "libs/tab.png",
         "edition": [
@@ -4425,7 +4425,7 @@
             "yearEnd": null,
             "mainTech": "js_lib",
             "isSupported": true,
-            "storeLink": "",
+            "storeLink": "https://bit.ly/3FiWFnu",
             "preview": "",
             "technologies": [
               "fab fa-html5",
