@@ -4355,7 +4355,7 @@
       },
       {
         "app": "Timing Field",
-        "link": "https://bit.ly/3i7xtIl",
+        "link": "",
         "description": "A jquery plugin to transform a timestamp field into an hours/minutes/seconds selector.",
         "logo": "libs/timePicker.png",
         "edition": [
@@ -4364,6 +4364,7 @@
             "yearEnd": 2024,
             "mainTech": "js_lib",
             "isSupported": false,
+            "link": "https://bit.ly/3i7xtIl",
             "storeLink": "",
             "preview": "",
             "technologies": [
@@ -4442,7 +4443,7 @@
       },
       {
         "app": "7 Segment OCR",
-        "link": "https://bit.ly/3iLSOpw",
+        "link": "",
         "description": "Class for reading 7 segment displays with C#.",
         "logo": "libs/7segment.png",
         "edition": [
@@ -4452,6 +4453,7 @@
             "mainTech": "uwp_lib",
             "isSupported": false,
             "storeLink": "",
+            "link": "https://bit.ly/3iLSOpw",
             "preview": "",
             "technologies": [
               "mdi mdi-language-csharp",
@@ -4721,7 +4723,7 @@
       },
       {
         "app": "Zero Waste",
-        "link": "https://bit.ly/2UIHi6u",
+        "link": "",
         "description": "Your new Recycling experience powered by AI!",
         "logo": "zeroWaste.png",
         "edition": [
@@ -4731,7 +4733,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "link": "",
+            "link": "https://bit.ly/2UIHi6u",
             "preview": "https://bit.ly/37cVM1f",
             "technologies": [
               "fab fa-html5",
@@ -4748,18 +4750,18 @@
       },
       {
         "app": "RPA Calculator",
-        "link": "https://bit.ly/3TqZayh",
+        "link": "",
         "description": "A simple for RPA calculator.",
         "logo": "rpa.png",
         "edition": [
           {
             "yearStart": 2020,
             "yearEnd": 2024,
-            "storeLink": "https://bit.ly/3Vci2Cm",
+            "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "link": "",
-            "preview": "",
+            "link": "https://bit.ly/3TqZayh",
+            "preview": "https://bit.ly/3Vci2Cm",
             "technologies": [
               "fab fa-angular",
               "fab fa-html5",
