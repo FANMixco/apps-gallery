@@ -1070,7 +1070,7 @@
           },
           {
             "yearStart": 2015,
-            "yearEnd": null,
+            "yearEnd": 2022,
             "mainTech": "windows10",
             "isSupported": false,
             "storeLink": "https://bit.ly/2V4goFY",
@@ -1610,7 +1610,7 @@
           },
           {
             "yearStart": 2015,
-            "yearEnd": null,
+            "yearEnd": 2022,
             "mainTech": "windows10",
             "isSupported": false,
             "storeLink": "https://bit.ly/3i1nX9l",
@@ -2095,7 +2095,7 @@
           },
           {
             "yearStart": 2015,
-            "yearEnd": null,
+            "yearEnd": 2022,
             "mainTech": "windows10",
             "isSupported": false,
             "storeLink": "https://bit.ly/36ZaRTW",
@@ -3018,7 +3018,7 @@
         "edition": [
           {
             "yearStart": 2013,
-            "yearEnd": null,
+            "yearEnd": 2014,
             "mainTech": "windows10",
             "isSupported": false,
             "storeLink": "https://bit.ly/36YeWaS",
@@ -4361,7 +4361,7 @@
         "edition": [
           {
             "yearStart": 2018,
-            "yearEnd": null,
+            "yearEnd": 2024,
             "mainTech": "js_lib",
             "isSupported": false,
             "storeLink": "",
@@ -4376,6 +4376,41 @@
               "mdi mdi-github"
             ],
             "order": 1
+          }
+        ]
+      },
+      {
+        "app": "OpenAI API Wrapper",
+        "link": "https://bit.ly/3Tu2Wag",
+        "description": "A simple wrapper for the latest OpenAI APIs for OutSystems.",
+        "logo": "libs/openai.png",
+        "edition": [
+          {
+            "yearStart": 2024,
+            "yearEnd": null,
+            "mainTech": "out_lib",
+            "isSupported": true,
+            "storeLink": "",
+            "preview": "",
+            "technologies": [
+              [
+                {
+                  "type": "img",
+                  "id": "id_out",
+                  "text": "outsystems",
+                  "icon": "out.svg"
+                }
+              ],
+              [
+                {
+                  "type": "img",
+                  "id": "id_ai",
+                  "text": "open ai",
+                  "icon": "openai.svg"
+                }
+              ]
+            ],
+            "order": 99
           }
         ]
       },
@@ -4413,7 +4448,7 @@
         "edition": [
           {
             "yearStart": 2015,
-            "yearEnd": null,
+            "yearEnd": 2024,
             "mainTech": "uwp_lib",
             "isSupported": false,
             "storeLink": "",
@@ -4473,7 +4508,7 @@
       },
       {
         "app": "Projects Gallery",
-        "link": "https://bit.ly/3eMJ0dV",
+        "link": "https://bit.ly/3TdcZyO",
         "description": "My collection of projects.",
         "logo": "apps.png",
         "edition": [
@@ -4501,7 +4536,7 @@
       },
       {
         "app": "Presentations Gallery",
-        "link": "https://bit.ly/3750fTf",
+        "link": "https://bit.ly/3T1RmSc",
         "description": "My collection of presentations in Prezi and PowerPoint.",
         "logo": "presentations.png",
         "edition": [
@@ -4535,7 +4570,7 @@
         "edition": [
           {
             "yearStart": 2020,
-            "yearEnd": null,
+            "yearEnd": 2024,
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
@@ -4692,7 +4727,7 @@
         "edition": [
           {
             "yearStart": 2020,
-            "yearEnd": null,
+            "yearEnd": 2020,
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
@@ -4719,7 +4754,7 @@
         "edition": [
           {
             "yearStart": 2020,
-            "yearEnd": null,
+            "yearEnd": 2024,
             "storeLink": "https://bit.ly/3Vci2Cm",
             "mainTech": "web",
             "isSupported": false,
@@ -4942,6 +4977,10 @@
               {
                 "id": "jsLibStore",
                 "subTitle": "<i class='fab fa-js-square'></i> JavaScript"
+              },
+              {
+                "id": "outLibStore",
+                "subTitle": "<img class='icons' src='img/icons/out.svg' /> OutSystems"
               }
             ]
           }
