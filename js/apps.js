@@ -10,8 +10,9 @@ const cardTemplate =
 </div>`;
 
 const galleryTitle = "Federico Navarrete — Projects Gallery";
+const https = 'https://';
 
-const galleryFooter = `Some icons were created by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> - <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">www.flaticon.com</a>. &copy; <a class="text-warning" href="https://federiconavarrete.com" target="_blank">Federico Navarrete</a> &amp; <a class="text-warning" href="http://supernovaic.tk" target="_blank">Supernova IC</a> {0}.`;
+const galleryFooter = `Some icons were created by <a href="${https}www.flaticon.com/authors/freepik" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> - <a href="${https}www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">www.flaticon.com</a>. &copy; <a class="text-warning" href="${https}federiconavarrete.com" target="_blank">Federico Navarrete</a> &amp; <a class="text-warning" href="${https}supernovaic.com" target="_blank">Supernova IC</a> {0}.`;
 
 const iconSpan = "<span class='oneLineIcon' style='width: auto;' {0}>{1}</span>";
 
@@ -209,14 +210,14 @@ function setApps(appCollection, control, techs, customIcons) {
     for (let item in appCollection) {
         let content = '';
         if (appCollection[item].storeLink !== '')
-            content += `<a href="${appCollection[item].storeLink}" class="btn btn-info btn-circle text-white" target="_blank"><i class="fas fa-download"></i></a>`;
+            content += `<a href="${https}${appCollection[item].storeLink}" class="btn btn-info btn-circle text-white" target="_blank"><i class="fas fa-download"></i></a>`;
         if (appCollection[item].link !== '' && appCollection[item].isSupported)
-            content += `<a href="${appCollection[item].link}" class="btn btn-success btn-circle text-white" target="_blank"><i class="fas fa-globe"></i></a>`;
+            content += `<a href="${https}${appCollection[item].link}" class="btn btn-success btn-circle text-white" target="_blank"><i class="fas fa-globe"></i></a>`;
         else if (appCollection[item].secondaryLink!== undefined && !appCollection[item].isSupported)
             if (appCollection[item].secondaryLink !== '')
-                content += `<a href="${appCollection[item].secondaryLink}" class="btn btn-secondary btn-circle text-white" target="_blank"><i class="fas fa-globe"></i></a>`;
+                content += `<a href="${https}${appCollection[item].secondaryLink}" class="btn btn-secondary btn-circle text-white" target="_blank"><i class="fas fa-globe"></i></a>`;
         if (appCollection[item].preview !== '')
-            content += `<a href="${appCollection[item].preview}" class="btn btn-danger btn-circle text-white" target="_blank"><i class="fas fa-images"></i></a>`;
+            content += `<a href="${https}${appCollection[item].preview}" class="btn btn-danger btn-circle text-white" target="_blank"><i class="fas fa-images"></i></a>`;
 
         let years = appCollection[item].yearStart;
 

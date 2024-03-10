@@ -2,7 +2,7 @@
     "apps": [
       {
         "app": "Toastasters Timer",
-        "link": "https://tmtimer.federiconavarrete.com",
+        "link": "tmtimer.federiconavarrete.com",
         "description": "The best Toastmasters Timer for your meetings. It's simple, fast and accurate.",
         "logo": "timer.png",
         "edition": [
@@ -11,8 +11,8 @@
             "yearEnd": null,
             "mainTech": "android",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3bcm6uL",
-            "preview": "https://bit.ly/3iZaMVZ",
+            "storeLink": "bit.ly/3bcm6uL",
+            "preview": "bit.ly/3iZaMVZ",
             "technologies": [
               "mdi mdi-android",
               [
@@ -69,8 +69,8 @@
             "yearEnd": null,
             "mainTech": "windows10",
             "isSupported": true,
-            "storeLink": "https://bit.ly/36Ug2EC",
-            "preview": "https://bit.ly/3BDz2VS",
+            "storeLink": "bit.ly/36Ug2EC",
+            "preview": "bit.ly/3BDz2VS",
             "technologies": [
               "fab fa-microsoft",
               [
@@ -143,7 +143,7 @@
             "storeLink": "",
             "mainTech": "android",
             "isSupported": false,
-            "preview": "https://bit.ly/2WhUDDe",
+            "preview": "bit.ly/2WhUDDe",
             "technologies": [
               "mdi mdi-android",
               "mdi mdi-xamarin",
@@ -196,7 +196,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": true,
-            "preview": "https://bit.ly/3iZaMVZ",
+            "preview": "bit.ly/3iZaMVZ",
             "technologies": [
               [
                 {
@@ -252,10 +252,10 @@
             "yearStart": 2017,
             "yearEnd": 2018,
             "storeLink": "",
-            "link": "https://bit.ly/2VbUUXB",
+            "link": "bit.ly/2VbUUXB",
             "mainTech": "web",
             "isSupported": false,
-            "preview": "https://bit.ly/2WhUDDe",
+            "preview": "bit.ly/2WhUDDe",
             "technologies": [
               [
                 {
@@ -306,7 +306,7 @@
             "mainTech": "windows10",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/3xYvATA",
+            "preview": "bit.ly/3xYvATA",
             "technologies": [
               "mdi mdi-microsoft-windows",
               "mdi mdi-language-csharp",
@@ -364,8 +364,8 @@
             "yearEnd": null,
             "mainTech": "android_huawei",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3rqoC7w",
-            "preview": "https://bit.ly/3iZaMVZ",
+            "storeLink": "bit.ly/3rqoC7w",
+            "preview": "bit.ly/3iZaMVZ",
             "technologies": [
               "mdi mdi-android",
               [
@@ -422,8 +422,8 @@
             "yearEnd": null,
             "mainTech": "android_amazon",
             "isSupported": true,
-            "storeLink": "https://amzn.to/3eSF23h",
-            "preview": "https://bit.ly/3iZaMVZ",
+            "storeLink": "amzn.to/3eSF23h",
+            "preview": "bit.ly/3iZaMVZ",
             "technologies": [
               "mdi mdi-android",
               [
@@ -480,8 +480,8 @@
             "yearEnd": null,
             "mainTech": "android_samsung",
             "isSupported": true,
-            "storeLink": "https://galaxy.store/tmtimer",
-            "preview": "https://bit.ly/3iZaMVZ",
+            "storeLink": "galaxy.store/tmtimer",
+            "preview": "bit.ly/3iZaMVZ",
             "technologies": [
               "mdi mdi-android",
               [
@@ -537,7 +537,7 @@
       },
       {
         "app": "Toastasters Timer Lite",
-        "link": "https://tmtimer.federiconavarrete.com",
+        "link": "tmtimer.federiconavarrete.com",
         "description": "The best Toastmasters Timer for your meetings. It's simple, fast and accurate.",
         "logo": "tm_lite.png",
         "edition": [
@@ -546,8 +546,8 @@
             "yearEnd": null,
             "mainTech": "android",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3zx5zeE",
-            "preview": "https://bit.ly/3iZaMVZ",
+            "storeLink": "bit.ly/3zx5zeE",
+            "preview": "bit.ly/3iZaMVZ",
             "technologies": [
               "mdi mdi-android",
               [
@@ -604,8 +604,8 @@
             "yearEnd": null,
             "mainTech": "android_amazon",
             "isSupported": true,
-            "storeLink": "https://amzn.to/3iBmaXy",
-            "preview": "https://bit.ly/3iZaMVZ",
+            "storeLink": "amzn.to/3iBmaXy",
+            "preview": "bit.ly/3iZaMVZ",
             "technologies": [
               "mdi mdi-android",
               [
@@ -662,8 +662,8 @@
             "yearEnd": null,
             "mainTech": "android_huawei",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3l6MM5O",
-            "preview": "https://bit.ly/3iZaMVZ",
+            "storeLink": "bit.ly/3l6MM5O",
+            "preview": "bit.ly/3iZaMVZ",
             "technologies": [
               "mdi mdi-android",
               [
@@ -720,8 +720,8 @@
             "yearEnd": null,
             "mainTech": "android_samsung",
             "isSupported": true,
-            "storeLink": "https://galaxy.store/tmtimerl",
-            "preview": "https://bit.ly/3iZaMVZ",
+            "storeLink": "galaxy.store/tmtimerl",
+            "preview": "bit.ly/3iZaMVZ",
             "technologies": [
               "mdi mdi-android",
               [
@@ -786,8 +786,8 @@
             "yearEnd": null,
             "mainTech": "android",
             "isSupported": true,
-            "storeLink": "https://bit.ly/36XKnSB",
-            "preview": "https://bit.ly/3mrsIrM",
+            "storeLink": "bit.ly/36XKnSB",
+            "preview": "bit.ly/3mrsIrM",
             "technologies": [
               "mdi mdi-android",
               [
@@ -854,8 +854,8 @@
             "yearEnd": null,
             "mainTech": "android_samsung",
             "isSupported": true,
-            "storeLink": "https://galaxy.store/tipsal",
-            "preview": "https://bit.ly/3mrsIrM",
+            "storeLink": "galaxy.store/tipsal",
+            "preview": "bit.ly/3mrsIrM",
             "technologies": [
               "mdi mdi-android",
               [
@@ -922,8 +922,8 @@
             "yearEnd": null,
             "mainTech": "android_amazon",
             "isSupported": true,
-            "storeLink": "https://amzn.to/3i0bdQg",
-            "preview": "https://bit.ly/3mrsIrM",
+            "storeLink": "amzn.to/3i0bdQg",
+            "preview": "bit.ly/3mrsIrM",
             "technologies": [
               "mdi mdi-android",
               [
@@ -990,8 +990,8 @@
             "yearEnd": null,
             "mainTech": "android_huawei",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3eMF251",
-            "preview": "https://bit.ly/3mrsIrM",
+            "storeLink": "bit.ly/3eMF251",
+            "preview": "bit.ly/3mrsIrM",
             "technologies": [
               "mdi mdi-android",
               [
@@ -1073,8 +1073,8 @@
             "yearEnd": 2022,
             "mainTech": "windows10",
             "isSupported": false,
-            "storeLink": "https://bit.ly/2V4goFY",
-            "preview": "https://bit.ly/3yfklGk",
+            "storeLink": "bit.ly/2V4goFY",
+            "preview": "bit.ly/3yfklGk",
             "technologies": [
               "fab fa-microsoft",
               "mdi mdi-language-csharp",
@@ -1149,7 +1149,7 @@
             "mainTech": "windows8",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/37085xu",
+            "preview": "bit.ly/37085xu",
             "technologies": [
               "mdi mdi-microsoft-windows",
               "mdi mdi-language-csharp",
@@ -1191,7 +1191,7 @@
             "mainTech": "windowsPhone",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/3iHkTyk",
+            "preview": "bit.ly/3iHkTyk",
             "technologies": [
               "mdi mdi-microsoft-windows",
               "mdi mdi-language-csharp",
@@ -1236,8 +1236,8 @@
             "yearEnd": null,
             "mainTech": "android",
             "isSupported": true,
-            "storeLink": "https://bit.ly/37cTxuR",
-            "preview": "https://bit.ly/3ztuEqI",
+            "storeLink": "bit.ly/37cTxuR",
+            "preview": "bit.ly/3ztuEqI",
             "technologies": [
               "mdi mdi-android",
               [
@@ -1327,8 +1327,8 @@
             "yearEnd": null,
             "mainTech": "android_amazon",
             "isSupported": true,
-            "storeLink": "https://amzn.to/3yjg6df",
-            "preview": "https://bit.ly/3ztuEqI",
+            "storeLink": "amzn.to/3yjg6df",
+            "preview": "bit.ly/3ztuEqI",
             "technologies": [
               "mdi mdi-android",
               [
@@ -1417,8 +1417,8 @@
             "yearEnd": null,
             "mainTech": "android_huawei",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3zw36kC",
-            "preview": "https://bit.ly/3ztuEqI",
+            "storeLink": "bit.ly/3zw36kC",
+            "preview": "bit.ly/3ztuEqI",
             "technologies": [
               "mdi mdi-android",
               [
@@ -1522,8 +1522,8 @@
             "yearEnd": null,
             "mainTech": "android_samsung",
             "isSupported": true,
-            "storeLink": "https://galaxy.store/lrm",
-            "preview": "https://bit.ly/3ztuEqI",
+            "storeLink": "galaxy.store/lrm",
+            "preview": "bit.ly/3ztuEqI",
             "technologies": [
               "mdi mdi-android",
               [
@@ -1613,8 +1613,8 @@
             "yearEnd": 2022,
             "mainTech": "windows10",
             "isSupported": false,
-            "storeLink": "https://bit.ly/3i1nX9l",
-            "preview": "https://bit.ly/3eRddIy",
+            "storeLink": "bit.ly/3i1nX9l",
+            "preview": "bit.ly/3eRddIy",
             "technologies": [
               "fab fa-microsoft",
               "mdi mdi-language-csharp",
@@ -1709,7 +1709,7 @@
             "mainTech": "windowsPhone",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/2VaQpwJ",
+            "preview": "bit.ly/2VaQpwJ",
             "technologies": [
               "mdi mdi-microsoft-windows",
               "mdi mdi-language-csharp",
@@ -1779,7 +1779,7 @@
       },
       {
         "app": "Gravity Now!",
-        "link": "https://bit.ly/3x3b4zK",
+        "link": "bit.ly/3x3b4zK",
         "description": "This is an educational platform that aims to be the #1 tool for teaching the physical sciences related to gravity.",
         "logo": "gnow.png",
         "edition": [
@@ -1788,8 +1788,8 @@
             "yearEnd": null,
             "mainTech": "android",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3rv7vS5",
-            "preview": "https://bit.ly/3wWGzvu",
+            "storeLink": "bit.ly/3rv7vS5",
+            "preview": "bit.ly/3wWGzvu",
             "technologies": [
               "mdi mdi-android",
               "mdi mdi-xamarin",
@@ -1862,8 +1862,8 @@
             "yearEnd": null,
             "mainTech": "android_huawei",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3iBkjly",
-            "preview": "https://bit.ly/3wWGzvu",
+            "storeLink": "bit.ly/3iBkjly",
+            "preview": "bit.ly/3wWGzvu",
             "technologies": [
               "mdi mdi-android",
               "mdi mdi-xamarin",
@@ -1950,8 +1950,8 @@
             "yearEnd": null,
             "mainTech": "android_samsung",
             "isSupported": true,
-            "storeLink": "https://galaxy.store/gnow",
-            "preview": "https://bit.ly/3wWGzvu",
+            "storeLink": "galaxy.store/gnow",
+            "preview": "bit.ly/3wWGzvu",
             "technologies": [
               "mdi mdi-android",
               "mdi mdi-xamarin",
@@ -2024,8 +2024,8 @@
             "yearEnd": null,
             "mainTech": "android_amazon",
             "isSupported": true,
-            "storeLink": "https://amzn.to/3y2egwV",
-            "preview": "https://bit.ly/3wWGzvu",
+            "storeLink": "amzn.to/3y2egwV",
+            "preview": "bit.ly/3wWGzvu",
             "technologies": [
               "mdi mdi-android",
               "mdi mdi-xamarin",
@@ -2098,8 +2098,8 @@
             "yearEnd": 2022,
             "mainTech": "windows10",
             "isSupported": false,
-            "storeLink": "https://bit.ly/36ZaRTW",
-            "preview": "https://bit.ly/3i1in6O",
+            "storeLink": "bit.ly/36ZaRTW",
+            "preview": "bit.ly/3i1in6O",
             "technologies": [
               "fab fa-microsoft",
               "mdi mdi-language-csharp",
@@ -2187,7 +2187,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": true,
-            "preview": "https://bit.ly/3eRBmPp",
+            "preview": "bit.ly/3eRBmPp",
             "technologies": [
               "fab fa-angular",
               "fab fa-html5",
@@ -2247,7 +2247,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "preview": "https://bit.ly/3BADtkq",
+            "preview": "bit.ly/3BADtkq",
             "technologies": [
               "mdi mdi-cellphone",
               "fab fa-html5",
@@ -2306,7 +2306,7 @@
             "mainTech": "windowsPhone",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/3eS3HoK",
+            "preview": "bit.ly/3eS3HoK",
             "technologies": [
               "mdi mdi-microsoft-windows",
               "mdi mdi-language-csharp",
@@ -2353,7 +2353,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "preview": "https://bit.ly/3ztwc40",
+            "preview": "bit.ly/3ztwc40",
             "technologies": [
               "mdi mdi-cellphone",
               "fab fa-html5",
@@ -2403,7 +2403,7 @@
             "mainTech": "windows10",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/3ePpuNM",
+            "preview": "bit.ly/3ePpuNM",
             "technologies": [
               "mdi mdi-microsoft-windows",
               "mdi mdi-language-csharp",
@@ -2507,7 +2507,7 @@
       },
       {
         "app": "Federico Stories",
-        "link": "https://federicostories.blogspot.com",
+        "link": "federicostories.blogspot.com",
         "description": "Do you have some spare time to enjoy some of the most unique legends of the world? Do you enjoy horror or mysteries?",
         "logo": "fstories.png",
         "edition": [
@@ -2516,7 +2516,7 @@
             "yearEnd": null,
             "mainTech": "android",
             "isSupported": true,
-            "storeLink": "https://bit.ly/2W5qiHN",
+            "storeLink": "bit.ly/2W5qiHN",
             "preview": "",
             "technologies": [
               "mdi mdi-android",
@@ -2547,7 +2547,7 @@
             "yearEnd": null,
             "mainTech": "android_samsung",
             "isSupported": true,
-            "storeLink": "https://galaxy.store/fstories",
+            "storeLink": "galaxy.store/fstories",
             "preview": "",
             "technologies": [
               "mdi mdi-android",
@@ -2578,7 +2578,7 @@
             "yearEnd": null,
             "mainTech": "android_huawei",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3K1vTn3",
+            "storeLink": "bit.ly/3K1vTn3",
             "preview": "",
             "technologies": [
               "mdi mdi-android",
@@ -2617,8 +2617,8 @@
             "yearEnd": null,
             "mainTech": "windows10",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3BLy1vh",
-            "preview": "https://bit.ly/3yfldL6",
+            "storeLink": "bit.ly/3BLy1vh",
+            "preview": "bit.ly/3yfldL6",
             "technologies": [
               "fab fa-microsoft",
               "mdi mdi-language-csharp",
@@ -2772,8 +2772,8 @@
             "yearEnd": null,
             "mainTech": "windows10",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3BAlVEY",
-            "preview": "https://bit.ly/3yfldL6",
+            "storeLink": "bit.ly/3BAlVEY",
+            "preview": "bit.ly/3yfldL6",
             "technologies": [
               "fab fa-microsoft",
               "mdi mdi-language-csharp",
@@ -2936,7 +2936,7 @@
             "mainTech": "windows10",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/3i3S5Bb",
+            "preview": "bit.ly/3i3S5Bb",
             "technologies": [
               "mdi mdi-microsoft-windows",
               "mdi mdi-language-csharp",
@@ -3021,8 +3021,8 @@
             "yearEnd": 2014,
             "mainTech": "windows10",
             "isSupported": false,
-            "storeLink": "https://bit.ly/36YeWaS",
-            "preview": "https://bit.ly/36VHthc",
+            "storeLink": "bit.ly/36YeWaS",
+            "preview": "bit.ly/36VHthc",
             "technologies": [
               "fab fa-microsoft",
               "mdi mdi-language-csharp",
@@ -3094,8 +3094,8 @@
             "mainTech": "web",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/3BAm0IM",
-            "link": "https://bit.ly/3eRguI4",
+            "preview": "bit.ly/3BAm0IM",
+            "link": "bit.ly/3eRguI4",
             "technologies": [
               "fab fa-html5",
               "fab fa-css3-alt",
@@ -3155,7 +3155,7 @@
             "mainTech": "android",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/374ZidD",
+            "preview": "bit.ly/374ZidD",
             "technologies": [
               "mdi mdi-android",
               "fab fa-java",
@@ -3191,7 +3191,7 @@
             "mainTech": "windowsPhone",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/3BBOD8w",
+            "preview": "bit.ly/3BBOD8w",
             "technologies": [
               "mdi mdi-microsoft-windows",
               "mdi mdi-cordova",
@@ -3245,7 +3245,7 @@
             "mainTech": "windowsPhone",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/3BBOB0o",
+            "preview": "bit.ly/3BBOB0o",
             "technologies": [
               "mdi mdi-microsoft-windows",
               "mdi mdi-language-csharp",
@@ -3309,7 +3309,7 @@
             "mainTech": "windowsPhone",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/3i2na8d",
+            "preview": "bit.ly/3i2na8d",
             "technologies": [
               "mdi mdi-microsoft-windows",
               "mdi mdi-language-csharp",
@@ -3380,8 +3380,8 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "link": "https://bit.ly/3zwjqSl",
-            "preview": "https://bit.ly/3y6OLea",
+            "link": "bit.ly/3zwjqSl",
+            "preview": "bit.ly/3y6OLea",
             "technologies": [
               "fab fa-html5",
               "fab fa-css3-alt",
@@ -3415,7 +3415,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "preview": "https://bit.ly/3zuBM61",
+            "preview": "bit.ly/3zuBM61",
             "technologies": [
               [
                 {
@@ -3473,7 +3473,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "preview": "https://bit.ly/2TvKzp0",
+            "preview": "bit.ly/2TvKzp0",
             "technologies": [
               "mdi mdi-language-php",
               [
@@ -3514,7 +3514,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "preview": "https://bit.ly/3rvaWrI",
+            "preview": "bit.ly/3rvaWrI",
             "technologies": [
               "mdi mdi-language-php",
               [
@@ -3555,7 +3555,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "preview": "https://bit.ly/2TxAtUF",
+            "preview": "bit.ly/2TxAtUF",
             "technologies": [
               [
                 {
@@ -3609,7 +3609,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "preview": "https://bit.ly/3i1jfIC",
+            "preview": "bit.ly/3i1jfIC",
             "technologies": [
               [
                 {
@@ -3654,8 +3654,8 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "link": "https://clstecla.x10.ml",
-            "preview": "https://bit.ly/2Wb4IBH",
+            "link": "clstecla.x10.ml",
+            "preview": "bit.ly/2Wb4IBH",
             "technologies": [
               "fab fa-html5",
               "fab fa-css3-alt",
@@ -3687,7 +3687,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "preview": "https://bit.ly/3kSVioS",
+            "preview": "bit.ly/3kSVioS",
             "technologies": [
               [
                 {
@@ -3733,7 +3733,7 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "preview": "https://bit.ly/2TwgyW7",
+            "preview": "bit.ly/2TwgyW7",
             "technologies": [
               "mdi mdi-cellphone",
               "fab fa-html5",
@@ -3766,7 +3766,7 @@
             "mainTech": "windowsXP",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/36XLLEN",
+            "preview": "bit.ly/36XLLEN",
             "technologies": [
               "mdi mdi-microsoft-windows",
               [
@@ -3803,7 +3803,7 @@
             "mainTech": "windowsXP",
             "isSupported": false,
             "storeLink": "",
-            "preview": "https://bit.ly/3x3UfoD",
+            "preview": "bit.ly/3x3UfoD",
             "technologies": [
               "mdi mdi-microsoft-windows",
               [
@@ -3829,7 +3829,7 @@
       },
       {
         "app": "Xamarin-MaterialSearchBar",
-        "link": "https://bit.ly/38naOBJ",
+        "link": "bit.ly/38naOBJ",
         "description": "Material Design Search Bar for Android Based on the fantastic version by Mancj.",
         "logo": "libs/searchBar.png",
         "edition": [
@@ -3838,7 +3838,7 @@
             "yearEnd": null,
             "mainTech": "nuget",
             "isSupported": true,
-            "storeLink": "https://bit.ly/2UIGwGC",
+            "storeLink": "bit.ly/2UIGwGC",
             "preview": "",
             "technologies": [
               [
@@ -3877,7 +3877,7 @@
       },
       {
         "app": "SpotsDialog.Xamarin",
-        "link": "https://bit.ly/3VtUv07",
+        "link": "bit.ly/3VtUv07",
         "description": "Android AlertDialog with moving spots progress indicator packed as android library.",
         "logo": "libs/spotsDialog.png",
         "edition": [
@@ -3886,7 +3886,7 @@
             "yearEnd": null,
             "mainTech": "nuget",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3zu3WOG",
+            "storeLink": "bit.ly/3zu3WOG",
             "preview": "",
             "technologies": [
               [
@@ -3926,7 +3926,7 @@
       },
       {
         "app": "BubbleTabs.Xamarin",
-        "link": "https://bit.ly/4a7LsFW",
+        "link": "bit.ly/4a7LsFW",
         "description": "Binding of the library: BubbleTab Put some bubble in your tabs and give your apps a supa fresh style!",
         "logo": "libs/bubbleTabs.png",
         "edition": [
@@ -3935,7 +3935,7 @@
             "yearEnd": null,
             "mainTech": "nuget",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3iN3Ivv",
+            "storeLink": "bit.ly/3iN3Ivv",
             "preview": "",
             "technologies": [
               [
@@ -3967,7 +3967,7 @@
       },
       {
         "app": "Xamarin-OneMoreFabMenu",
-        "link": "https://bit.ly/43dObf2",
+        "link": "bit.ly/43dObf2",
         "description": "OneMoreFabMenu Another floating action button menu with expand/collapse behavior.",
         "logo": "libs/oneFabMenu.png",
         "edition": [
@@ -3976,7 +3976,7 @@
             "yearEnd": null,
             "mainTech": "nuget",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3BBQ46U",
+            "storeLink": "bit.ly/3BBQ46U",
             "preview": "",
             "technologies": [
               [
@@ -4020,7 +4020,7 @@
       },
       {
         "app": "Xamarin-MaterialSearchView",
-        "link": "https://bit.ly/4cbVNmm",
+        "link": "bit.ly/4cbVNmm",
         "description": "Cute library to implement SearchView in a Material Design Approach.",
         "logo": "libs/materialSearchView.png",
         "edition": [
@@ -4029,7 +4029,7 @@
             "yearEnd": null,
             "mainTech": "nuget",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3iFYaTn",
+            "storeLink": "bit.ly/3iFYaTn",
             "preview": "",
             "technologies": [
               [
@@ -4076,9 +4076,9 @@
             "yearEnd": null,
             "mainTech": "nuget",
             "isSupported": false,
-            "storeLink": "https://bit.ly/3iL0Kr8",
+            "storeLink": "bit.ly/3iL0Kr8",
             "preview": "",
-            "link": "https://bit.ly/3Tt66eh",
+            "link": "bit.ly/3Tt66eh",
             "technologies": [
               [
                 {
@@ -4126,7 +4126,7 @@
             "yearEnd": 2019,
             "mainTech": "nuget",
             "isSupported": false,
-            "storeLink": "https://bit.ly/3eTHuH0",
+            "storeLink": "bit.ly/3eTHuH0",
             "preview": "",
             "technologies": [
               [
@@ -4173,8 +4173,8 @@
             "yearEnd": 2024,
             "mainTech": "nuget",
             "isSupported": false,
-            "storeLink": "https://bit.ly/3BFv7bo",
-            "link": "https://bit.ly/3Iwpi4z",
+            "storeLink": "bit.ly/3BFv7bo",
+            "link": "bit.ly/3Iwpi4z",
             "preview": "",
             "technologies": [
               [
@@ -4214,7 +4214,7 @@
       },
       {
         "app": "Xamarin-FiveStarsRate",
-        "link": "https://bit.ly/3wNK7Wv",
+        "link": "bit.ly/3wNK7Wv",
         "description": "Android Five Stars Library is a small library that helps developer add a “Rate My App” dialog to their applications. It's called “Five Stars” because the dialog has a different behaviour based on the rating given by the user.",
         "logo": "libs/star_five.png",
         "edition": [
@@ -4223,7 +4223,7 @@
             "yearEnd": null,
             "mainTech": "nuget",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3zuDcNT",
+            "storeLink": "bit.ly/3zuDcNT",
             "preview": "",
             "technologies": [
               [
@@ -4271,8 +4271,8 @@
             "yearEnd": 2024,
             "mainTech": "nuget",
             "isSupported": false,
-            "storeLink": "https://bit.ly/370apVw",
-            "link": "https://bit.ly/3IBY6RL",
+            "storeLink": "bit.ly/370apVw",
+            "link": "bit.ly/3IBY6RL",
             "preview": "",
             "technologies": [
               [
@@ -4311,7 +4311,7 @@
       },
       {
         "app": "ZoomImage-Xamarin",
-        "link": "https://bit.ly/36Yw948",
+        "link": "bit.ly/36Yw948",
         "description": "A simple pinch-to-zoom ImageView library for Xamarin.Android.",
         "logo": "libs/zoom.png",
         "edition": [
@@ -4320,7 +4320,7 @@
             "yearEnd": null,
             "mainTech": "nuget",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3hYH7N4",
+            "storeLink": "bit.ly/3hYH7N4",
             "preview": "",
             "technologies": [
               [
@@ -4368,7 +4368,7 @@
             "yearEnd": 2024,
             "mainTech": "js_lib",
             "isSupported": false,
-            "link": "https://bit.ly/3i7xtIl",
+            "link": "bit.ly/3i7xtIl",
             "storeLink": "",
             "preview": "",
             "technologies": [
@@ -4386,7 +4386,7 @@
       },
       {
         "app": "OpenAI API Wrapper",
-        "link": "https://bit.ly/492YrYR",
+        "link": "bit.ly/492YrYR",
         "description": "A simple wrapper for the latest OpenAI APIs for OutSystems.",
         "logo": "libs/openai.png",
         "edition": [
@@ -4395,7 +4395,7 @@
             "yearEnd": null,
             "mainTech": "out_lib",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3Tu2Wag",
+            "storeLink": "bit.ly/3Tu2Wag",
             "preview": "",
             "technologies": [
               [
@@ -4421,7 +4421,7 @@
       },
       {
         "app": "Scrollable Tabs",
-        "link": "https://bit.ly/3TtghQ0",
+        "link": "bit.ly/3TtghQ0",
         "description": "A simple plugin to create scrollable tabs with Bootstrap 5.",
         "logo": "libs/tab.png",
         "edition": [
@@ -4430,7 +4430,7 @@
             "yearEnd": null,
             "mainTech": "js_lib",
             "isSupported": true,
-            "storeLink": "https://bit.ly/3FiWFnu",
+            "storeLink": "bit.ly/3FiWFnu",
             "preview": "",
             "technologies": [
               "fab fa-html5",
@@ -4457,7 +4457,7 @@
             "mainTech": "uwp_lib",
             "isSupported": false,
             "storeLink": "",
-            "link": "https://bit.ly/3iLSOpw",
+            "link": "bit.ly/3iLSOpw",
             "preview": "",
             "technologies": [
               "mdi mdi-language-csharp",
@@ -4478,7 +4478,7 @@
       },
       {
         "app": "Personal website",
-        "link": "https://federiconavarrete.com",
+        "link": "federiconavarrete.com",
         "description": "My personal website.",
         "logo": "personal.png",
         "edition": [
@@ -4489,7 +4489,7 @@
             "mainTech": "web",
             "isSupported": true,
             "link": "",
-            "preview": "https://bit.ly/3x6P9b4",
+            "preview": "bit.ly/3x6P9b4",
             "technologies": [
               "fab fa-html5",
               "fab fa-css3-alt",
@@ -4514,7 +4514,7 @@
       },
       {
         "app": "Projects Gallery",
-        "link": "https://bit.ly/3TdcZyO",
+        "link": "bit.ly/3TdcZyO",
         "description": "My collection of projects.",
         "logo": "apps.png",
         "edition": [
@@ -4525,7 +4525,7 @@
             "mainTech": "web",
             "isSupported": true,
             "link": "",
-            "preview": "https://bit.ly/2UKht5R",
+            "preview": "bit.ly/2UKht5R",
             "technologies": [
               "fab fa-html5",
               "fab fa-css3-alt",
@@ -4542,7 +4542,7 @@
       },
       {
         "app": "Presentations Gallery",
-        "link": "https://bit.ly/3T1RmSc",
+        "link": "bit.ly/3T1RmSc",
         "description": "My collection of presentations in Prezi and PowerPoint.",
         "logo": "presentations.png",
         "edition": [
@@ -4553,7 +4553,7 @@
             "mainTech": "web",
             "isSupported": true,
             "link": "",
-            "preview": "https://bit.ly/3rv2adr",
+            "preview": "bit.ly/3rv2adr",
             "technologies": [
               "fab fa-html5",
               "fab fa-css3-alt",
@@ -4581,7 +4581,7 @@
             "mainTech": "web",
             "isSupported": false,
             "link": "",
-            "preview": "https://bit.ly/3BvUOuR",
+            "preview": "bit.ly/3BvUOuR",
             "technologies": [
               "fab fa-html5",
               "fab fa-css3-alt",
@@ -4637,7 +4637,7 @@
       },
       {
         "app": "RPA Best Practices",
-        "link": "https://bit.ly/3bhknlU",
+        "link": "bit.ly/3bhknlU",
         "description": "RPA Best Practices for developing the best Bots from Gathering requirements to infrastructure and even more secret details!",
         "logo": "robot.png",
         "edition": [
@@ -4648,7 +4648,7 @@
             "mainTech": "web",
             "isSupported": true,
             "link": "",
-            "preview": "https://bit.ly/3x1IPSh",
+            "preview": "bit.ly/3x1IPSh",
             "technologies": [
               [
                 {
@@ -4683,8 +4683,8 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "link": "https://bit.ly/3BBLw0l",
-            "preview": "https://bit.ly/370Absu",
+            "link": "bit.ly/3BBLw0l",
+            "preview": "bit.ly/370Absu",
             "technologies": [
               "fab fa-html5",
               "fab fa-css3-alt",
@@ -4710,8 +4710,8 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "link": "https://bit.ly/2Wirl7t",
-            "preview": "https://bit.ly/3kPgsEr",
+            "link": "bit.ly/2Wirl7t",
+            "preview": "bit.ly/3kPgsEr",
             "technologies": [
               "fab fa-html5",
               "fab fa-css3-alt",
@@ -4737,8 +4737,8 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "link": "https://bit.ly/2UIHi6u",
-            "preview": "https://bit.ly/37cVM1f",
+            "link": "bit.ly/2UIHi6u",
+            "preview": "bit.ly/37cVM1f",
             "technologies": [
               "fab fa-html5",
               "fab fa-css3-alt",
@@ -4764,8 +4764,8 @@
             "storeLink": "",
             "mainTech": "web",
             "isSupported": false,
-            "link": "https://bit.ly/3TqZayh",
-            "preview": "https://bit.ly/3Vci2Cm",
+            "link": "bit.ly/3TqZayh",
+            "preview": "bit.ly/3Vci2Cm",
             "technologies": [
               "fab fa-angular",
               "fab fa-html5",
@@ -4792,7 +4792,7 @@
             "mainTech": "xamarin_forms",
             "isSupported": false,
             "link": "",
-            "preview": "https://bit.ly/3FmtrnB",
+            "preview": "bit.ly/3FmtrnB",
             "technologies": [
               "mdi mdi-android",
               "mdi mdi-apple-ios",
@@ -4831,7 +4831,7 @@
       },
       {
         "app": "LinkTree",
-        "link": "https://linktree.federiconavarrete.com",
+        "link": "linktree.federiconavarrete.com",
         "description": "My LinkTree.",
         "logo": "personal.png",
         "edition": [
@@ -4854,6 +4854,14 @@
                   "id": "id_pwa",
                   "text": "PWA",
                   "tooltip": "Progressive Web App"
+                }
+              ],
+              [
+                {
+                  "type": "icon",
+                  "id": "id_multiLanguage",
+                  "icon": "fas fa-language",
+                  "tooltip": "Multi-language"
                 }
               ],
               "fab fa-git",
