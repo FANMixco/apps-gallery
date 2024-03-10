@@ -3012,7 +3012,7 @@
       },
       {
         "app": "The Wet Zone",
-        "link": "https://bit.ly/3eRguI4",
+        "link": "",
         "description": "It's an application designed by SuperNova Team from 2013-2014. The project aim is, “To Save Lives”.",
         "logo": "twetzone.png",
         "edition": [
@@ -3095,6 +3095,7 @@
             "isSupported": false,
             "storeLink": "",
             "preview": "https://bit.ly/3BAm0IM",
+            "link": "https://bit.ly/3eRguI4",
             "technologies": [
               "fab fa-html5",
               "fab fa-css3-alt",
@@ -3643,7 +3644,7 @@
       },
       {
         "app": "Club de Leones de Santa Tecla",
-        "link": "https://clstecla.x10.ml",
+        "link": "",
         "description": "The site of the Lions Club of Santa Tecla.",
         "logo": "clstecla.png",
         "edition": [
@@ -3876,7 +3877,7 @@
       },
       {
         "app": "SpotsDialog.Xamarin",
-        "link": "https://bit.ly/3BzC1i5",
+        "link": "https://bit.ly/3VtUv07",
         "description": "Android AlertDialog with moving spots progress indicator packed as android library.",
         "logo": "libs/spotsDialog.png",
         "edition": [
@@ -3925,7 +3926,7 @@
       },
       {
         "app": "BubbleTabs.Xamarin",
-        "link": "https://bit.ly/3iOKWE2",
+        "link": "https://bit.ly/4a7LsFW",
         "description": "Binding of the library: BubbleTab Put some bubble in your tabs and give your apps a supa fresh style!",
         "logo": "libs/bubbleTabs.png",
         "edition": [
@@ -3966,7 +3967,7 @@
       },
       {
         "app": "Xamarin-OneMoreFabMenu",
-        "link": "",
+        "link": "https://bit.ly/43dObf2",
         "description": "OneMoreFabMenu Another floating action button menu with expand/collapse behavior.",
         "logo": "libs/oneFabMenu.png",
         "edition": [
@@ -4019,7 +4020,7 @@
       },
       {
         "app": "Xamarin-MaterialSearchView",
-        "link": "",
+        "link": "https://bit.ly/4cbVNmm",
         "description": "Cute library to implement SearchView in a Material Design Approach.",
         "logo": "libs/materialSearchView.png",
         "edition": [
@@ -4066,7 +4067,7 @@
       },
       {
         "app": "Xamarin.Search.Dialog",
-        "link": "https://bit.ly/3BEOhOe",
+        "link": "",
         "description": "Android Search Dialog Library.",
         "logo": "libs/searchDialog.png",
         "edition": [
@@ -4074,9 +4075,10 @@
             "yearStart": 2019,
             "yearEnd": null,
             "mainTech": "nuget",
-            "isSupported": true,
+            "isSupported": false,
             "storeLink": "https://bit.ly/3iL0Kr8",
             "preview": "",
+            "link": "https://bit.ly/3Tt66eh",
             "technologies": [
               [
                 {
@@ -4162,16 +4164,17 @@
       },
       {
         "app": "Xamarin-SmartRate",
-        "link": "https://bit.ly/3iFBEKs",
+        "link": "",
         "description": "A library for simple implementation of smart ranking.",
         "logo": "libs/rating.png",
         "edition": [
           {
             "yearStart": 2019,
-            "yearEnd": null,
+            "yearEnd": 2024,
             "mainTech": "nuget",
-            "isSupported": true,
+            "isSupported": false,
             "storeLink": "https://bit.ly/3BFv7bo",
+            "link": "https://bit.ly/3Iwpi4z",
             "preview": "",
             "technologies": [
               [
@@ -4211,7 +4214,7 @@
       },
       {
         "app": "Xamarin-FiveStarsRate",
-        "link": "https://bit.ly/3BAnD9m",
+        "link": "https://bit.ly/3wNK7Wv",
         "description": "Android Five Stars Library is a small library that helps developer add a “Rate My App” dialog to their applications. It's called “Five Stars” because the dialog has a different behaviour based on the rating given by the user.",
         "logo": "libs/star_five.png",
         "edition": [
@@ -4259,16 +4262,17 @@
       },
       {
         "app": "Xamarin-SmoothBottomBar",
-        "link": "https://bit.ly/3iI8XMN",
+        "link": "",
         "description": "A lightweight Xamarin.Android material bottom navigation bar library. Based on @ibrahimsn98's version.",
         "logo": "libs/bottom_tab.png",
         "edition": [
           {
             "yearStart": 2020,
-            "yearEnd": null,
+            "yearEnd": 2024,
             "mainTech": "nuget",
-            "isSupported": true,
+            "isSupported": false,
             "storeLink": "https://bit.ly/370apVw",
+            "link": "https://bit.ly/3IBY6RL",
             "preview": "",
             "technologies": [
               [
@@ -4566,7 +4570,7 @@
       },
       {
         "app": "Booking App",
-        "link": "https://bit.ly/3ruKLBE",
+        "link": "",
         "description": "Simple app for reserving books in ASP .NET Core",
         "logo": "book-app.png",
         "edition": [
