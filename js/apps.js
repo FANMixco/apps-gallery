@@ -3,8 +3,9 @@
 const cardTemplate = `<div class="card border-0 transform-on-hover" style="padding-right: 0px; padding-left: 0px;"><img src="img/apps/{0}" alt="{1}" class="card-img-top"><div class="card-body"><h6><a href="#" class="text-decoration-none">{2}</a></h6><p class="card-text">{3}<a tabindex="0" data-bs-trigger="focus" data-bs-html="true" data-bs-placement="top" data-bs-toggle="popover" data-bs-container="body" title="{4}" data-bs-content="{5}" role="button" class="popMore btn btn-warning btn-circle text-white"><i class="fas fa-ellipsis-h"></i></a></p></div></div>`;
 
 const galleryTitle = "Federico Navarrete — Projects Gallery";
+const https = 'https://';
 
-const galleryFooter = `Some icons were created by <a href="https://www.flaticon.com/authors/freepik" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> - <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">www.flaticon.com</a>. &copy; <a class="text-warning" href="https://federiconavarrete.com" target="_blank">Federico Navarrete</a> &amp; <a class="text-warning" href="http://supernovaic.tk" target="_blank">Supernova IC</a> {0}.`;
+const galleryFooter = `Some icons were created by <a href="${https}www.flaticon.com/authors/freepik" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> - <a href="${https}www.flaticon.com/" title="Flaticon" target="_blank" rel="noreferrer">www.flaticon.com</a>. &copy; <a class="text-warning" href="${https}federiconavarrete.com" target="_blank">Federico Navarrete</a> &amp; <a class="text-warning" href="${https}supernovaic.com" target="_blank">Supernova IC</a> {0}.`;
 
 const iconSpan = "<span class='oneLineIcon' style='width: auto;' {0}>{1}</span>";
 
@@ -43,7 +44,7 @@ function load() {
     let nugetSupported = [];
     let libsSupportedTechs = [];
     let jsLibSupported = [];
-    let uwpLibSupported = [];
+    let outLibSupported = [];
     
     let androidUnsupported = [];
     let w10Unsupported = [];
@@ -54,6 +55,8 @@ function load() {
     let nugetUnsupported = [];
     let xamarinFormsUnsupported = [];
     let unsupportedTechs = [];
+    let jsLibUnsupported = [];
+    let uwpLibUnsupported = [];
 
     let customIconsArray = [];
 
@@ -95,11 +98,15 @@ function load() {
 
         filterElem(apps[item], 'js_lib', true, jsLibSupported);
 
-        filterElem(apps[item], 'uwp_lib', true, uwpLibSupported);
+        filterElem(apps[item], 'out_lib', true, outLibSupported);
 
         filterElem(apps[item], 'nuget', false, nugetUnsupported);
 
         filterElem(apps[item], 'xamarin_forms', false, xamarinFormsUnsupported);
+
+        filterElem(apps[item], 'uwp_lib', false, uwpLibUnsupported);
+
+        filterElem(apps[item], 'js_lib', false, jsLibUnsupported);
     }
 
     setApps(androidSupported.sort(sortByProperty('order')), "playStore", androidSupportedTechs, customIconsArray);
@@ -110,7 +117,7 @@ function load() {
     setApps(webSupported.sort(sortByProperty('order')), "webStore", webSupportedTechs, customIconsArray);
     setApps(nugetSupported.sort(sortByProperty('order')), "nugetsStore", libsSupportedTechs, customIconsArray);
     setApps(jsLibSupported.sort(sortByProperty('order')), "jsLibStore", libsSupportedTechs, customIconsArray);
-    setApps(uwpLibSupported.sort(sortByProperty('order')), "uwpLibStore", libsSupportedTechs, customIconsArray);
+    setApps(outLibSupported.sort(sortByProperty('order')), "outLibStore", libsSupportedTechs, customIconsArray);
 
     setApps(xamarinFormsUnsupported.sort(sortByProperty('order')), "unsupportedXamarinForms", unsupportedTechs, customIconsArray);
     setApps(androidUnsupported.sort(sortByProperty('order')), "unsupportedAndroid", unsupportedTechs, customIconsArray);
@@ -120,6 +127,9 @@ function load() {
     setApps(webUnsupported.sort(sortByProperty('order')), "unsupportedWeb", unsupportedTechs, customIconsArray);
     setApps(wXPUnsupported.sort(sortByProperty('order')), "unsupportedVB", unsupportedTechs, customIconsArray);
     setApps(nugetUnsupported.sort(sortByProperty('order')), "unsupportedNuget", unsupportedTechs, customIconsArray);
+
+    setApps(jsLibUnsupported.sort(sortByProperty('order')), "unSuppportedJsLibStore", libsSupportedTechs, customIconsArray);
+    setApps(uwpLibUnsupported.sort(sortByProperty('order')), "unsupportedUwpLibStore", libsSupportedTechs, customIconsArray);
 
     setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
     setTechUsed(w10SupportedTechs, "techsMSStore", customIconsArray);
@@ -193,19 +203,19 @@ function setApps(appCollection, control, techs, customIcons) {
     for (let item in appCollection) {
         let content = '';
         if (appCollection[item].storeLink !== '')
-            content += `<a href="${appCollection[item].storeLink}" class="btn btn-info btn-circle text-white" target="_blank"><i class="fas fa-download"></i></a>`;
+            content += `<a href="${https}${appCollection[item].storeLink}" class="btn btn-info btn-circle text-white" target="_blank"><i class="fas fa-download"></i></a>`;
         if (appCollection[item].link !== '' && appCollection[item].isSupported)
-            content += `<a href="${appCollection[item].link}" class="btn btn-success btn-circle text-white" target="_blank"><i class="fas fa-globe"></i></a>`;
+            content += `<a href="${https}${appCollection[item].link}" class="btn btn-success btn-circle text-white" target="_blank"><i class="fas fa-globe"></i></a>`;
         else if (appCollection[item].secondaryLink!== undefined && !appCollection[item].isSupported)
             if (appCollection[item].secondaryLink !== '')
-                content += `<a href="${appCollection[item].secondaryLink}" class="btn btn-secondary btn-circle text-white" target="_blank"><i class="fas fa-globe"></i></a>`;
+                content += `<a href="${https}${appCollection[item].secondaryLink}" class="btn btn-secondary btn-circle text-white" target="_blank"><i class="fas fa-globe"></i></a>`;
         if (appCollection[item].preview !== '')
-            content += `<a href="${appCollection[item].preview}" class="btn btn-danger btn-circle text-white" target="_blank"><i class="fas fa-images"></i></a>`;
+            content += `<a href="${https}${appCollection[item].preview}" class="btn btn-danger btn-circle text-white" target="_blank"><i class="fas fa-images"></i></a>`;
 
         let years = appCollection[item].yearStart;
 
         if (appCollection[item].yearStart !== appCollection[item].yearEnd) {
-            years += appCollection[item].yearEnd !== undefined ? ` - ${appCollection[item].yearEnd}` : " - now";
+            years += appCollection[item].yearEnd !== null ? ` - ${appCollection[item].yearEnd}` : " - now";
         }
         
         let tooltip = `${years}<br><br>${appCollection[item].description}`;
