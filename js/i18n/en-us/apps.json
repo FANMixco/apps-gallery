@@ -4693,6 +4693,7 @@
               "fab fa-bootstrap",
               "fab fa-git",
               "mdi mdi-github",
+              "mdi mdi-microsoft-azure",
               [
                 {
                   "type": "img",
