@@ -4,7 +4,7 @@
         "app": "Toastasters Timer",
         "link": "tmtimer.federiconavarrete.com",
         "description": "The best Toastmasters Timer for your meetings. It's simple, fast and accurate.",
-        "logo": "timer.png",
+        "logo": "timer",
         "edition": [
           {
             "yearStart": 2017,
@@ -539,7 +539,7 @@
         "app": "Toastasters Timer Lite",
         "link": "tmtimer.federiconavarrete.com",
         "description": "The best Toastmasters Timer for your meetings. It's simple, fast and accurate.",
-        "logo": "tm_lite.png",
+        "logo": "tm_lite",
         "edition": [
           {
             "yearStart": 2021,
@@ -779,7 +779,7 @@
         "app": "Típicos Salvadoreños",
         "link": "",
         "description": "Are you ready to cook some of the best Salvadoran Dishes? Then this is the best app for you! With more than 100 recipes.",
-        "logo": "tipsal.png",
+        "logo": "tipsal",
         "edition": [
           {
             "yearStart": 2016,
@@ -1229,7 +1229,7 @@
         "app": "La Ruta Maya",
         "link": "",
         "description": "The Mayan Route is an app for enjoying a wonderful experience with all those pyramids, architecture and amazing places all in one place.",
-        "logo": "lrm.png",
+        "logo": "lrm",
         "edition": [
           {
             "yearStart": 2016,
@@ -1781,7 +1781,7 @@
         "app": "Gravity Now!",
         "link": "bit.ly/3x3b4zK",
         "description": "This is an educational platform that aims to be the #1 tool for teaching the physical sciences related to gravity.",
-        "logo": "gnow.png",
+        "logo": "gnow",
         "edition": [
           {
             "yearStart": 2018,
@@ -2298,7 +2298,7 @@
         "app": "Diputado 85",
         "link": "",
         "description": "Help your country becoming the Deputy 85 and provide your feedback about the new laws!",
-        "logo": "d85.png",
+        "logo": "d85",
         "edition": [
           {
             "yearStart": 2014,
@@ -2395,7 +2395,7 @@
         "app": "Firefly",
         "link": "",
         "description": "Smart T-Shirt App",
-        "logo": "firefly.png",
+        "logo": "firefly",
         "edition": [
           {
             "yearStart": 2015,
@@ -2509,7 +2509,7 @@
         "app": "Federico Stories",
         "link": "federicostories.blogspot.com",
         "description": "Do you have some spare time to enjoy some of the most unique legends of the world? Do you enjoy horror or mysteries?",
-        "logo": "fstories.png",
+        "logo": "fstories",
         "edition": [
           {
             "yearStart": 2019,
@@ -2610,7 +2610,7 @@
         "app": "Let's Stop Diabetes Premium",
         "link": "",
         "description": "Let’s Stop Diabetes is a platform that has the main purpose to transform diabetics into Superheroes. We provide them with the powerful tools to improve their life.",
-        "logo": "lsdp.png",
+        "logo": "lsdp",
         "edition": [
           {
             "yearStart": 2015,
@@ -2765,7 +2765,7 @@
         "app": "Let's Stop Diabetes",
         "link": "",
         "description": "Let’s Stop Diabetes is a platform that has the main purpose to transform diabetics into Superheroes. We provide them with the powerful tools to improve their life.",
-        "logo": "lsd.png",
+        "logo": "lsd",
         "edition": [
           {
             "yearStart": 2016,
@@ -2928,7 +2928,7 @@
         "app": "Let's Stop Diabetes Map",
         "link": "",
         "description": "Let’s Stop Diabetes is a platform that has the main purpose to transform diabetics into Superheroes. We provide a full map to monitor the changes of diabetes all over the world.",
-        "logo": "lsd_map.png",
+        "logo": "lsd_map",
         "edition": [
           {
             "yearStart": 2015,
@@ -3014,7 +3014,7 @@
         "app": "The Wet Zone",
         "link": "",
         "description": "It's an application designed by SuperNova Team from 2013-2014. The project aim is, “To Save Lives”.",
-        "logo": "twetzone.png",
+        "logo": "twetzone",
         "edition": [
           {
             "yearStart": 2013,
@@ -3147,7 +3147,7 @@
         "app": "Tu_ElSalvador",
         "link": "",
         "description": "App for industrial tourism in El Salvador.",
-        "logo": "tu_elsalvador.png",
+        "logo": "tu_elsalvador",
         "edition": [
           {
             "yearStart": 2013,
@@ -3183,7 +3183,7 @@
         "app": "QuickDer",
         "link": "",
         "description": "Order your food from the comfort of your mobile!",
-        "logo": "quickder.png",
+        "logo": "quickder",
         "edition": [
           {
             "yearStart": 2012,
@@ -3237,7 +3237,7 @@
         "app": "Farmapp",
         "link": "",
         "description": "Check the best prices of your medicines from your mobile!",
-        "logo": "farmapp.png",
+        "logo": "farmapp",
         "edition": [
           {
             "yearStart": 2014,
@@ -3301,7 +3301,7 @@
         "app": "Tu Costa",
         "link": "",
         "description": "Discover the best beaches of your medicines from your mobile!",
-        "logo": "tu_costa.png",
+        "logo": "tu_costa",
         "edition": [
           {
             "yearStart": 2013,
@@ -3372,7 +3372,7 @@
         "app": "Łódźarts Conference",
         "link": "",
         "description": "Łódźarts the magical conference of the Area A of the District 108.",
-        "logo": "lodzarts.png",
+        "logo": "lodzarts",
         "edition": [
           {
             "yearStart": 2018,
@@ -3407,7 +3407,7 @@
         "app": "TUL Residence",
         "link": "",
         "description": "Online reservations and payment system for the Dorms of the Politechnika Lodzka.",
-        "logo": "tul.png",
+        "logo": "tul",
         "edition": [
           {
             "yearStart": 2014,
@@ -3465,7 +3465,7 @@
         "app": "Virtual Cloud School",
         "link": "",
         "description": "Your virtual school at one click of distance!",
-        "logo": "vcschool.png",
+        "logo": "vcschool",
         "edition": [
           {
             "yearStart": 2012,
@@ -3506,7 +3506,7 @@
         "app": "Talento Siman",
         "link": "",
         "description": "Your personalised virtual job affair for Siman.",
-        "logo": "siman.png",
+        "logo": "siman",
         "edition": [
           {
             "yearStart": 2011,
@@ -3547,7 +3547,7 @@
         "app": "MaintSys",
         "link": "",
         "description": "Your virtual reservation system for Universidad Don Bosco.",
-        "logo": "maintsys.png",
+        "logo": "maintsys",
         "edition": [
           {
             "yearStart": 2010,
@@ -3601,7 +3601,7 @@
         "app": "TranSoft",
         "link": "",
         "description": "Your virtual reservation system for automobile reservations for the World Food Programme of the United Nations.",
-        "logo": "wfp.png",
+        "logo": "wfp",
         "edition": [
           {
             "yearStart": 2011,
@@ -3646,7 +3646,7 @@
         "app": "Club de Leones de Santa Tecla",
         "link": "",
         "description": "The site of the Lions Club of Santa Tecla.",
-        "logo": "clstecla.png",
+        "logo": "clstecla",
         "edition": [
           {
             "yearStart": 2008,
@@ -3679,7 +3679,7 @@
         "app": "MyMaps",
         "link": "",
         "description": "Your site for creating your personal maps.",
-        "logo": "mymaps.png",
+        "logo": "mymaps",
         "edition": [
           {
             "yearStart": 2011,
@@ -3725,7 +3725,7 @@
         "app": "ArevaloGroup Site",
         "link": "",
         "description": "The mobile site of ArevaloGroup.",
-        "logo": "arevalo.png",
+        "logo": "arevalo",
         "edition": [
           {
             "yearStart": 2013,
@@ -3758,7 +3758,7 @@
         "app": "Mr. Tooth",
         "link": "",
         "description": "A nice dentist CRM with odontogram for handling all your patients.",
-        "logo": "mr_tooth.png",
+        "logo": "mr_tooth",
         "edition": [
           {
             "yearStart": 2007,
@@ -3795,7 +3795,7 @@
         "app": "Ghost Hunter",
         "link": "",
         "description": "A nice dentist CRM for tracking all your reservations and members' payments.",
-        "logo": "ghost_hunter.png",
+        "logo": "ghost_hunter",
         "edition": [
           {
             "yearStart": 2008,
@@ -3831,7 +3831,7 @@
         "app": "Xamarin-MaterialSearchBar",
         "link": "bit.ly/38naOBJ",
         "description": "Material Design Search Bar for Android Based on the fantastic version by Mancj.",
-        "logo": "libs/searchBar.png",
+        "logo": "libs/searchBar",
         "edition": [
           {
             "yearStart": 2019,
@@ -3879,7 +3879,7 @@
         "app": "SpotsDialog.Xamarin",
         "link": "bit.ly/3VtUv07",
         "description": "Android AlertDialog with moving spots progress indicator packed as android library.",
-        "logo": "libs/spotsDialog.png",
+        "logo": "libs/spotsDialog",
         "edition": [
           {
             "yearStart": 2017,
@@ -3928,7 +3928,7 @@
         "app": "BubbleTabs.Xamarin",
         "link": "bit.ly/4a7LsFW",
         "description": "Binding of the library: BubbleTab Put some bubble in your tabs and give your apps a supa fresh style!",
-        "logo": "libs/bubbleTabs.png",
+        "logo": "libs/bubbleTabs",
         "edition": [
           {
             "yearStart": 2017,
@@ -3969,7 +3969,7 @@
         "app": "Xamarin-OneMoreFabMenu",
         "link": "bit.ly/43dObf2",
         "description": "OneMoreFabMenu Another floating action button menu with expand/collapse behavior.",
-        "logo": "libs/oneFabMenu.png",
+        "logo": "libs/oneFabMenu",
         "edition": [
           {
             "yearStart": 2019,
@@ -4022,7 +4022,7 @@
         "app": "Xamarin-MaterialSearchView",
         "link": "bit.ly/4cbVNmm",
         "description": "Cute library to implement SearchView in a Material Design Approach.",
-        "logo": "libs/materialSearchView.png",
+        "logo": "libs/materialSearchView",
         "edition": [
           {
             "yearStart": 2019,
@@ -4069,7 +4069,7 @@
         "app": "Xamarin.Search.Dialog",
         "link": "",
         "description": "Android Search Dialog Library.",
-        "logo": "libs/searchDialog.png",
+        "logo": "libs/searchDialog",
         "edition": [
           {
             "yearStart": 2019,
@@ -4119,7 +4119,7 @@
         "app": "Xamarin-Speed-Dial",
         "link": "",
         "description": "Android library providing an implementation of the Material Design Floating Action Button Speed Dial.",
-        "logo": "libs/speedDial.png",
+        "logo": "libs/speedDial",
         "edition": [
           {
             "yearStart": 2019,
@@ -4166,7 +4166,7 @@
         "app": "Xamarin-SmartRate",
         "link": "",
         "description": "A library for simple implementation of smart ranking.",
-        "logo": "libs/rating.png",
+        "logo": "libs/rating",
         "edition": [
           {
             "yearStart": 2019,
@@ -4216,7 +4216,7 @@
         "app": "Xamarin-FiveStarsRate",
         "link": "bit.ly/3wNK7Wv",
         "description": "Android Five Stars Library is a small library that helps developer add a “Rate My App” dialog to their applications. It's called “Five Stars” because the dialog has a different behaviour based on the rating given by the user.",
-        "logo": "libs/star_five.png",
+        "logo": "libs/star_five",
         "edition": [
           {
             "yearStart": 2020,
@@ -4264,7 +4264,7 @@
         "app": "Xamarin-SmoothBottomBar",
         "link": "",
         "description": "A lightweight Xamarin.Android material bottom navigation bar library. Based on @ibrahimsn98's version.",
-        "logo": "libs/bottom_tab.png",
+        "logo": "libs/bottom_tab",
         "edition": [
           {
             "yearStart": 2020,
@@ -4313,7 +4313,7 @@
         "app": "ZoomImage-Xamarin",
         "link": "bit.ly/36Yw948",
         "description": "A simple pinch-to-zoom ImageView library for Xamarin.Android.",
-        "logo": "libs/zoom.png",
+        "logo": "libs/zoom",
         "edition": [
           {
             "yearStart": 2020,
@@ -4361,7 +4361,7 @@
         "app": "Timing Field",
         "link": "",
         "description": "A jquery plugin to transform a timestamp field into an hours/minutes/seconds selector.",
-        "logo": "libs/timePicker.png",
+        "logo": "libs/timePicker",
         "edition": [
           {
             "yearStart": 2018,
@@ -4388,7 +4388,7 @@
         "app": "OpenAI API Wrapper",
         "link": "bit.ly/492YrYR",
         "description": "A simple wrapper for the latest OpenAI APIs for OutSystems.",
-        "logo": "libs/openai.png",
+        "logo": "libs/openai",
         "edition": [
           {
             "yearStart": 2024,
@@ -4423,7 +4423,7 @@
         "app": "Scrollable Tabs",
         "link": "bit.ly/3TtghQ0",
         "description": "A simple plugin to create scrollable tabs with Bootstrap 5.",
-        "logo": "libs/tab.png",
+        "logo": "libs/tab",
         "edition": [
           {
             "yearStart": 2022,
@@ -4449,7 +4449,7 @@
         "app": "7 Segment OCR",
         "link": "",
         "description": "Class for reading 7 segment displays with C#.",
-        "logo": "libs/7segment.png",
+        "logo": "libs/7segment",
         "edition": [
           {
             "yearStart": 2015,
@@ -4480,7 +4480,7 @@
         "app": "Personal website",
         "link": "federiconavarrete.com",
         "description": "My personal website.",
-        "logo": "personal.png",
+        "logo": "personal",
         "edition": [
           {
             "yearStart": 2019,
@@ -4516,7 +4516,7 @@
         "app": "Projects Gallery",
         "link": "bit.ly/3TdcZyO",
         "description": "My collection of projects.",
-        "logo": "apps.png",
+        "logo": "apps",
         "edition": [
           {
             "yearStart": 2019,
@@ -4544,7 +4544,7 @@
         "app": "Presentations Gallery",
         "link": "bit.ly/3T1RmSc",
         "description": "My collection of presentations in Prezi and PowerPoint.",
-        "logo": "presentations.png",
+        "logo": "presentations",
         "edition": [
           {
             "yearStart": 2019,
@@ -4572,7 +4572,7 @@
         "app": "Booking App",
         "link": "",
         "description": "Simple app for reserving books in ASP .NET Core",
-        "logo": "book-app.png",
+        "logo": "book-app",
         "edition": [
           {
             "yearStart": 2020,
@@ -4639,7 +4639,7 @@
         "app": "RPA Best Practices",
         "link": "bit.ly/3bhknlU",
         "description": "RPA Best Practices for developing the best Bots from Gathering requirements to infrastructure and even more secret details!",
-        "logo": "robot.png",
+        "logo": "robot",
         "edition": [
           {
             "yearStart": 2020,
@@ -4672,10 +4672,45 @@
         ]
       },
       {
+        "app": "Act Now",
+        "link": "",
+        "description": "An AI powered tool for supporting actors.",
+        "logo": "actnow",
+        "edition": [
+          {
+            "yearStart": 2023,
+            "yearEnd": 2024,
+            "storeLink": "",
+            "mainTech": "web",
+            "isSupported": false,
+            "link": "",
+            "preview": "youtube.com/shorts/wK9QcRGNrGo",
+            "technologies": [
+              "fab fa-angular",
+              "fab fa-html5",
+              "fab fa-css3-alt",
+              "fab fa-js-square",
+              "fab fa-bootstrap",
+              "fab fa-git",
+              "mdi mdi-github",
+              [
+                {
+                  "type": "img",
+                  "id": "id_ai",
+                  "text": "open ai",
+                  "icon": "openai.svg"
+                }
+              ]
+            ],
+            "order": 3
+          }
+        ]
+      },
+      {
         "app": "Mate",
         "link": "",
         "description": "Your new experience to find the best Mates in your town!",
-        "logo": "mate.png",
+        "logo": "mate",
         "edition": [
           {
             "yearStart": 2019,
@@ -4702,7 +4737,7 @@
         "app": "Futurum",
         "link": "",
         "description": "Online IT services and trainings in Poland.",
-        "logo": "futurum.png",
+        "logo": "futurum",
         "edition": [
           {
             "yearStart": 2019,
@@ -4729,7 +4764,7 @@
         "app": "Zero Waste",
         "link": "",
         "description": "Your new Recycling experience powered by AI!",
-        "logo": "zeroWaste.png",
+        "logo": "zeroWaste",
         "edition": [
           {
             "yearStart": 2020,
@@ -4756,7 +4791,7 @@
         "app": "RPA Calculator",
         "link": "",
         "description": "A simple for RPA calculator.",
-        "logo": "rpa.png",
+        "logo": "rpa",
         "edition": [
           {
             "yearStart": 2020,
@@ -4783,7 +4818,7 @@
         "app": "Save that Power",
         "link": "",
         "description": "A solution to save electricity in the Netherlands.",
-        "logo": "save.png",
+        "logo": "save",
         "edition": [
           {
             "yearStart": 2021,
@@ -4833,7 +4868,7 @@
         "app": "LinkTree",
         "link": "linktree.federiconavarrete.com",
         "description": "My LinkTree.",
-        "logo": "personal.png",
+        "logo": "personal",
         "edition": [
           {
             "yearStart": 2023,
