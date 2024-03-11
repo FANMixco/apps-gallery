@@ -1,13 +1,6 @@
 /*This code is Federico Navarrete's property and for any commercial use he must be contacted. Also, this part of code cannot be removed.*/
 
-const cardTemplate = 
-`<div class="card border-0 transform-on-hover" style="padding-right: 0px; padding-left: 0px;">
-   <img src="img/apps/{0}" alt="{1}" class="card-img-top">
-   <div class="card-body">
-      <h6><a href="#" class="text-decoration-none">{2}</a></h6>
-      <p class="card-text">{3}<a tabindex="0" data-bs-trigger="focus" data-bs-html="true" data-bs-placement="top" data-bs-toggle="popover" data-bs-container="body" title="{4}" data-bs-content="{5}" role="button" class="popMore btn btn-warning btn-circle text-white"><i class="fas fa-ellipsis-h"></i></a></p>
-   </div>
-</div>`;
+const cardTemplate = `<div class="card border-0 transform-on-hover" style="padding-right: 0px; padding-left: 0px;"><img src="img/apps/{0}" alt="{1}" class="card-img-top"><div class="card-body"><h6><a href="#" class="text-decoration-none">{2}</a></h6><p class="card-text">{3}<a tabindex="0" data-bs-trigger="focus" data-bs-html="true" data-bs-placement="top" data-bs-toggle="popover" data-bs-container="body" title="{4}" data-bs-content="{5}" role="button" class="popMore btn btn-warning btn-circle text-white"><i class="fas fa-ellipsis-h"></i></a></p></div></div>`;
 
 const galleryTitle = "Federico Navarrete — Projects Gallery";
 
@@ -18,7 +11,7 @@ const iconSpan = "<span class='oneLineIcon' style='width: auto;' {0}>{1}</span>"
 let apps, panesOptions, tabsOptions;
 
 window.addEventListener('DOMContentLoaded', () => {
-    fetchData('js/data/translations/en-us/external/apps.min.json')
+    fetchData('js/i18n/en-us/apps.min.json')
     .then(data => {
         apps = data.apps;
         panesOptions = data.panesOptions;
