@@ -776,6 +776,14 @@
                 "text": "Ads",
                 "icon": "ad.svg"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_notification",
+                "icon": "message-badge.svg",
+                "tooltip": "Notifications"
+              }
             ]
           ],
           "order": 6
@@ -856,6 +864,14 @@
                 "id": "id_ads",
                 "text": "Ads",
                 "icon": "ad.svg"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_notification",
+                "icon": "message-badge.svg",
+                "tooltip": "Notifications"
               }
             ]
           ],
@@ -938,6 +954,14 @@
                 "text": "Ads",
                 "icon": "ad.svg"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_notification",
+                "icon": "message-badge.svg",
+                "tooltip": "Notifications"
+              }
             ]
           ],
           "order": 6
@@ -1018,6 +1042,14 @@
                 "id": "id_ads",
                 "text": "Ads",
                 "icon": "ad.svg"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_notification",
+                "icon": "message-badge.svg",
+                "tooltip": "Notifications"
               }
             ]
           ],
