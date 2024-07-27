@@ -31,7 +31,14 @@
                 "icon": "material_design_lite.svg"
               }
             ],
-            "mdi mdi-xamarin",
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -47,6 +54,14 @@
                 "id": "id_TV",
                 "icon": "mdi mdi-television",
                 "tooltip": "Android TV"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
               }
             ],
             [
@@ -84,6 +99,30 @@
                 "icon": "mdi mdi-bitbucket",
                 "tooltip": "Bitbucket"
               }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_json",
+                "icon": "mdi mdi-code-json",
+                "tooltip": "JSON/Web Service"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_text_speech",
+                "icon": "speaker-message.svg",
+                "tooltip": "Text to speech"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_notification",
+                "icon": "message-badge.svg",
+                "tooltip": "Notifications"
+              }
             ]
           ],
           "order": 1
@@ -91,7 +130,7 @@
         {
           "yearStart": 2018,
           "yearEnd": null,
-          "mainTech": "windows10",
+          "mainTech": "windows11",
           "isSupported": true,
           "storeLink": "bit.ly/36Ug2EC",
           "preview": "bit.ly/3BDz2VS",
@@ -111,6 +150,14 @@
                 "id": "id_material_design_lite",
                 "tooltip": "Material Design Lite",
                 "icon": "material_design_lite.svg"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
               }
             ],
             "mdi mdi-language-csharp",
@@ -364,7 +411,22 @@
           "storeLink": "",
           "preview": "bit.ly/3xYvATA",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows10",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows 10"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -372,6 +434,14 @@
                 "id": "id_uwp",
                 "text": "UWP",
                 "tooltip": "Universal Windows Platform"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_inApp",
+                "icon": "mdi mdi-currency-usd",
+                "tooltip": "In-App Purchases"
               }
             ],
             "fab fa-html5",
@@ -690,7 +760,15 @@
               }
             ],
             "fab fa-git",
-            "mdi mdi-github"
+            "mdi mdi-github",
+            [
+              {
+                "type": "img",
+                "id": "id_ads",
+                "text": "Ads",
+                "icon": "ad.svg"
+              }
+            ]
           ],
           "order": 6
         },
@@ -763,7 +841,15 @@
               }
             ],
             "fab fa-git",
-            "mdi mdi-github"
+            "mdi mdi-github",
+            [
+              {
+                "type": "img",
+                "id": "id_ads",
+                "text": "Ads",
+                "icon": "ad.svg"
+              }
+            ]
           ],
           "order": 6
         },
@@ -836,7 +922,15 @@
               }
             ],
             "fab fa-git",
-            "mdi mdi-github"
+            "mdi mdi-github",
+            [
+              {
+                "type": "img",
+                "id": "id_ads",
+                "text": "Ads",
+                "icon": "ad.svg"
+              }
+            ]
           ],
           "order": 6
         },
@@ -909,7 +1003,15 @@
               }
             ],
             "fab fa-git",
-            "mdi mdi-github"
+            "mdi mdi-github",
+            [
+              {
+                "type": "img",
+                "id": "id_ads",
+                "text": "Ads",
+                "icon": "ad.svg"
+              }
+            ]
           ],
           "order": 6
         }
@@ -938,7 +1040,14 @@
                 "tooltip": "Material Design"
               }
             ],
-            "mdi mdi-xamarin",
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -985,7 +1094,23 @@
                 "tooltip": "Bitbucket"
               }
             ],
-            "mdi mdi-google-ads"
+            "mdi mdi-google-ads",
+            [
+              {
+                "type": "img",
+                "id": "id_text_speech",
+                "icon": "speaker-message.svg",
+                "tooltip": "Text to speech"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ]
           ],
           "order": 2
         },
@@ -1053,7 +1178,23 @@
                 "tooltip": "Bitbucket"
               }
             ],
-            "mdi mdi-google-ads"
+            "mdi mdi-google-ads",
+            [
+              {
+                "type": "img",
+                "id": "id_text_speech",
+                "icon": "speaker-message.svg",
+                "tooltip": "Text to speech"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ]
           ],
           "order": 2
         },
@@ -1121,7 +1262,23 @@
                 "tooltip": "Bitbucket"
               }
             ],
-            "mdi mdi-google-ads"
+            "mdi mdi-google-ads",
+            [
+              {
+                "type": "img",
+                "id": "id_text_speech",
+                "icon": "speaker-message.svg",
+                "tooltip": "Text to speech"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ]
           ],
           "order": 2
         },
@@ -1204,6 +1361,22 @@
                 "text": "Ads",
                 "icon": "ad.svg"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_text_speech",
+                "icon": "speaker-message.svg",
+                "tooltip": "Text to speech"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
             ]
           ],
           "order": 2
@@ -1211,12 +1384,27 @@
         {
           "yearStart": 2015,
           "yearEnd": 2022,
-          "mainTech": "windows10",
+          "mainTech": "windows10Mobile",
           "isSupported": false,
           "storeLink": "bit.ly/2V4goFY",
           "preview": "bit.ly/3yfklGk",
           "technologies": [
-            "fab fa-microsoft",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows10Mobile",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows 10 &amp; Mobile"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -1279,6 +1467,22 @@
                 "text": "Ads",
                 "icon": "ad.svg"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_text_speech",
+                "icon": "speaker-message.svg",
+                "tooltip": "Text to speech"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_phones",
+                "tooltip": "Small screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
             ]
           ],
           "order": 2
@@ -1291,7 +1495,22 @@
           "storeLink": "",
           "preview": "bit.ly/37085xu",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows8",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows 8.x"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -1333,7 +1552,22 @@
           "storeLink": "",
           "preview": "bit.ly/3iHkTyk",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows7",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows Phone 7.x &amp; 8.x"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -1388,7 +1622,14 @@
                 "tooltip": "Material Design"
               }
             ],
-            "mdi mdi-xamarin",
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -1458,7 +1699,15 @@
                 "tooltip": "YouTube tutorials"
               }
             ],
-            "fas fa-route"
+            "fas fa-route",
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ]
           ],
           "order": 3
         },
@@ -1548,7 +1797,15 @@
                 "tooltip": "YouTube tutorials"
               }
             ],
-            "fas fa-route"
+            "fas fa-route",
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ]
           ],
           "order": 3
         },
@@ -1653,7 +1910,15 @@
                 "tooltip": "YouTube tutorials"
               }
             ],
-            "fas fa-route"
+            "fas fa-route",
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ]
           ],
           "order": 3
         },
@@ -1744,19 +2009,42 @@
                 "tooltip": "YouTube tutorials"
               }
             ],
-            "fas fa-route"
+            "fas fa-route",
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ]
           ],
           "order": 3
         },
         {
           "yearStart": 2015,
           "yearEnd": 2022,
-          "mainTech": "windows10",
+          "mainTech": "windows10Mobile",
           "isSupported": false,
           "storeLink": "bit.ly/3i1nX9l",
           "preview": "bit.ly/3eRddIy",
           "technologies": [
-            "fab fa-microsoft",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows10Mobile",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows 10 &amp; Mobile"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -1839,6 +2127,14 @@
                 "text": "Ads",
                 "icon": "ad.svg"
               }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_phones",
+                "tooltip": "Small screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
             ]
           ],
           "order": 3
@@ -1851,7 +2147,22 @@
           "storeLink": "",
           "preview": "bit.ly/2VaQpwJ",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows7",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows Phone 7.x &amp; 8.x"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -1932,7 +2243,14 @@
           "preview": "bit.ly/3wWGzvu",
           "technologies": [
             "mdi mdi-android",
-            "mdi mdi-xamarin",
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -1993,7 +2311,15 @@
                 "tooltip": "Google Play Services"
               }
             ],
-            "mdi mdi-google-ads"
+            "mdi mdi-google-ads",
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ]
           ],
           "order": 4
         },
@@ -2081,6 +2407,14 @@
                 "text": "Ads",
                 "icon": "ad.svg"
               }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
             ]
           ],
           "order": 4
@@ -2155,7 +2489,15 @@
                 "tooltip": "Google Play Services"
               }
             ],
-            "mdi mdi-google-ads"
+            "mdi mdi-google-ads",
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ]
           ],
           "order": 4
         },
@@ -2229,19 +2571,42 @@
                 "tooltip": "Google Play Services"
               }
             ],
-            "mdi mdi-google-ads"
+            "mdi mdi-google-ads",
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ]
           ],
           "order": 4
         },
         {
           "yearStart": 2015,
           "yearEnd": 2022,
-          "mainTech": "windows10",
+          "mainTech": "windows10Mobile",
           "isSupported": false,
           "storeLink": "bit.ly/36ZaRTW",
           "preview": "bit.ly/3i1in6O",
           "technologies": [
-            "fab fa-microsoft",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows10Mobile",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows 10 &amp; Mobile"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -2317,6 +2682,14 @@
                 "text": "Ads",
                 "icon": "ad.svg"
               }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_phones",
+                "tooltip": "Small screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
             ]
           ],
           "order": 4
@@ -2389,11 +2762,26 @@
           "isSupported": false,
           "preview": "bit.ly/3BADtkq",
           "technologies": [
-            "mdi mdi-cellphone",
+            [
+              {
+                "type": "icon",
+                "id": "id_smartphone_opt",
+                "tooltip": "Smartphones optimized",
+                "icon": "mdi mdi-cellphone"
+              }
+            ],
             "fab fa-html5",
             "fab fa-css3-alt",
             "fab fa-js-square",
             "mdi mdi-jquery",
+            [
+              {
+                "type": "img",
+                "id": "id_jMobile",
+                "tooltip": "jQuery Mobile",
+                "icon": "jMobile.svg"
+              }
+            ],
             [
               {
                 "type": "icon",
@@ -2448,7 +2836,22 @@
           "storeLink": "",
           "preview": "bit.ly/3eS3HoK",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows7",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows Phone 7.x &amp; 8.x"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -2495,11 +2898,26 @@
           "isSupported": false,
           "preview": "bit.ly/3ztwc40",
           "technologies": [
-            "mdi mdi-cellphone",
+            [
+              {
+                "type": "icon",
+                "id": "id_smartphone_opt",
+                "tooltip": "Smartphones optimized",
+                "icon": "mdi mdi-cellphone"
+              }
+            ],
             "fab fa-html5",
             "fab fa-css3-alt",
             "fab fa-js-square",
             "mdi mdi-jquery",
+            [
+              {
+                "type": "img",
+                "id": "id_jMobile",
+                "tooltip": "jQuery Mobile",
+                "icon": "jMobile.svg"
+              }
+            ],
             [
               {
                 "type": "icon",
@@ -2540,12 +2958,27 @@
         {
           "yearStart": 2015,
           "yearEnd": 2016,
-          "mainTech": "windows10",
+          "mainTech": "windows10Mobile",
           "isSupported": false,
           "storeLink": "",
           "preview": "bit.ly/3ePpuNM",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows10Mobile",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows 10 &amp; Mobile"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -2617,9 +3050,9 @@
             ],
             [
               {
-                "type": "icon",
+                "type": "img",
                 "id": "id_voiceR",
-                "icon": "mdi mdi-account-tie-voice",
+                "icon": "microphone-message.svg",
                 "tooltip": "Voice recognition"
               }
             ],
@@ -2639,6 +3072,14 @@
                 "icon": "mdi mdi-bitbucket",
                 "tooltip": "Bitbucket"
               }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_phones",
+                "tooltip": "Small screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
             ]
           ],
           "order": 2
@@ -2653,9 +3094,9 @@
       "edition": [
         {
           "yearStart": 2019,
-          "yearEnd": null,
+          "yearEnd": 2024,
           "mainTech": "android",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "bit.ly/2W5qiHN",
           "preview": "",
           "technologies": [
@@ -2684,9 +3125,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2024,
           "mainTech": "android_samsung",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "galaxy.store/fstories",
           "preview": "",
           "technologies": [
@@ -2715,9 +3156,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2024,
           "mainTech": "android_huawei",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "bit.ly/3K1vTn3",
           "preview": "",
           "technologies": [
@@ -2755,12 +3196,20 @@
         {
           "yearStart": 2015,
           "yearEnd": null,
-          "mainTech": "windows10",
+          "mainTech": "windows11",
           "isSupported": true,
           "storeLink": "bit.ly/3BLy1vh",
           "preview": "bit.ly/3yfldL6",
           "technologies": [
             "fab fa-microsoft",
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -2828,9 +3277,9 @@
             ],
             [
               {
-                "type": "icon",
+                "type": "img",
                 "id": "id_voiceR",
-                "icon": "mdi mdi-account-tie-voice",
+                "icon": "microphone-message.svg",
                 "tooltip": "Voice recognition"
               }
             ],
@@ -2910,12 +3359,20 @@
         {
           "yearStart": 2016,
           "yearEnd": null,
-          "mainTech": "windows10",
+          "mainTech": "windows11",
           "isSupported": true,
           "storeLink": "bit.ly/3BAlVEY",
           "preview": "bit.ly/3yfldL6",
           "technologies": [
             "fab fa-microsoft",
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -2991,9 +3448,9 @@
             ],
             [
               {
-                "type": "icon",
+                "type": "img",
                 "id": "id_voiceR",
-                "icon": "mdi mdi-account-tie-voice",
+                "icon": "microphone-message.svg",
                 "tooltip": "Voice recognition"
               }
             ],
@@ -3081,12 +3538,27 @@
         {
           "yearStart": 2015,
           "yearEnd": 2016,
-          "mainTech": "windows10",
+          "mainTech": "windows10Mobile",
           "isSupported": false,
           "storeLink": "",
           "preview": "bit.ly/3i3S5Bb",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows10Mobile",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows 10 &amp; Mobile"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -3152,6 +3624,14 @@
                 "icon": "mdi mdi-bitbucket",
                 "tooltip": "Bitbucket"
               }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_phones",
+                "tooltip": "Small screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
             ]
           ],
           "order": 3
@@ -3167,12 +3647,27 @@
         {
           "yearStart": 2013,
           "yearEnd": 2014,
-          "mainTech": "windows10",
+          "mainTech": "windows10Mobile",
           "isSupported": false,
           "storeLink": "bit.ly/36YeWaS",
           "preview": "bit.ly/36VHthc",
           "technologies": [
-            "fab fa-microsoft",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows10Mobile",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows 10 &amp; Mobile"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -3231,6 +3726,14 @@
                 "id": "id_bitbucket",
                 "icon": "mdi mdi-bitbucket",
                 "tooltip": "Bitbucket"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_phones",
+                "tooltip": "Small screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
               }
             ]
           ],
@@ -3341,7 +3844,14 @@
           "storeLink": "",
           "preview": "bit.ly/3BBOD8w",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows7",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows Phone 7.x &amp; 8.x"
+              }
+            ],
             "mdi mdi-cordova",
             "fab fa-html5",
             "fab fa-css3-alt",
@@ -3395,7 +3905,22 @@
           "storeLink": "",
           "preview": "bit.ly/3BBOB0o",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows7",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows Phone 7.x &amp; 8.x"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -3459,7 +3984,22 @@
           "storeLink": "",
           "preview": "bit.ly/3i2na8d",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "icon",
+                "id": "id_windows7",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows Phone 7.x &amp; 8.x"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -3883,11 +4423,26 @@
           "isSupported": false,
           "preview": "bit.ly/2TwgyW7",
           "technologies": [
-            "mdi mdi-cellphone",
+            [
+              {
+                "type": "icon",
+                "id": "id_smartphone_opt",
+                "tooltip": "Smartphones optimized",
+                "icon": "mdi mdi-cellphone"
+              }
+            ],
             "fab fa-html5",
             "fab fa-css3-alt",
             "fab fa-js-square",
             "mdi mdi-jquery",
+            [
+              {
+                "type": "img",
+                "id": "id_jMobile",
+                "tooltip": "jQuery Mobile",
+                "icon": "jMobile.svg"
+              }
+            ],
             "fab fa-git",
             [
               {
@@ -3916,7 +4471,14 @@
           "storeLink": "",
           "preview": "bit.ly/36XLLEN",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "img",
+                "id": "id_windowsXP",
+                "icon": "windowsXP.svg",
+                "tooltip": "Windows XP"
+              }
+            ],
             [
               {
                 "type": "text",
@@ -3953,7 +4515,14 @@
           "storeLink": "",
           "preview": "bit.ly/3x3UfoD",
           "technologies": [
-            "mdi mdi-microsoft-windows",
+            [
+              {
+                "type": "img",
+                "id": "id_windowsXP",
+                "icon": "windowsXP.svg",
+                "tooltip": "Windows XP"
+              }
+            ],
             [
               {
                 "type": "text",
@@ -4608,6 +5177,22 @@
           "link": "bit.ly/3iLSOpw",
           "preview": "",
           "technologies": [
+            [
+              {
+                "type": "icon",
+                "id": "id_windows10Mobile",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows 10 &amp; Mobile"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_dot_net_plus",
+                "tooltip": ".NET",
+                "icon": "net.svg"
+              }
+            ],
             "mdi mdi-language-csharp",
             [
               {
@@ -5203,16 +5788,20 @@
               "subTitle": "<i class='mdi mdi-android'></i> Android"
             },
             {
+              "id": "unsupportedWindows10Mobile",
+              "subTitle": "<i class='fab fa-windows'></i> Windows 10 &amp; Mobile"
+            },
+            {
               "id": "unsupportedWindows10",
               "subTitle": "<i class='fab fa-windows'></i> Windows 10"
             },
             {
               "id": "unsupportedWindows8",
-              "subTitle": "<i class='fab fa-windows'></i> Windows 8+"
+              "subTitle": "<i class='fab fa-windows'></i> Windows 8.x"
             },
             {
               "id": "unsupportedWindowsPhone",
-              "subTitle": "<i class='fab fa-windows'></i> Windows Phone 7 &amp; 8+"
+              "subTitle": "<i class='fab fa-windows'></i> Windows Phone 7.x &amp; 8.x"
             },
             {
               "id": "unsupportedWeb",
@@ -5220,7 +5809,7 @@
             },
             {
               "id": "unsupportedVB",
-              "subTitle": "<i class='fab fa-windows'></i> Windows XP"
+              "subTitle": "<img class='icons' src='img/icons/windowsXP.svg' /> Windows XP"
             }
           ]
         },
@@ -5237,7 +5826,7 @@
             },
             {
               "id": "unsupportedUwpLibStore",
-              "subTitle": "<i class='fab fa-microsoft'></i> Windows 11"
+              "subTitle": "<i class='mdi mdi-microsoft-windows'></i> Windows 10 &amp; Mobile"
             }
           ]
         }

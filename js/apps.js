@@ -37,8 +37,8 @@ function load() {
     let androidSamsungSupported = [];
     let androidAmazonSupported = [];
     let androidSupportedTechs = [];
-    let w10Supported = [];
-    let w10SupportedTechs = [];
+    let w11Supported = [];
+    let w11SupportedTechs = [];
     let webSupported = [];
     let webSupportedTechs = [];
     let nugetSupported = [];
@@ -47,6 +47,7 @@ function load() {
     let outLibSupported = [];
 
     let androidUnsupported = [];
+    let w10UnsupportedMobile = [];
     let w10Unsupported = [];
     let wXPUnsupported = [];
     let wpUnsupported = [];
@@ -78,11 +79,13 @@ function load() {
 
         filterElem(apps[item], 'android_amazon', true, androidAmazonSupported);
 
-        filterElem(apps[item], 'windows10', true, w10Supported);
+        filterElem(apps[item], 'windows11', true, w11Supported);
 
         filterElem(apps[item], 'android', false, androidUnsupported);
 
         filterElem(apps[item], 'windows10', false, w10Unsupported);
+
+        filterElem(apps[item], 'windows10Mobile', false, w10UnsupportedMobile);
 
         filterElem(apps[item], 'windowsPhone', false, wpUnsupported);
 
@@ -113,7 +116,7 @@ function load() {
     setApps(androidHuaweiSupported.sort(sortByProperty('order')), "huaweiStore", androidSupportedTechs, customIconsArray);
     setApps(androidSamsungSupported.sort(sortByProperty('order')), "samsungStore", androidSupportedTechs, customIconsArray);
     setApps(androidAmazonSupported.sort(sortByProperty('order')), "amazonStore", androidSupportedTechs, customIconsArray);
-    setApps(w10Supported.sort(sortByProperty('order')), "msStore", w10SupportedTechs, customIconsArray);
+    setApps(w11Supported.sort(sortByProperty('order')), "msStore", w11SupportedTechs, customIconsArray);
     setApps(webSupported.sort(sortByProperty('order')), "webStore", webSupportedTechs, customIconsArray);
     setApps(nugetSupported.sort(sortByProperty('order')), "nugetsStore", libsSupportedTechs, customIconsArray);
     setApps(jsLibSupported.sort(sortByProperty('order')), "jsLibStore", libsSupportedTechs, customIconsArray);
@@ -123,6 +126,7 @@ function load() {
     setApps(androidUnsupported.sort(sortByProperty('order')), "unsupportedAndroid", unsupportedTechs, customIconsArray);
     setApps(w8Unsupported.sort(sortByProperty('order')), "unsupportedWindows8", unsupportedTechs, customIconsArray);
     setApps(w10Unsupported.sort(sortByProperty('order')), "unsupportedWindows10", unsupportedTechs, customIconsArray);
+    setApps(w10UnsupportedMobile.sort(sortByProperty('order')), "unsupportedWindows10Mobile", unsupportedTechs, customIconsArray);
     setApps(wpUnsupported.sort(sortByProperty('order')), "unsupportedWindowsPhone", unsupportedTechs, customIconsArray);
     setApps(webUnsupported.sort(sortByProperty('order')), "unsupportedWeb", unsupportedTechs, customIconsArray);
     setApps(wXPUnsupported.sort(sortByProperty('order')), "unsupportedVB", unsupportedTechs, customIconsArray);
@@ -132,7 +136,7 @@ function load() {
     setApps(uwpLibUnsupported.sort(sortByProperty('order')), "unsupportedUwpLibStore", libsSupportedTechs, customIconsArray);
 
     setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
-    setTechUsed(w10SupportedTechs, "techsMSStore", customIconsArray);
+    setTechUsed(w11SupportedTechs, "techsMSStore", customIconsArray);
     setTechUsed(webSupportedTechs, "techsWebStore", customIconsArray);
     setTechUsed(unsupportedTechs, "techsOldStore", customIconsArray);
     setTechUsed(libsSupportedTechs, "techsLibsStore", customIconsArray);
