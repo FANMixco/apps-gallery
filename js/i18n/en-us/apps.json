@@ -123,6 +123,14 @@
                 "icon": "message-badge.svg",
                 "tooltip": "Notifications"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_ai",
+                "tooltip": "Open AI",
+                "icon": "openai.svg"
+              }
             ]
           ],
           "order": 1
@@ -3815,6 +3823,14 @@
             "fab fa-css3-alt",
             "fab fa-js-square",
             "mdi mdi-jquery",
+            [
+              {
+                "type": "img",
+                "id": "id_jMobile",
+                "tooltip": "jQuery Mobile",
+                "icon": "jMobile.svg"
+              }
+            ],
             "mdi mdi-google-maps",
             "fab fa-git",
             [
@@ -4435,6 +4451,14 @@
             "fab fa-css3-alt",
             "fab fa-js-square",
             "mdi mdi-jquery",
+            [
+              {
+                "type": "img",
+                "id": "id_jMobile",
+                "tooltip": "jQuery Mobile",
+                "icon": "jMobile.svg"
+              }
+            ],
             [
               {
                 "type": "img",
@@ -5127,7 +5151,7 @@
               {
                 "type": "img",
                 "id": "id_ai",
-                "text": "open ai",
+                "tooltip": "Open AI",
                 "icon": "openai.svg"
               }
             ]
@@ -5431,7 +5455,7 @@
               {
                 "type": "img",
                 "id": "id_ai",
-                "text": "open ai",
+                "tooltip": "Open AI",
                 "icon": "openai.svg"
               }
             ]
