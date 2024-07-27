@@ -2709,7 +2709,7 @@
                 "tooltip": "Calculus and/or Statistics"
               }
             ],
-            "mdi mdi-chart-scatter-plot",
+            "fas fa-chart-bar",
             [
               {
                 "type": "icon",
@@ -2929,7 +2929,7 @@
                 "tooltip": "XAML"
               }
             ],
-            "fas fa-chart-pie",
+            "fas fa-chart-bar",
             "fab fa-git",
             [
               {
@@ -2978,7 +2978,7 @@
                 "tooltip": "JSON/Web Service"
               }
             ],
-            "fas fa-chart-pie",
+            "fas fa-chart-bar",
             [
               {
                 "type": "mix-left-icon",
@@ -3362,7 +3362,6 @@
               }
             ],
             "mdi mdi-crosshairs-gps",
-            "fas fa-chart-pie",
             "fas fa-chart-bar",
             [
               {
@@ -3533,7 +3532,6 @@
               }
             ],
             "mdi mdi-crosshairs-gps",
-            "fas fa-chart-pie",
             "fas fa-chart-bar",
             [
               {
@@ -3667,7 +3665,7 @@
               }
             ],
             "mdi mdi-crosshairs-gps",
-            "fas fa-chart-pie",
+            "fas fa-chart-bar",
             "fab fa-git",
             [
               {
@@ -4555,7 +4553,7 @@
               }
             ],
             "mdi mdi-upload",
-            "mdi mdi-file-chart"
+            "fas fa-chart-bar"
           ],
           "order": 1
         }
@@ -4598,7 +4596,7 @@
                 "icon": "fas fa-database"
               }
             ],
-            "mdi mdi-file-chart"
+            "fas fa-chart-bar"
           ],
           "order": 2
         }
