@@ -18,6 +18,22 @@
             [
               {
                 "type": "icon",
+                "id": "id_TV",
+                "icon": "mdi mdi-television",
+                "tooltip": "Android TV"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ],
+            [
+              {
+                "type": "icon",
                 "id": "id_material",
                 "icon": "mdi mdi-material-design",
                 "tooltip": "Material Design"
@@ -46,30 +62,6 @@
                 "id": "id_iDB",
                 "text": "<sub>IndexedDB</sub>",
                 "icon": "fas fa-database"
-              }
-            ],
-            [
-              {
-                "type": "icon",
-                "id": "id_TV",
-                "icon": "mdi mdi-television",
-                "tooltip": "Android TV"
-              }
-            ],
-            [
-              {
-                "type": "icon",
-                "id": "id_tablets",
-                "tooltip": "Large screens optimized",
-                "icon": "mdi mdi-tablet-cellphone"
-              }
-            ],
-            [
-              {
-                "type": "icon",
-                "id": "id_inApp",
-                "icon": "mdi mdi-currency-usd",
-                "tooltip": "In-App Purchases"
               }
             ],
             "fab fa-html5",
@@ -130,6 +122,22 @@
                 "id": "id_ai",
                 "tooltip": "Open AI",
                 "icon": "openai.svg"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_gamefication",
+                "icon": "fas fa-gamepad",
+                "tooltip": "Gamefication"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_inApp",
+                "icon": "mdi mdi-currency-usd",
+                "tooltip": "In-App Purchases"
               }
             ]
           ],
