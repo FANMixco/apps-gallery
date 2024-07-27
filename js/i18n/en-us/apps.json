@@ -4459,14 +4459,6 @@
                 "icon": "jMobile.svg"
               }
             ],
-            [
-              {
-                "type": "img",
-                "id": "id_jMobile",
-                "tooltip": "jQuery Mobile",
-                "icon": "jMobile.svg"
-              }
-            ],
             "fab fa-git",
             [
               {
