@@ -139,7 +139,8 @@
                 "icon": "mdi mdi-currency-usd",
                 "tooltip": "In-App Purchases"
               }
-            ]
+            ],
+            "mdi mdi-vibrate"
           ],
           "order": 1
         },
@@ -288,8 +289,7 @@
                 "icon": "mdi mdi-bitbucket",
                 "tooltip": "Bitbucket"
               }
-            ],
-            "mdi mdi-google-analytics"
+            ]
           ],
           "order": 1
         },
@@ -563,7 +563,8 @@
                 "icon": "mdi mdi-bitbucket",
                 "tooltip": "Bitbucket"
               }
-            ]
+            ],
+            "mdi mdi-vibrate"
           ],
           "order": 1
         },
@@ -629,7 +630,8 @@
                 "icon": "mdi mdi-bitbucket",
                 "tooltip": "Bitbucket"
               }
-            ]
+            ],
+            "mdi mdi-vibrate"
           ],
           "order": 1
         },
@@ -695,7 +697,8 @@
                 "icon": "mdi mdi-bitbucket",
                 "tooltip": "Bitbucket"
               }
-            ]
+            ],
+            "mdi mdi-vibrate"
           ],
           "order": 1
         }
