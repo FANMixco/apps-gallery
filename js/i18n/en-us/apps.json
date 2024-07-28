@@ -148,7 +148,15 @@
                 "tooltip": "In-App Purchases"
               }
             ],
-            "mdi mdi-vibrate"
+            "mdi mdi-vibrate",
+            [
+              {
+                "type": "icon",
+                "id": "id_play_services",
+                "icon": "mdi mdi-puzzle",
+                "tooltip": "Google Play Services"
+              }
+            ]
           ],
           "order": 1
         },
@@ -1924,7 +1932,7 @@
               {
                 "type": "icon",
                 "id": "id_petal_maps",
-                "icon": "fas fa-map-marked-alt",
+                "icon": "mdi mdi-map-marker",
                 "tooltip": "Petal Maps"
               }
             ],
