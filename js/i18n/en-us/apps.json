@@ -26,6 +26,14 @@
             [
               {
                 "type": "icon",
+                "id": "id_Car",
+                "icon": "mdi mdi-car",
+                "tooltip": "Android Auto"
+              }
+            ],
+            [
+              {
+                "type": "icon",
                 "id": "id_tablets",
                 "tooltip": "Large screens optimized",
                 "icon": "mdi mdi-tablet-cellphone"
