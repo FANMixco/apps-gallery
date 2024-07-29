@@ -256,8 +256,24 @@
                 "icon": "ad.svg"
               }
             ],
-            "mdi mdi-cellphone-sound",
-            "mdi mdi-invert-colors"
+            "mdi mdi-volume-high",
+            "mdi mdi-invert-colors",
+            [
+              {
+                "type": "img",
+                "id": "id_c_plus_plus",
+                "icon": "c-plus-plus.svg",
+                "tooltip": "C++"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_webview2",
+                "icon": "webview2.svg",
+                "tooltip": "Microsoft WebView 2"
+              }
+            ]
           ],
           "order": 1
         },
@@ -387,7 +403,7 @@
                 "icon": "ad.svg"
               }
             ],
-            "mdi mdi-cellphone-sound",
+            "mdi mdi-volume-high",
             "mdi mdi-invert-colors"
           ],
           "order": 1
