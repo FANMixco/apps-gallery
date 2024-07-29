@@ -1416,10 +1416,10 @@
             ],
             [
               {
-                "type": "icon",
+                "type": "text",
                 "id": "id_hms_services",
-                "icon": "mdi mdi-cloud",
-                "tooltip": "Huawei Mobile Services"
+                "text": "HMS",
+                "tooltip": "HMS Core"
               }
             ],
             [
@@ -1956,10 +1956,10 @@
             ],
             [
               {
-                "type": "icon",
+                "type": "text",
                 "id": "id_hms_services",
-                "icon": "mdi mdi-cloud",
-                "tooltip": "Huawei Mobile Services"
+                "text": "HMS",
+                "tooltip": "HMS Core"
               }
             ],
             [
@@ -2462,10 +2462,10 @@
             ],
             [
               {
-                "type": "icon",
+                "type": "text",
                 "id": "id_hms_services",
-                "icon": "mdi mdi-cloud",
-                "tooltip": "Huawei Mobile Services"
+                "text": "HMS",
+                "tooltip": "HMS Core"
               }
             ],
             [
