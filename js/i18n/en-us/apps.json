@@ -156,7 +156,9 @@
                 "icon": "mdi mdi-puzzle",
                 "tooltip": "Google Play Services"
               }
-            ]
+            ],
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors"
           ],
           "order": 1
         },
@@ -253,7 +255,9 @@
                 "text": "Ads",
                 "icon": "ad.svg"
               }
-            ]
+            ],
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors"
           ],
           "order": 1
         },
@@ -306,7 +310,9 @@
                 "tooltip": "Bitbucket"
               }
             ],
-            "mdi mdi-vibrate"
+            "mdi mdi-vibrate",
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors"
           ],
           "order": 1
         },
@@ -380,7 +386,9 @@
                 "text": "Ads",
                 "icon": "ad.svg"
               }
-            ]
+            ],
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors"
           ],
           "order": 1
         },
@@ -432,7 +440,9 @@
             ],
             "fab fa-git",
             "mdi mdi-github",
-            "mdi mdi-google-analytics"
+            "mdi mdi-google-analytics",
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors"
           ],
           "order": 1
         },
@@ -514,7 +524,9 @@
                 "icon": "mdi mdi-bitbucket",
                 "tooltip": "Bitbucket"
               }
-            ]
+            ],
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors"
           ],
           "order": 1
         },
@@ -581,7 +593,9 @@
                 "tooltip": "Bitbucket"
               }
             ],
-            "mdi mdi-vibrate"
+            "mdi mdi-vibrate",
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors"
           ],
           "order": 1
         },
@@ -648,7 +662,9 @@
                 "tooltip": "Bitbucket"
               }
             ],
-            "mdi mdi-vibrate"
+            "mdi mdi-vibrate",
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors"
           ],
           "order": 1
         },
@@ -715,7 +731,9 @@
                 "tooltip": "Bitbucket"
               }
             ],
-            "mdi mdi-vibrate"
+            "mdi mdi-vibrate",
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors"
           ],
           "order": 1
         }
@@ -812,6 +830,16 @@
                 "icon": "message-badge.svg",
                 "tooltip": "Notifications"
               }
+            ],
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors",
+            [
+              {
+                "type": "img",
+                "id": "id_firebase_h",
+                "icon": "firebase_h.svg",
+                "tooltip": "Firebase Hosting"
+              }
             ]
           ],
           "order": 6
@@ -900,6 +928,16 @@
                 "id": "id_notification",
                 "icon": "message-badge.svg",
                 "tooltip": "Notifications"
+              }
+            ],
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors",
+            [
+              {
+                "type": "img",
+                "id": "id_firebase_h",
+                "icon": "firebase_h.svg",
+                "tooltip": "Firebase Hosting"
               }
             ]
           ],
@@ -990,6 +1028,16 @@
                 "icon": "message-badge.svg",
                 "tooltip": "Notifications"
               }
+            ],
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors",
+            [
+              {
+                "type": "img",
+                "id": "id_firebase_h",
+                "icon": "firebase_h.svg",
+                "tooltip": "Firebase Hosting"
+              }
             ]
           ],
           "order": 6
@@ -1078,6 +1126,16 @@
                 "id": "id_notification",
                 "icon": "message-badge.svg",
                 "tooltip": "Notifications"
+              }
+            ],
+            "mdi mdi-cellphone-sound",
+            "mdi mdi-invert-colors",
+            [
+              {
+                "type": "img",
+                "id": "id_firebase_h",
+                "icon": "firebase_h.svg",
+                "tooltip": "Firebase Hosting"
               }
             ]
           ],
@@ -5469,7 +5527,12 @@
             "fab fa-css3-alt",
             "fab fa-js-square",
             "mdi mdi-jquery",
-            "mdi mdi-firebase",
+            [{
+              "type": "img",
+              "id": "id_firebase_db",
+              "icon": "firebase_db.svg",
+              "tooltip": "Firebase Realtime Database"
+            }],
             "fab fa-bootstrap",
             "fab fa-git",
             "mdi mdi-github"
