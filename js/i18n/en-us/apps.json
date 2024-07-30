@@ -5387,7 +5387,24 @@
                 "tooltip": "Multi-language"
               }
             ],
-            "mdi mdi-google-analytics"
+            "mdi mdi-google-analytics",
+            [
+              {
+                "type": "icon",
+                "id": "id_eco",
+                "icon": "mdi mdi-sprout",
+                "tooltip": "Eco-friendly"
+              }
+            ],
+            "mdi mdi-google-maps",
+            [
+              {
+                "type": "icon",
+                "id": "id_json",
+                "icon": "mdi mdi-code-json",
+                "tooltip": "JSON/Web Service"
+              }
+            ]
           ],
           "order": 5
         }
@@ -5415,7 +5432,15 @@
             "fab fa-bootstrap",
             "fab fa-git",
             "mdi mdi-github",
-            "mdi mdi-google-analytics"
+            "mdi mdi-google-analytics",
+            [
+              {
+                "type": "icon",
+                "id": "id_json",
+                "icon": "mdi mdi-code-json",
+                "tooltip": "JSON/Web Service"
+              }
+            ]
           ],
           "order": 6
         }
@@ -5443,7 +5468,15 @@
             "fab fa-bootstrap",
             "fab fa-git",
             "mdi mdi-github",
-            "mdi mdi-google-analytics"
+            "mdi mdi-google-analytics",
+            [
+              {
+                "type": "icon",
+                "id": "id_json",
+                "icon": "mdi mdi-code-json",
+                "tooltip": "JSON/Web Service"
+              }
+            ]
           ],
           "order": 7
         }
@@ -5788,7 +5821,15 @@
             ],
             "fab fa-git",
             "mdi mdi-github",
-            "mdi mdi-google-analytics"
+            "mdi mdi-google-analytics",
+            [
+              {
+                "type": "icon",
+                "id": "id_json",
+                "icon": "mdi mdi-code-json",
+                "tooltip": "JSON/Web Service"
+              }
+            ]
           ],
           "order": 7
         }
