@@ -173,7 +173,8 @@
                 "icon": "fas fa-file-pdf",
                 "tooltip": "PDF export"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 1
         },
@@ -295,7 +296,8 @@
                 "icon": "webview2.svg",
                 "tooltip": "Microsoft WebView 2"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 1
         },
@@ -440,7 +442,8 @@
                 "icon": "mdi mdi-invert-colors",
                 "tooltip": "Dark Mode support"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 1
         },
@@ -501,7 +504,8 @@
                 "icon": "mdi mdi-invert-colors",
                 "tooltip": "Dark Mode support"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 1
         },
@@ -592,7 +596,8 @@
                 "icon": "mdi mdi-invert-colors",
                 "tooltip": "Dark Mode support"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 1
         },
@@ -668,7 +673,8 @@
                 "icon": "mdi mdi-invert-colors",
                 "tooltip": "Dark Mode support"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 1
         },
@@ -744,7 +750,8 @@
                 "icon": "mdi mdi-invert-colors",
                 "tooltip": "Dark Mode support"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 1
         },
@@ -820,7 +827,8 @@
                 "icon": "mdi mdi-invert-colors",
                 "tooltip": "Dark Mode support"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 1
         }
@@ -934,7 +942,8 @@
                 "icon": "firebase_h.svg",
                 "tooltip": "Firebase Hosting"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 6
         },
@@ -1040,7 +1049,8 @@
                 "icon": "firebase_h.svg",
                 "tooltip": "Firebase Hosting"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 6
         },
@@ -1146,7 +1156,8 @@
                 "icon": "firebase_h.svg",
                 "tooltip": "Firebase Hosting"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 6
         },
@@ -1252,7 +1263,8 @@
                 "icon": "firebase_h.svg",
                 "tooltip": "Firebase Hosting"
               }
-            ]
+            ],
+            "mdi mdi-human"
           ],
           "order": 6
         }
@@ -3584,7 +3596,16 @@
                 "icon": "mdi mdi-bitbucket",
                 "tooltip": "Bitbucket"
               }
-            ]
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_notification",
+                "icon": "message-badge.svg",
+                "tooltip": "Notifications"
+              }
+            ],
+            "mdi mdi-human"
           ],
           "order": 5
         }
@@ -3762,7 +3783,16 @@
                 "text": "Ads",
                 "icon": "ad.svg"
               }
-            ]
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_notification",
+                "icon": "message-badge.svg",
+                "tooltip": "Notifications"
+              }
+            ],
+            "mdi mdi-human"
           ],
           "order": 6
         }
