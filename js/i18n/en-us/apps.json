@@ -20,7 +20,7 @@
                 "type": "icon",
                 "id": "id_TV",
                 "icon": "mdi mdi-television",
-                "tooltip": "Android TV"
+                "tooltip": "Android TV support"
               }
             ],
             [
@@ -28,7 +28,15 @@
                 "type": "icon",
                 "id": "id_Car",
                 "icon": "mdi mdi-car",
-                "tooltip": "Android Auto"
+                "tooltip": "Android Auto support"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_CROS",
+                "icon": "fab fa-chrome",
+                "tooltip": "ChromeOS support"
               }
             ],
             [
