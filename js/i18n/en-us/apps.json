@@ -1699,19 +1699,6 @@
                 "tooltip": "XML"
               }
             ],
-            "fab fa-html5",
-            "fab fa-css3-alt",
-            "fab fa-js-square",
-            "mdi mdi-jquery",
-            "fab fa-bootstrap",
-            [
-              {
-                "type": "icon",
-                "id": "id_uTubeTutorials",
-                "icon": "mdi mdi-youtube",
-                "tooltip": "YouTube tutorials"
-              }
-            ],
             "fab fa-git",
             [
               {
@@ -1727,14 +1714,6 @@
                 "id": "id_ads",
                 "text": "Ads",
                 "icon": "ad.svg"
-              }
-            ],
-            [
-              {
-                "type": "img",
-                "id": "id_text_speech",
-                "icon": "speaker-message.svg",
-                "tooltip": "Text to speech"
               }
             ],
             [
