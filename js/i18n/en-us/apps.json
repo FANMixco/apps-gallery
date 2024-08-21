@@ -5427,6 +5427,38 @@
       ]
     },
     {
+      "app": "Simple Rating Dialogue",
+      "link": "bit.ly/3yKcdU3",
+      "description": "A simple rating dialogue based on HTML for collecting feedback for your websites.",
+      "logo": "libs/srating",
+      "edition": [
+        {
+          "yearStart": 2024,
+          "yearEnd": null,
+          "mainTech": "js_lib",
+          "isSupported": true,
+          "storeLink": "bit.ly/4fV2FWT",
+          "preview": "",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-js-square",
+            "fab fa-git",
+            "mdi mdi-github",
+            "fab fa-npm",
+            [
+              {
+                "type": "icon",
+                "id": "id_darkMode",
+                "icon": "mdi mdi-invert-colors",
+                "tooltip": "Dark Mode support"
+              }
+            ]
+          ],
+          "order": 2
+        }
+      ]
+    },
+    {
       "app": "7 Segment OCR",
       "link": "",
       "description": "Class for reading 7 segment displays with C#.",
