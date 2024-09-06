@@ -62,8 +62,9 @@ function load() {
     let customIconsArray = [];
 
     if (!new URLSearchParams(window.location.search).get('isIframe')) {
-        document.getElementById('header').style.display = "block";
-        document.getElementById('header').classList.add("pt-4");
+        const h = document.getElementById('header');
+        h.style.display = "block";
+        h.classList.add("pt-4");
 
         [...document.getElementsByClassName('.gallery-block')].forEach((element) => {
             element.style.paddingTop = '60px';
@@ -133,7 +134,7 @@ function load() {
     setApps(nugetUnsupported.sort(sortByProperty('order')), "unsupportedNuget", unsupportedTechs, customIconsArray);
 
     setApps(jsLibUnsupported.sort(sortByProperty('order')), "unSuppportedJsLibStore", libsSupportedTechs, customIconsArray);
-    setApps(uwpLibUnsupported.sort(sortByProperty('order')), "unsupportedUwpLibStore", libsSupportedTechs, customIconsArray);
+    setApps(uwpLibUnsupported.sort(sortByProperty('order')), "unsupportedUwpLibStore", unsupportedTechs, customIconsArray);
 
     setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
     setTechUsed(w11SupportedTechs, "techsMSStore", customIconsArray);
