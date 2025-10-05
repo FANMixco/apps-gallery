@@ -7,7 +7,7 @@
       "logo": "timer",
       "edition": [
         {
-          "yearStart": 2017,
+          "yearStart": 2018,
           "yearEnd": null,
           "mainTech": "android",
           "isSupported": true,
@@ -26,9 +26,17 @@
             [
               {
                 "type": "icon",
+                "id": "id_XR",
+                "icon": "mdi mdi-sunglasses",
+                "tooltip": "Android XR support"
+              }
+            ],
+            [
+              {
+                "type": "icon",
                 "id": "id_Car",
                 "icon": "mdi mdi-car",
-                "tooltip": "Android Auto support"
+                "tooltip": "Android Automotive support"
               }
             ],
             [
