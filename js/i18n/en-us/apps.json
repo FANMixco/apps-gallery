@@ -50,6 +50,14 @@
             [
               {
                 "type": "icon",
+                "id": "id_eyeblind",
+                "tooltip": "Color blindness optimized",
+                "icon": "mdi mdi-eye-settings-outline"
+              }
+            ],
+            [
+              {
+                "type": "icon",
                 "id": "id_tablets",
                 "tooltip": "Large screens optimized",
                 "icon": "mdi mdi-tablet-cellphone"
