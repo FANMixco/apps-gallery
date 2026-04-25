@@ -5721,10 +5721,10 @@
       "edition": [
         {
           "yearStart": 2020,
-          "yearEnd": null,
+          "yearEnd": 2025,
           "storeLink": "",
           "mainTech": "web",
-          "isSupported": true,
+          "isSupported": false,
           "link": "",
           "preview": "bit.ly/3x1IPSh",
           "technologies": [
