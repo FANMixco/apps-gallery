@@ -5998,6 +5998,178 @@
           "order": 7
         }
       ]
+    },
+        {
+      "app": "QR Generator",
+      "link": "qr-gen.federiconavarrete.com",
+      "description": "Simple QR Generator.",
+      "logo": "qr",
+      "edition": [
+        {
+          "yearStart": 2026,
+          "yearEnd": null,
+          "storeLink": "",
+          "mainTech": "web",
+          "isSupported": true,
+          "link": "",
+          "preview": "",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            "fab fa-git",
+            "mdi mdi-github",
+            "mdi mdi-google-analytics"
+          ],
+          "order": 8
+        }
+      ]
+    },
+	{
+      "app": "Blogs",
+      "link": "blogs.federiconavarrete.com",
+      "description": "Blogs collection.",
+      "logo": "personal",
+      "edition": [
+        {
+          "yearStart": 2025,
+          "yearEnd": null,
+          "storeLink": "",
+          "mainTech": "web",
+          "isSupported": true,
+          "link": "",
+          "preview": "",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            "fab fa-git",
+            "mdi mdi-github",
+            "mdi mdi-google-analytics"
+          ],
+          "order": 9
+        }
+      ]
+    },
+	{
+      "app": "Books",
+      "link": "books.federiconavarrete.com",
+      "description": "Books collection.",
+      "logo": "tstories",
+      "edition": [
+        {
+          "yearStart": 2026,
+          "yearEnd": null,
+          "storeLink": "",
+          "mainTech": "web",
+          "isSupported": true,
+          "link": "",
+          "preview": "",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            "fab fa-git",
+            "mdi mdi-github",
+            "mdi mdi-google-analytics"
+          ],
+          "order": 9
+        }
+      ]
+    },
+	{
+      "app": "Timeless Stories",
+      "link": "tstories.federiconavarrete.com",
+      "description": "Timeless Stories Official Website.",
+      "logo": "tstories",
+      "edition": [
+        {
+          "yearStart": 2024,
+          "yearEnd": null,
+          "storeLink": "",
+          "mainTech": "web",
+          "isSupported": true,
+          "link": "",
+          "preview": "",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            "fab fa-bootstrap",
+            "fas fa-leaf",
+            [
+              {
+                "type": "img",
+                "id": "id_osm",
+                "text": "osm",
+                "icon": "osm.svg"
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "id": "id_pwa",
+                "text": "PWA",
+                "tooltip": "Progressive Web App"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_multiLanguage",
+                "icon": "fas fa-language",
+                "tooltip": "Multi-language"
+              }
+            ],
+            "fab fa-git",
+            "mdi mdi-github",
+            "mdi mdi-google-analytics",
+            [
+              {
+                "type": "icon",
+                "id": "id_json",
+                "icon": "mdi mdi-code-json",
+                "tooltip": "JSON/Web Service"
+              }
+            ]
+          ],
+          "order": 10
+        }
+      ]
+    },
+  	{
+      "app": "Tic-Tac-Toe",
+      "link": "federiconavarrete.com/pages/easter-egg",
+      "description": "Simple Tic-Tac-Toe.",
+      "logo": "xo",
+      "edition": [
+        {
+          "yearStart": 2025,
+          "yearEnd": null,
+          "storeLink": "",
+          "mainTech": "web",
+          "isSupported": true,
+          "link": "",
+          "preview": "",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            "fab fa-git",
+            "mdi mdi-github",
+            "mdi mdi-google-analytics",
+            [
+              {
+                "type": "icon",
+                "id": "id_gamefication",
+                "icon": "fas fa-gamepad",
+                "tooltip": "Gamefication"
+              }
+            ]
+          ],
+          "order": 11
+        }
+      ]
     }
   ],
   "tabsOptions": [
