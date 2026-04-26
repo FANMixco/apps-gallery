@@ -43,19 +43,19 @@ function load() {
     const routes = {
         android: {
             supported: { control: 'playStore', techsUsed: androidSupportedTechs },
-            unsupported: { control: 'unsupportedAndroid', techsUsed: unsupportedTechs, storeTitle: "<i class='mdi mdi-google-play'></i> Play Store" }
+            unsupported: { control: 'unsupportedAndroidPlayStore', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-google-play'></i> Play Store", beforeControl: 'unsupportedWindows10Mobile', sectionControl: 'unsupportedAndroid' }
         },
         android_amazon: {
             supported: { control: 'amazonStore', techsUsed: androidSupportedTechs },
-            unsupported: { control: 'unsupportedAndroidAmazon', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-amazon'></i> Amazon Appstore", beforeControl: 'unsupportedWindows10Mobile' }
+            unsupported: { control: 'unsupportedAndroidAmazon', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-amazon'></i> Amazon Appstore", beforeControl: 'unsupportedWindows10Mobile', sectionControl: 'unsupportedAndroid' }
         },
         android_huawei: {
             supported: { control: 'huaweiStore', techsUsed: androidSupportedTechs },
-            unsupported: { control: 'unsupportedAndroidHuawei', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Huawei AppGallery", beforeControl: 'unsupportedWindows10Mobile' }
+            unsupported: { control: 'unsupportedAndroidHuawei', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Huawei AppGallery", beforeControl: 'unsupportedWindows10Mobile', sectionControl: 'unsupportedAndroid' }
         },
         android_samsung: {
             supported: { control: 'samsungStore', techsUsed: androidSupportedTechs },
-            unsupported: { control: 'unsupportedAndroidSamsung', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Samsung Galaxy Store", beforeControl: 'unsupportedWindows10Mobile' }
+            unsupported: { control: 'unsupportedAndroidSamsung', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Samsung Galaxy Store", beforeControl: 'unsupportedWindows10Mobile', sectionControl: 'unsupportedAndroid' }
         },
         windows11: {
             supported: { control: 'msStore', techsUsed: w11SupportedTechs }
@@ -100,6 +100,7 @@ function load() {
     };
     const appBuckets = [];
     const appBucketsByControl = {};
+    const activeSectionControls = {};
 
     if (!new URLSearchParams(window.location.search).get('isIframe')) {
         const h = document.getElementById('header');
@@ -119,6 +120,7 @@ function load() {
         setApps(appBuckets[bucket].apps.sort(sortByProperty('order')), appBuckets[bucket].control, appBuckets[bucket].techsUsed, customIconsArray);
     }
     hideEmptyControls(getRouteControls());
+    cleanupSectionControls();
 
     setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
     setTechUsed(w11SupportedTechs, "techsMSStore", customIconsArray);
@@ -232,10 +234,10 @@ function load() {
 
     function ensureControl(group) {
         let control = document.getElementById(group.control);
-        if (control !== null) {
-            ensureStoreTitle(control, group);
+        ensureSectionControl(group);
+
+        if (control !== null)
             return;
-        }
 
         if (group.apps.length === 0 || group.title === undefined)
             return;
@@ -250,15 +252,16 @@ function load() {
             techsContainer.insertAdjacentHTML('beforebegin', html);
     }
 
-    function ensureStoreTitle(control, group) {
-        if (group.storeTitle === undefined || group.apps.length === 0)
+    function ensureSectionControl(group) {
+        if (group.sectionControl === undefined || group.apps.length === 0)
             return;
 
-        let heading = control.previousElementSibling;
-        if (heading !== null && heading.getAttribute('data-store-title-for') === group.control)
+        activeSectionControls[group.sectionControl] = true;
+        let sectionControl = document.getElementById(group.sectionControl);
+        if (sectionControl === null)
             return;
 
-        control.insertAdjacentHTML('beforebegin', `<div class="row row-container full-width" data-store-title-for="${group.control}"><h4 class="text-center full-width mt-3">${group.storeTitle}</h4></div>`);
+        sectionControl.style.display = 'none';
     }
 
     function hideEmptyControls(groups) {
@@ -273,6 +276,24 @@ function load() {
             if (heading !== null && heading.classList.contains('row-container'))
                 heading.style.display = 'none';
         }
+    }
+
+    function cleanupSectionControls() {
+        cleanupSectionControl('unsupportedAndroid');
+    }
+
+    function cleanupSectionControl(controlId) {
+        let control = document.getElementById(controlId);
+        if (control === null)
+            return;
+
+        control.style.display = 'none';
+        if (activeSectionControls[controlId])
+            return;
+
+        let heading = control.previousElementSibling;
+        if (heading !== null && heading.classList.contains('row-container'))
+            heading.style.display = 'none';
     }
 
     function getRouteControls() {
