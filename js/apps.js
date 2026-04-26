@@ -32,34 +32,40 @@ function load() {
 
     document.getElementById('galleryFooter').innerHTML += galleryFooter.format(cYear);
 
-    let androidSupported = [];
-    let androidHuaweiSupported = [];
-    let androidSamsungSupported = [];
-    let androidAmazonSupported = [];
     let androidSupportedTechs = [];
-    let w11Supported = [];
     let w11SupportedTechs = [];
-    let webSupported = [];
     let webSupportedTechs = [];
-    let nugetSupported = [];
     let libsSupportedTechs = [];
-    let jsLibSupported = [];
-    let outLibSupported = [];
 
-    let androidUnsupported = [];
-    let w10UnsupportedMobile = [];
-    let w10Unsupported = [];
-    let wXPUnsupported = [];
-    let wpUnsupported = [];
-    let w8Unsupported = [];
-    let webUnsupported = [];
-    let nugetUnsupported = [];
-    let xamarinFormsUnsupported = [];
     let unsupportedTechs = [];
-    let jsLibUnsupported = [];
-    let uwpLibUnsupported = [];
 
     let customIconsArray = [];
+    const appGroups = [
+        { techs: ['android'], isSupported: true, control: 'playStore', techsUsed: androidSupportedTechs, apps: [] },
+        { techs: ['android_huawei'], isSupported: true, control: 'huaweiStore', techsUsed: androidSupportedTechs, apps: [] },
+        { techs: ['android_samsung'], isSupported: true, control: 'samsungStore', techsUsed: androidSupportedTechs, apps: [] },
+        { techs: ['android_amazon'], isSupported: true, control: 'amazonStore', techsUsed: androidSupportedTechs, apps: [] },
+        { techs: ['windows11'], isSupported: true, control: 'msStore', techsUsed: w11SupportedTechs, apps: [] },
+        { techs: ['web'], isSupported: true, control: 'webStore', techsUsed: webSupportedTechs, apps: [] },
+        { techs: ['nuget'], isSupported: true, control: 'nugetsStore', techsUsed: libsSupportedTechs, apps: [] },
+        { techs: ['js_lib'], isSupported: true, control: 'jsLibStore', techsUsed: libsSupportedTechs, apps: [] },
+        { techs: ['out_lib'], isSupported: true, control: 'outLibStore', techsUsed: libsSupportedTechs, apps: [] },
+        { techs: ['android'], isSupported: false, control: 'unsupportedAndroid', techsUsed: unsupportedTechs, apps: [] },
+        { techs: ['android_amazon'], isSupported: false, control: 'unsupportedAndroidAmazon', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-amazon'></i> Amazon Appstore", beforeControl: 'unsupportedWindows10Mobile', apps: [] },
+        { techs: ['android_huawei'], isSupported: false, control: 'unsupportedAndroidHuawei', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Huawei AppGallery", beforeControl: 'unsupportedWindows10Mobile', apps: [] },
+        { techs: ['android_samsung'], isSupported: false, control: 'unsupportedAndroidSamsung', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Samsung Galaxy Store", beforeControl: 'unsupportedWindows10Mobile', apps: [] },
+        { techs: ['windows8'], isSupported: false, control: 'unsupportedWindows8', techsUsed: unsupportedTechs, apps: [] },
+        { techs: ['windows10'], isSupported: false, control: 'unsupportedWindows10', techsUsed: unsupportedTechs, apps: [] },
+        { techs: ['windows10Mobile'], isSupported: false, control: 'unsupportedWindows10Mobile', techsUsed: unsupportedTechs, apps: [] },
+        { techs: ['windowsPhone'], isSupported: false, control: 'unsupportedWindowsPhone', techsUsed: unsupportedTechs, apps: [] },
+        { techs: ['web'], isSupported: false, control: 'unsupportedWeb', techsUsed: unsupportedTechs, apps: [] },
+        { techs: ['windowsXP'], isSupported: false, control: 'unsupportedVB', techsUsed: unsupportedTechs, apps: [] },
+        { techs: ['xamarin_forms'], isSupported: false, control: 'unsupportedXamarinForms', techsUsed: unsupportedTechs, apps: [] },
+        { techs: ['nuget'], isSupported: false, control: 'unsupportedNuget', techsUsed: unsupportedTechs, apps: [] },
+        { techs: ['js_lib'], isSupported: false, control: 'unSuppportedJsLibStore', techsUsed: unsupportedTechs, apps: [] },
+        { techs: ['uwp_lib'], isSupported: false, control: 'unsupportedUwpLibStore', techsUsed: unsupportedTechs, apps: [] },
+        { techs: ['out_lib'], isSupported: false, control: 'unsupportedOutLibStore', techsUsed: unsupportedTechs, title: "<img class='icons' src='img/icons/out.svg' /> OutSystems", apps: [] }
+    ];
 
     if (!new URLSearchParams(window.location.search).get('isIframe')) {
         const h = document.getElementById('header');
@@ -72,69 +78,15 @@ function load() {
     }
 
     for (let item in apps) {
-        filterElem(apps[item], 'android', true, androidSupported);
-
-        filterElem(apps[item], 'android_huawei', true, androidHuaweiSupported);
-
-        filterElem(apps[item], 'android_samsung', true, androidSamsungSupported);
-
-        filterElem(apps[item], 'android_amazon', true, androidAmazonSupported);
-
-        filterElem(apps[item], 'windows11', true, w11Supported);
-
-        filterElem(apps[item], 'android', false, androidUnsupported);
-
-        filterElem(apps[item], 'windows10', false, w10Unsupported);
-
-        filterElem(apps[item], 'windows10Mobile', false, w10UnsupportedMobile);
-
-        filterElem(apps[item], 'windowsPhone', false, wpUnsupported);
-
-        filterElem(apps[item], 'windows8', false, w8Unsupported);
-
-        filterElem(apps[item], 'web', true, webSupported);
-
-        filterElem(apps[item], 'web', false, webUnsupported);
-
-        filterElem(apps[item], 'windowsXP', false, wXPUnsupported);
-
-        filterElem(apps[item], 'nuget', true, nugetSupported);
-
-        filterElem(apps[item], 'js_lib', true, jsLibSupported);
-
-        filterElem(apps[item], 'out_lib', true, outLibSupported);
-
-        filterElem(apps[item], 'nuget', false, nugetUnsupported);
-
-        filterElem(apps[item], 'xamarin_forms', false, xamarinFormsUnsupported);
-
-        filterElem(apps[item], 'uwp_lib', false, uwpLibUnsupported);
-
-        filterElem(apps[item], 'js_lib', false, jsLibUnsupported);
+        for (let group in appGroups)
+            filterElem(apps[item], appGroups[group].techs, appGroups[group].isSupported, appGroups[group].apps);
     }
 
-    setApps(androidSupported.sort(sortByProperty('order')), "playStore", androidSupportedTechs, customIconsArray);
-    setApps(androidHuaweiSupported.sort(sortByProperty('order')), "huaweiStore", androidSupportedTechs, customIconsArray);
-    setApps(androidSamsungSupported.sort(sortByProperty('order')), "samsungStore", androidSupportedTechs, customIconsArray);
-    setApps(androidAmazonSupported.sort(sortByProperty('order')), "amazonStore", androidSupportedTechs, customIconsArray);
-    setApps(w11Supported.sort(sortByProperty('order')), "msStore", w11SupportedTechs, customIconsArray);
-    setApps(webSupported.sort(sortByProperty('order')), "webStore", webSupportedTechs, customIconsArray);
-    setApps(nugetSupported.sort(sortByProperty('order')), "nugetsStore", libsSupportedTechs, customIconsArray);
-    setApps(jsLibSupported.sort(sortByProperty('order')), "jsLibStore", libsSupportedTechs, customIconsArray);
-    setApps(outLibSupported.sort(sortByProperty('order')), "outLibStore", libsSupportedTechs, customIconsArray);
-
-    setApps(xamarinFormsUnsupported.sort(sortByProperty('order')), "unsupportedXamarinForms", unsupportedTechs, customIconsArray);
-    setApps(androidUnsupported.sort(sortByProperty('order')), "unsupportedAndroid", unsupportedTechs, customIconsArray);
-    setApps(w8Unsupported.sort(sortByProperty('order')), "unsupportedWindows8", unsupportedTechs, customIconsArray);
-    setApps(w10Unsupported.sort(sortByProperty('order')), "unsupportedWindows10", unsupportedTechs, customIconsArray);
-    setApps(w10UnsupportedMobile.sort(sortByProperty('order')), "unsupportedWindows10Mobile", unsupportedTechs, customIconsArray);
-    setApps(wpUnsupported.sort(sortByProperty('order')), "unsupportedWindowsPhone", unsupportedTechs, customIconsArray);
-    setApps(webUnsupported.sort(sortByProperty('order')), "unsupportedWeb", unsupportedTechs, customIconsArray);
-    setApps(wXPUnsupported.sort(sortByProperty('order')), "unsupportedVB", unsupportedTechs, customIconsArray);
-    setApps(nugetUnsupported.sort(sortByProperty('order')), "unsupportedNuget", unsupportedTechs, customIconsArray);
-
-    setApps(jsLibUnsupported.sort(sortByProperty('order')), "unSuppportedJsLibStore", libsSupportedTechs, customIconsArray);
-    setApps(uwpLibUnsupported.sort(sortByProperty('order')), "unsupportedUwpLibStore", unsupportedTechs, customIconsArray);
+    for (let group in appGroups) {
+        ensureControl(appGroups[group]);
+        setApps(appGroups[group].apps.sort(sortByProperty('order')), appGroups[group].control, appGroups[group].techsUsed, customIconsArray);
+    }
+    hideEmptyControls(appGroups);
 
     setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
     setTechUsed(w11SupportedTechs, "techsMSStore", customIconsArray);
@@ -246,15 +198,45 @@ function load() {
         }
     }
 
+    function ensureControl(group) {
+        if (document.getElementById(group.control) !== null || group.apps.length === 0 || group.title === undefined)
+            return;
+
+        let html = `<div class="row row-container full-width"><h4 class="text-center full-width mt-3">${group.title}</h4></div><div id="${group.control}" class="row row-container justify-content-center"></div>`;
+        let targetControl = document.getElementById(group.beforeControl);
+        let techsContainer = document.getElementById('techsOldStore');
+
+        if (targetControl !== null && targetControl.previousElementSibling !== null)
+            targetControl.previousElementSibling.insertAdjacentHTML('beforebegin', html);
+        else if (techsContainer !== null)
+            techsContainer.insertAdjacentHTML('beforebegin', html);
+    }
+
+    function hideEmptyControls(groups) {
+        for (let group in groups) {
+            let control = document.getElementById(groups[group].control);
+            if (control === null || control.children.length > 0)
+                continue;
+
+            control.style.display = 'none';
+
+            let heading = control.previousElementSibling;
+            if (heading !== null && heading.classList.contains('row-container'))
+                heading.style.display = 'none';
+        }
+    }
+
     function addTech(techs, tech) {
         if (techs !== undefined)
             techs.push((!Array.isArray(techs)) ? tech.replaceAll(" ", "_").replaceAll("-", "__") : tech);
     }
 
     function filterElem(item, tech, isSupported, array) {
-        let filteredElem = item.edition.filter(x => x.mainTech == tech && x.isSupported === isSupported)[0];
+        let techs = Array.isArray(tech) ? tech : [tech];
+        let filteredElems = item.edition.filter(x => techs.includes(x.mainTech) && x.isSupported === isSupported);
 
-        if (filteredElem !== undefined) array.push(createElem(item, filteredElem));
+        for (let filteredElem in filteredElems)
+            array.push(createElem(item, filteredElems[filteredElem]));
     }
 
     function createElem(item, edition) {

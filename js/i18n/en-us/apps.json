@@ -627,9 +627,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2026,
           "mainTech": "android_huawei",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "bit.ly/3rqoC7w",
           "preview": "bit.ly/3iZaMVZ",
           "technologies": [
@@ -781,9 +781,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2026,
           "mainTech": "android_samsung",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "galaxy.store/tmtimer",
           "preview": "bit.ly/3iZaMVZ",
           "technologies": [
@@ -1080,9 +1080,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2026,
           "mainTech": "android_huawei",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "bit.ly/3l6MM5O",
           "preview": "bit.ly/3iZaMVZ",
           "technologies": [
@@ -1187,9 +1187,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2026,
           "mainTech": "android_samsung",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "galaxy.store/tmtimerl",
           "preview": "bit.ly/3iZaMVZ",
           "technologies": [
@@ -1393,9 +1393,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2026,
           "mainTech": "android_samsung",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "galaxy.store/tipsal",
           "preview": "bit.ly/3mrsIrM",
           "technologies": [
@@ -1561,9 +1561,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2026,
           "mainTech": "android_huawei",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "bit.ly/3eMF251",
           "preview": "bit.ly/3mrsIrM",
           "technologies": [
@@ -2067,9 +2067,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2026,
           "mainTech": "android_huawei",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "bit.ly/3zw36kC",
           "preview": "bit.ly/3ztuEqI",
           "technologies": [
@@ -2180,9 +2180,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2026,
           "mainTech": "android_samsung",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "galaxy.store/lrm",
           "preview": "bit.ly/3ztuEqI",
           "technologies": [
@@ -2581,9 +2581,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2026,
           "mainTech": "android_huawei",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "bit.ly/3iBkjly",
           "preview": "bit.ly/3wWGzvu",
           "technologies": [
@@ -2677,9 +2677,9 @@
         },
         {
           "yearStart": 2021,
-          "yearEnd": null,
+          "yearEnd": 2026,
           "mainTech": "android_samsung",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "galaxy.store/gnow",
           "preview": "bit.ly/3wWGzvu",
           "technologies": [
@@ -5389,9 +5389,9 @@
       "edition": [
         {
           "yearStart": 2024,
-          "yearEnd": null,
+          "yearEnd": 2026,
           "mainTech": "out_lib",
-          "isSupported": true,
+          "isSupported": false,
           "storeLink": "bit.ly/3Tu2Wag",
           "preview": "",
           "technologies": [
