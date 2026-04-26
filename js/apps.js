@@ -40,32 +40,66 @@ function load() {
     let unsupportedTechs = [];
 
     let customIconsArray = [];
-    const appGroups = [
-        { techs: ['android'], isSupported: true, control: 'playStore', techsUsed: androidSupportedTechs, apps: [] },
-        { techs: ['android_huawei'], isSupported: true, control: 'huaweiStore', techsUsed: androidSupportedTechs, apps: [] },
-        { techs: ['android_samsung'], isSupported: true, control: 'samsungStore', techsUsed: androidSupportedTechs, apps: [] },
-        { techs: ['android_amazon'], isSupported: true, control: 'amazonStore', techsUsed: androidSupportedTechs, apps: [] },
-        { techs: ['windows11'], isSupported: true, control: 'msStore', techsUsed: w11SupportedTechs, apps: [] },
-        { techs: ['web'], isSupported: true, control: 'webStore', techsUsed: webSupportedTechs, apps: [] },
-        { techs: ['nuget'], isSupported: true, control: 'nugetsStore', techsUsed: libsSupportedTechs, apps: [] },
-        { techs: ['js_lib'], isSupported: true, control: 'jsLibStore', techsUsed: libsSupportedTechs, apps: [] },
-        { techs: ['out_lib'], isSupported: true, control: 'outLibStore', techsUsed: libsSupportedTechs, apps: [] },
-        { techs: ['android'], isSupported: false, control: 'unsupportedAndroid', techsUsed: unsupportedTechs, apps: [] },
-        { techs: ['android_amazon'], isSupported: false, control: 'unsupportedAndroidAmazon', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-amazon'></i> Amazon Appstore", beforeControl: 'unsupportedWindows10Mobile', apps: [] },
-        { techs: ['android_huawei'], isSupported: false, control: 'unsupportedAndroidHuawei', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Huawei AppGallery", beforeControl: 'unsupportedWindows10Mobile', apps: [] },
-        { techs: ['android_samsung'], isSupported: false, control: 'unsupportedAndroidSamsung', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Samsung Galaxy Store", beforeControl: 'unsupportedWindows10Mobile', apps: [] },
-        { techs: ['windows8'], isSupported: false, control: 'unsupportedWindows8', techsUsed: unsupportedTechs, apps: [] },
-        { techs: ['windows10'], isSupported: false, control: 'unsupportedWindows10', techsUsed: unsupportedTechs, apps: [] },
-        { techs: ['windows10Mobile'], isSupported: false, control: 'unsupportedWindows10Mobile', techsUsed: unsupportedTechs, apps: [] },
-        { techs: ['windowsPhone'], isSupported: false, control: 'unsupportedWindowsPhone', techsUsed: unsupportedTechs, apps: [] },
-        { techs: ['web'], isSupported: false, control: 'unsupportedWeb', techsUsed: unsupportedTechs, apps: [] },
-        { techs: ['windowsXP'], isSupported: false, control: 'unsupportedVB', techsUsed: unsupportedTechs, apps: [] },
-        { techs: ['xamarin_forms'], isSupported: false, control: 'unsupportedXamarinForms', techsUsed: unsupportedTechs, apps: [] },
-        { techs: ['nuget'], isSupported: false, control: 'unsupportedNuget', techsUsed: unsupportedTechs, apps: [] },
-        { techs: ['js_lib'], isSupported: false, control: 'unSuppportedJsLibStore', techsUsed: unsupportedTechs, apps: [] },
-        { techs: ['uwp_lib'], isSupported: false, control: 'unsupportedUwpLibStore', techsUsed: unsupportedTechs, apps: [] },
-        { techs: ['out_lib'], isSupported: false, control: 'unsupportedOutLibStore', techsUsed: unsupportedTechs, title: "<img class='icons' src='img/icons/out.svg' /> OutSystems", apps: [] }
-    ];
+    const routes = {
+        android: {
+            supported: { control: 'playStore', techsUsed: androidSupportedTechs },
+            unsupported: { control: 'unsupportedAndroid', techsUsed: unsupportedTechs, storeTitle: "<i class='mdi mdi-google-play'></i> Play Store" }
+        },
+        android_amazon: {
+            supported: { control: 'amazonStore', techsUsed: androidSupportedTechs },
+            unsupported: { control: 'unsupportedAndroidAmazon', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-amazon'></i> Amazon Appstore", beforeControl: 'unsupportedWindows10Mobile' }
+        },
+        android_huawei: {
+            supported: { control: 'huaweiStore', techsUsed: androidSupportedTechs },
+            unsupported: { control: 'unsupportedAndroidHuawei', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Huawei AppGallery", beforeControl: 'unsupportedWindows10Mobile' }
+        },
+        android_samsung: {
+            supported: { control: 'samsungStore', techsUsed: androidSupportedTechs },
+            unsupported: { control: 'unsupportedAndroidSamsung', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Samsung Galaxy Store", beforeControl: 'unsupportedWindows10Mobile' }
+        },
+        windows11: {
+            supported: { control: 'msStore', techsUsed: w11SupportedTechs }
+        },
+        web: {
+            supported: { control: 'webStore', techsUsed: webSupportedTechs },
+            unsupported: { control: 'unsupportedWeb', techsUsed: unsupportedTechs }
+        },
+        nuget: {
+            supported: { control: 'nugetsStore', techsUsed: libsSupportedTechs },
+            unsupported: { control: 'unsupportedNuget', techsUsed: unsupportedTechs }
+        },
+        js_lib: {
+            supported: { control: 'jsLibStore', techsUsed: libsSupportedTechs },
+            unsupported: { control: 'unSuppportedJsLibStore', techsUsed: unsupportedTechs }
+        },
+        out_lib: {
+            supported: { control: 'outLibStore', techsUsed: libsSupportedTechs },
+            unsupported: { control: 'unsupportedOutLibStore', techsUsed: unsupportedTechs, title: "<img class='icons' src='img/icons/out.svg' /> OutSystems" }
+        },
+        windows8: {
+            unsupported: { control: 'unsupportedWindows8', techsUsed: unsupportedTechs }
+        },
+        windows10: {
+            unsupported: { control: 'unsupportedWindows10', techsUsed: unsupportedTechs }
+        },
+        windows10Mobile: {
+            unsupported: { control: 'unsupportedWindows10Mobile', techsUsed: unsupportedTechs }
+        },
+        windowsPhone: {
+            unsupported: { control: 'unsupportedWindowsPhone', techsUsed: unsupportedTechs }
+        },
+        windowsXP: {
+            unsupported: { control: 'unsupportedVB', techsUsed: unsupportedTechs }
+        },
+        xamarin_forms: {
+            unsupported: { control: 'unsupportedXamarinForms', techsUsed: unsupportedTechs }
+        },
+        uwp_lib: {
+            unsupported: { control: 'unsupportedUwpLibStore', techsUsed: unsupportedTechs }
+        }
+    };
+    const appBuckets = [];
+    const appBucketsByControl = {};
 
     if (!new URLSearchParams(window.location.search).get('isIframe')) {
         const h = document.getElementById('header');
@@ -77,16 +111,14 @@ function load() {
         });
     }
 
-    for (let item in apps) {
-        for (let group in appGroups)
-            filterElem(apps[item], appGroups[group].techs, appGroups[group].isSupported, appGroups[group].apps);
-    }
+    for (let item in apps)
+        addAppToBucket(apps[item]);
 
-    for (let group in appGroups) {
-        ensureControl(appGroups[group]);
-        setApps(appGroups[group].apps.sort(sortByProperty('order')), appGroups[group].control, appGroups[group].techsUsed, customIconsArray);
+    for (let bucket in appBuckets) {
+        ensureControl(appBuckets[bucket]);
+        setApps(appBuckets[bucket].apps.sort(sortByProperty('order')), appBuckets[bucket].control, appBuckets[bucket].techsUsed, customIconsArray);
     }
-    hideEmptyControls(appGroups);
+    hideEmptyControls(getRouteControls());
 
     setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
     setTechUsed(w11SupportedTechs, "techsMSStore", customIconsArray);
@@ -199,7 +231,13 @@ function load() {
     }
 
     function ensureControl(group) {
-        if (document.getElementById(group.control) !== null || group.apps.length === 0 || group.title === undefined)
+        let control = document.getElementById(group.control);
+        if (control !== null) {
+            ensureStoreTitle(control, group);
+            return;
+        }
+
+        if (group.apps.length === 0 || group.title === undefined)
             return;
 
         let html = `<div class="row row-container full-width"><h4 class="text-center full-width mt-3">${group.title}</h4></div><div id="${group.control}" class="row row-container justify-content-center"></div>`;
@@ -210,6 +248,17 @@ function load() {
             targetControl.previousElementSibling.insertAdjacentHTML('beforebegin', html);
         else if (techsContainer !== null)
             techsContainer.insertAdjacentHTML('beforebegin', html);
+    }
+
+    function ensureStoreTitle(control, group) {
+        if (group.storeTitle === undefined || group.apps.length === 0)
+            return;
+
+        let heading = control.previousElementSibling;
+        if (heading !== null && heading.getAttribute('data-store-title-for') === group.control)
+            return;
+
+        control.insertAdjacentHTML('beforebegin', `<div class="row row-container full-width" data-store-title-for="${group.control}"><h4 class="text-center full-width mt-3">${group.storeTitle}</h4></div>`);
     }
 
     function hideEmptyControls(groups) {
@@ -226,17 +275,56 @@ function load() {
         }
     }
 
+    function getRouteControls() {
+        let controls = [];
+        let controlsById = {};
+
+        for (let route in routes) {
+            addRouteControl(controls, controlsById, routes[route].supported);
+            addRouteControl(controls, controlsById, routes[route].unsupported);
+        }
+
+        return controls;
+    }
+
+    function addRouteControl(controls, controlsById, route) {
+        if (route === undefined || controlsById[route.control] !== undefined)
+            return;
+
+        controlsById[route.control] = true;
+        controls.push(route);
+    }
+
     function addTech(techs, tech) {
         if (techs !== undefined)
             techs.push((!Array.isArray(techs)) ? tech.replaceAll(" ", "_").replaceAll("-", "__") : tech);
     }
 
-    function filterElem(item, tech, isSupported, array) {
-        let techs = Array.isArray(tech) ? tech : [tech];
-        let filteredElems = item.edition.filter(x => techs.includes(x.mainTech) && x.isSupported === isSupported);
+    function addAppToBucket(item) {
+        for (let edition in item.edition) {
+            let route = getEditionRoute(item.edition[edition]);
+            if (route !== undefined)
+                getBucket(route).apps.push(createElem(item, item.edition[edition]));
+        }
+    }
 
-        for (let filteredElem in filteredElems)
-            array.push(createElem(item, filteredElems[filteredElem]));
+    function getEditionRoute(edition) {
+        let route = routes[edition.mainTech];
+        if (route === undefined)
+            return undefined;
+
+        return edition.isSupported ? route.supported : route.unsupported;
+    }
+
+    function getBucket(route) {
+        let bucket = appBucketsByControl[route.control];
+        if (bucket === undefined) {
+            bucket = Object.assign({ apps: [] }, route);
+            appBucketsByControl[route.control] = bucket;
+            appBuckets.push(bucket);
+        }
+
+        return bucket;
     }
 
     function createElem(item, edition) {
