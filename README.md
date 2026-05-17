@@ -4,6 +4,16 @@ A simple website for displaying all your Apps and Libraries from Android, Window
 
 ![preview](https://apps.federiconavarrete.com/img/apps_preview.jpg)
 
+## i18n Manager
+
+Run a local editor for the JSON language files in `js/i18n`:
+
+```bash
+npm run i18n:manager
+```
+
+Then open `http://localhost:4173`. The manager edits source JSON files and can generate the matching `*.min.json` files for one language or all languages.
+
 ## Follow me on
 
 |  LinkedIn  |YouTube|Amazon|Goodreads|Instagram|Cyber Prophets|Sharing Your Stories|TikTok|

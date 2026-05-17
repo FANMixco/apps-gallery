@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "i18n:manager": "node tools/i18n-manager/server.js"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "app": "Toastasters Timer",
+      "app": "Toastmasters Timer",
       "link": "tmtimer.federiconavarrete.com",
       "description": "The best Toastmasters Timer for your meetings. It's simple, fast and accurate.",
       "logo": "timer",
@@ -859,7 +859,7 @@
       ]
     },
     {
-      "app": "Toastasters Timer Lite",
+      "app": "Toastmasters Timer Lite",
       "link": "tmtimer.federiconavarrete.com",
       "description": "The best Toastmasters Timer for your meetings. It's simple, fast and accurate.",
       "logo": "tm_lite",
@@ -5740,12 +5740,14 @@
             "fab fa-css3-alt",
             "fab fa-js-square",
             "mdi mdi-jquery",
-            [{
-              "type": "img",
-              "id": "id_firebase_db",
-              "icon": "firebase_db.svg",
-              "tooltip": "Firebase Realtime Database"
-            }],
+            [
+              {
+                "type": "img",
+                "id": "id_firebase_db",
+                "icon": "firebase_db.svg",
+                "tooltip": "Firebase Realtime Database"
+              }
+            ],
             "fab fa-bootstrap",
             "fab fa-git",
             "mdi mdi-github"
@@ -5999,7 +6001,7 @@
         }
       ]
     },
-        {
+    {
       "app": "QR Generator",
       "link": "qr-gen.federiconavarrete.com",
       "description": "Simple QR Generator.",
@@ -6025,7 +6027,7 @@
         }
       ]
     },
-	{
+    {
       "app": "Blogs",
       "link": "blogs.federiconavarrete.com",
       "description": "Blogs collection.",
@@ -6051,7 +6053,7 @@
         }
       ]
     },
-	{
+    {
       "app": "Books",
       "link": "books.federiconavarrete.com",
       "description": "Books collection.",
@@ -6077,7 +6079,7 @@
         }
       ]
     },
-	{
+    {
       "app": "Timeless Stories",
       "link": "tstories.federiconavarrete.com",
       "description": "Timeless Stories Official Website.",
@@ -6137,7 +6139,7 @@
         }
       ]
     },
-  	{
+    {
       "app": "Tic-Tac-Toe",
       "link": "federiconavarrete.com/pages/easter-egg",
       "description": "Simple Tic-Tac-Toe.",

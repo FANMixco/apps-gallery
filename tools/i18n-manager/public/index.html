@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>i18n Manager</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <aside class="sidebar">
+      <header class="brand">
+        <h1>i18n Manager</h1>
+        <p>Edit source JSON and generate minified files.</p>
+      </header>
+
+      <section class="panel">
+        <div class="section-title">
+          <span>Languages</span>
+          <button id="refreshButton" class="icon-button" title="Refresh">R</button>
+        </div>
+        <div id="languages" class="stack"></div>
+        <form id="languageForm" class="inline-form">
+          <input id="languageInput" type="text" placeholder="new language" autocomplete="off">
+          <button title="Add language">+</button>
+        </form>
+      </section>
+
+      <section class="panel files-panel">
+        <div class="section-title">
+          <span>Files</span>
+          <span id="fileCount"></span>
+        </div>
+        <div id="files" class="stack"></div>
+        <form id="fileForm" class="inline-form">
+          <input id="fileInput" type="text" placeholder="new-file.json" autocomplete="off">
+          <button title="Add file">+</button>
+        </form>
+      </section>
+    </aside>
+
+    <main class="workspace">
+      <header class="toolbar">
+        <div>
+          <h2 id="fileTitle">Select a file</h2>
+          <p id="filePath">js/i18n</p>
+        </div>
+        <div class="actions">
+          <button id="rawButton">Raw JSON</button>
+          <button id="validateButton">Validate</button>
+          <button id="minifyLanguageButton">Minify language</button>
+          <button id="minifyAllButton">Minify all</button>
+          <button id="saveButton" class="primary" disabled>Save</button>
+        </div>
+      </header>
+
+      <section class="editor-shell">
+        <div id="treeView" class="tree-view">
+          <div class="tree-header">
+            <strong id="rootLabel">Root</strong>
+            <span id="rootMeta"></span>
+            <button id="addFieldButton">Add field</button>
+          </div>
+          <div id="navigator" class="navigator"></div>
+          <div id="fields" class="fields"></div>
+        </div>
+        <div id="rawView" class="raw-view hidden">
+          <textarea id="rawEditor" spellcheck="false"></textarea>
+        </div>
+      </section>
+
+      <div id="status" class="status" role="status"></div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
