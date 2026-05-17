@@ -6,7 +6,11 @@ const state = {
   raw: "",
   rawMode: false,
   dirty: false,
-  viewPath: null
+  viewPath: null,
+  nestedArrayKey: null,
+  nestedArrayIndex: 0,
+  childArrayKey: null,
+  childArrayIndex: 0
 };
 
 const els = {
@@ -125,6 +129,20 @@ function collectEditableLeaves(value, path = [], rows = []) {
   return rows;
 }
 
+function collectEditableLeavesSkippingArrays(value, path = [], rows = []) {
+  if (value === null || typeof value !== "object") {
+    rows.push({ path, value });
+    return rows;
+  }
+
+  if (Array.isArray(value)) {
+    return rows;
+  }
+
+  Object.keys(value).forEach(key => collectEditableLeavesSkippingArrays(value[key], [...path, key], rows));
+  return rows;
+}
+
 function rootMeta(value) {
   if (Array.isArray(value)) {
     return `Array - ${value.length} items`;
@@ -144,10 +162,29 @@ function topLevelArrays() {
 }
 
 function itemLabel(item, index) {
+  if (typeof item === "string") {
+    return `${index + 1}. ${item}`;
+  }
+
+  if (Array.isArray(item)) {
+    const first = item[0];
+    if (first && typeof first === "object" && !Array.isArray(first)) {
+      const type = first.type || "object";
+      const label = first.tooltip || first.text || first.icon || first.id || type;
+      return `${index + 1}. ${type}: ${String(label).replace(/<[^>]*>/g, "").trim()}`;
+    }
+    return `${index + 1}. Array (${item.length})`;
+  }
+
   if (item && typeof item === "object" && !Array.isArray(item)) {
     const label = item.app || item.name || item.title || item.id || item.mainTitle || item.subTitle;
     if (label) {
       return `${index + 1}. ${String(label).replace(/<[^>]*>/g, "").trim() || "(blank)"}`;
+    }
+    if ("yearStart" in item || "mainTech" in item) {
+      const years = `${item.yearStart ?? "?"}-${item.yearEnd ?? "now"}`;
+      const tech = item.mainTech ? ` ${item.mainTech}` : "";
+      return `${index + 1}. ${years}${tech}`;
     }
   }
 
@@ -189,7 +226,65 @@ function currentView() {
 
 function selectView(path) {
   state.viewPath = path;
+  state.nestedArrayKey = null;
+  state.nestedArrayIndex = 0;
+  state.childArrayKey = null;
+  state.childArrayIndex = 0;
   renderTree();
+}
+
+function directArrays(value) {
+  if (!value || Array.isArray(value) || typeof value !== "object") {
+    return [];
+  }
+
+  return Object.keys(value).filter(key => Array.isArray(value[key]));
+}
+
+function normalizeNestedArray(viewValue) {
+  const arrays = directArrays(viewValue);
+  if (!arrays.length) {
+    state.nestedArrayKey = null;
+    state.nestedArrayIndex = 0;
+    return null;
+  }
+
+  if (!state.nestedArrayKey || !arrays.includes(state.nestedArrayKey)) {
+    state.nestedArrayKey = arrays[0];
+    state.nestedArrayIndex = 0;
+  }
+
+  const items = viewValue[state.nestedArrayKey];
+  state.nestedArrayIndex = Math.max(0, Math.min(state.nestedArrayIndex, items.length - 1));
+  return {
+    arrays,
+    key: state.nestedArrayKey,
+    index: state.nestedArrayIndex,
+    items
+  };
+}
+
+function normalizeChildArray(value) {
+  const arrays = directArrays(value);
+  if (!arrays.length) {
+    state.childArrayKey = null;
+    state.childArrayIndex = 0;
+    return null;
+  }
+
+  if (!state.childArrayKey || !arrays.includes(state.childArrayKey)) {
+    state.childArrayKey = arrays[0];
+    state.childArrayIndex = 0;
+  }
+
+  const items = value[state.childArrayKey];
+  state.childArrayIndex = Math.max(0, Math.min(state.childArrayIndex, items.length - 1));
+  return {
+    arrays,
+    key: state.childArrayKey,
+    index: state.childArrayIndex,
+    items
+  };
 }
 
 function renderNavigator(view) {
@@ -261,6 +356,278 @@ function renderNavigator(view) {
   els.navigator.append(toolbar);
 }
 
+function createFieldRow(row) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "field-row";
+
+  const key = document.createElement("div");
+  key.className = "field-key";
+  const label = row.path[row.path.length - 1] ?? "value";
+  key.innerHTML = `<strong>${label}</strong><code>${formatPath(row.path)}</code>`;
+
+  const value = document.createElement("div");
+  let input;
+  if (typeof row.value === "boolean") {
+    input = document.createElement("select");
+    input.innerHTML = "<option value=\"true\">true</option><option value=\"false\">false</option>";
+    input.value = String(row.value);
+  } else if (typeof row.value === "number") {
+    input = document.createElement("input");
+    input.type = "number";
+    input.value = row.value;
+  } else {
+    input = document.createElement("textarea");
+    input.value = row.value === null ? "null" : row.value;
+  }
+
+  input.addEventListener("input", () => {
+    try {
+      setAtPath(state.parsed, row.path, coerceValue(input.value, row.value));
+      updateRawFromParsed();
+      markDirty();
+      setStatus("Edited. Save when you are ready.");
+    } catch (error) {
+      setStatus(error.message, true);
+    }
+  });
+
+  value.append(input);
+  wrapper.append(key, value);
+  return wrapper;
+}
+
+function appendRows(container, rows, emptyMessage) {
+  if (!rows.length) {
+    const empty = document.createElement("div");
+    empty.className = "empty compact";
+    empty.textContent = emptyMessage;
+    container.append(empty);
+    return;
+  }
+
+  rows.forEach(row => container.append(createFieldRow(row)));
+}
+
+function renderNestedArrays(view) {
+  const nested = normalizeNestedArray(view.value);
+  if (!nested) {
+    return;
+  }
+
+  const shell = document.createElement("section");
+  shell.className = "nested-editor";
+
+  const tabs = document.createElement("div");
+  tabs.className = "nested-tabs";
+  nested.arrays.forEach(key => {
+    const button = document.createElement("button");
+    button.textContent = `${key} (${view.value[key].length})`;
+    button.className = key === nested.key ? "active" : "";
+    button.addEventListener("click", () => {
+      state.nestedArrayKey = key;
+      state.nestedArrayIndex = 0;
+      renderTree();
+    });
+    tabs.append(button);
+  });
+
+  const toolbar = document.createElement("div");
+  toolbar.className = "item-toolbar nested-toolbar";
+
+  const previous = document.createElement("button");
+  previous.textContent = "Previous";
+  previous.disabled = nested.index <= 0;
+  previous.addEventListener("click", () => {
+    state.nestedArrayIndex -= 1;
+    renderTree();
+  });
+
+  const select = document.createElement("select");
+  nested.items.forEach((item, itemIndex) => {
+    const option = document.createElement("option");
+    option.value = String(itemIndex);
+    option.textContent = itemLabel(item, itemIndex);
+    select.append(option);
+  });
+  select.value = String(nested.index);
+  select.addEventListener("change", () => {
+    state.nestedArrayIndex = Number(select.value);
+    renderTree();
+  });
+
+  const next = document.createElement("button");
+  next.textContent = "Next";
+  next.disabled = nested.index >= nested.items.length - 1;
+  next.addEventListener("click", () => {
+    state.nestedArrayIndex += 1;
+    renderTree();
+  });
+
+  const position = document.createElement("span");
+  position.className = "item-position";
+  position.textContent = nested.items.length ? `${nested.index + 1} / ${nested.items.length}` : "0 / 0";
+
+  const title = document.createElement("h3");
+  title.textContent = `${nested.key}[${nested.index}]`;
+
+  const rows = nested.items.length
+    ? collectEditableLeavesSkippingArrays(nested.items[nested.index], [...view.path, nested.key, nested.index]).slice(0, 500)
+    : [];
+
+  toolbar.append(previous, select, next, position);
+  shell.append(tabs, toolbar, title);
+  appendRows(shell, rows, "This nested item has no editable fields yet.");
+  if (nested.items.length) {
+    renderChildArrays(shell, nested.items[nested.index], [...view.path, nested.key, nested.index]);
+  }
+  els.fields.append(shell);
+}
+
+function makeTechnologyTemplate(kind) {
+  if (kind === "class") {
+    return "";
+  }
+  if (kind === "img") {
+    return [{ type: "img", id: "", icon: "", tooltip: "" }];
+  }
+  if (kind === "text") {
+    return [{ type: "text", id: "", text: "", tooltip: "" }];
+  }
+  return [{ type: "icon", id: "", icon: "", tooltip: "" }];
+}
+
+function appendArrayItem(arrayPath, item) {
+  const array = getAtPath(state.parsed, arrayPath);
+  array.push(item);
+  state.childArrayIndex = array.length - 1;
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus("Added item. Save when you are ready.");
+}
+
+function removeArrayItem(arrayPath) {
+  const array = getAtPath(state.parsed, arrayPath);
+  if (!array.length) {
+    return;
+  }
+
+  array.splice(state.childArrayIndex, 1);
+  state.childArrayIndex = Math.max(0, Math.min(state.childArrayIndex, array.length - 1));
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus("Removed item. Save when you are ready.");
+}
+
+function renderChildArrays(parent, value, basePath) {
+  const child = normalizeChildArray(value);
+  if (!child) {
+    return;
+  }
+
+  const shell = document.createElement("section");
+  shell.className = "child-array-editor";
+
+  const tabs = document.createElement("div");
+  tabs.className = "nested-tabs";
+  child.arrays.forEach(key => {
+    const button = document.createElement("button");
+    button.textContent = `${key} (${value[key].length})`;
+    button.className = key === child.key ? "active" : "";
+    button.addEventListener("click", () => {
+      state.childArrayKey = key;
+      state.childArrayIndex = 0;
+      renderTree();
+    });
+    tabs.append(button);
+  });
+
+  const toolbar = document.createElement("div");
+  toolbar.className = "item-toolbar nested-toolbar";
+
+  const previous = document.createElement("button");
+  previous.textContent = "Previous";
+  previous.disabled = child.index <= 0;
+  previous.addEventListener("click", () => {
+    state.childArrayIndex -= 1;
+    renderTree();
+  });
+
+  const select = document.createElement("select");
+  child.items.forEach((item, itemIndex) => {
+    const option = document.createElement("option");
+    option.value = String(itemIndex);
+    option.textContent = itemLabel(item, itemIndex);
+    select.append(option);
+  });
+  select.value = String(child.index);
+  select.addEventListener("change", () => {
+    state.childArrayIndex = Number(select.value);
+    renderTree();
+  });
+
+  const next = document.createElement("button");
+  next.textContent = "Next";
+  next.disabled = child.index >= child.items.length - 1;
+  next.addEventListener("click", () => {
+    state.childArrayIndex += 1;
+    renderTree();
+  });
+
+  const position = document.createElement("span");
+  position.className = "item-position";
+  position.textContent = child.items.length ? `${child.index + 1} / ${child.items.length}` : "0 / 0";
+
+  toolbar.append(previous, select, next, position);
+
+  const addBar = document.createElement("div");
+  addBar.className = "add-bar";
+  const arrayPath = [...basePath, child.key];
+  if (child.key === "technologies") {
+    [
+      ["Class", "class"],
+      ["Icon", "icon"],
+      ["Image", "img"],
+      ["Text", "text"]
+    ].forEach(([label, kind]) => {
+      const button = document.createElement("button");
+      button.textContent = `Add ${label}`;
+      button.addEventListener("click", () => appendArrayItem(arrayPath, makeTechnologyTemplate(kind)));
+      addBar.append(button);
+    });
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove selected";
+    removeButton.className = "danger-button";
+    removeButton.disabled = !child.items.length;
+    removeButton.addEventListener("click", () => removeArrayItem(arrayPath));
+    addBar.append(removeButton);
+  } else {
+    const button = document.createElement("button");
+    button.textContent = "Add item";
+    button.addEventListener("click", () => appendArrayItem(arrayPath, {}));
+    addBar.append(button);
+  }
+
+  const title = document.createElement("h4");
+  title.textContent = `${child.key}[${child.index}]`;
+
+  const currentItem = child.items[child.index];
+  const itemPath = [...arrayPath, child.index];
+  let rows = [];
+  if (Array.isArray(currentItem)) {
+    rows = collectEditableLeaves(currentItem, itemPath).slice(0, 500);
+  } else if (currentItem && typeof currentItem === "object") {
+    rows = collectEditableLeavesSkippingArrays(currentItem, itemPath).slice(0, 500);
+  } else {
+    rows = [{ path: itemPath, value: currentItem }];
+  }
+
+  shell.append(tabs, toolbar, addBar, title);
+  appendRows(shell, rows, "This item has no editable fields yet.");
+  parent.append(shell);
+}
+
 function updateRawFromParsed() {
   state.raw = `${JSON.stringify(state.parsed, null, 2)}\n`;
   els.rawEditor.value = state.raw;
@@ -297,53 +664,28 @@ function renderTree() {
     return;
   }
 
-  const rows = collectEditableLeaves(view.value, view.path).slice(0, 500);
+  const nested = directArrays(view.value);
+  const rows = nested.length
+    ? collectEditableLeavesSkippingArrays(view.value, view.path).slice(0, 500)
+    : collectEditableLeaves(view.value, view.path).slice(0, 500);
+
   if (!rows.length) {
-    els.fields.innerHTML = "<div class=\"empty\">This file has no primitive fields yet.</div>";
-    return;
+    els.fields.innerHTML = "<div class=\"empty\">This item has no direct primitive fields.</div>";
+  } else {
+    const section = document.createElement("section");
+    section.className = "field-section";
+    if (nested.length) {
+      const title = document.createElement("h3");
+      title.textContent = "Fields";
+      section.append(title);
+    }
+    appendRows(section, rows, "This item has no direct primitive fields.");
+    els.fields.append(section);
   }
 
-  rows.forEach(row => {
-    const wrapper = document.createElement("div");
-    wrapper.className = "field-row";
+  renderNestedArrays(view);
 
-    const key = document.createElement("div");
-    key.className = "field-key";
-    const label = row.path[row.path.length - 1] ?? "value";
-    key.innerHTML = `<strong>${label}</strong><code>${formatPath(row.path)}</code>`;
-
-    const value = document.createElement("div");
-    let input;
-    if (typeof row.value === "boolean") {
-      input = document.createElement("select");
-      input.innerHTML = "<option value=\"true\">true</option><option value=\"false\">false</option>";
-      input.value = String(row.value);
-    } else if (typeof row.value === "number") {
-      input = document.createElement("input");
-      input.type = "number";
-      input.value = row.value;
-    } else {
-      input = document.createElement("textarea");
-      input.value = row.value === null ? "null" : row.value;
-    }
-
-    input.addEventListener("input", () => {
-      try {
-        setAtPath(state.parsed, row.path, coerceValue(input.value, row.value));
-        updateRawFromParsed();
-        markDirty();
-        setStatus("Edited. Save when you are ready.");
-      } catch (error) {
-        setStatus(error.message, true);
-      }
-    });
-
-    value.append(input);
-    wrapper.append(key, value);
-    els.fields.append(wrapper);
-  });
-
-  if (collectEditableLeaves(view.value, view.path).length > rows.length) {
+  if (!nested.length && collectEditableLeaves(view.value, view.path).length > rows.length) {
     const note = document.createElement("div");
     note.className = "empty";
     note.textContent = "Showing the first 500 editable values in this item. Use Raw JSON for the full file.";
@@ -383,6 +725,10 @@ async function loadFile(lang, file) {
     state.raw = data.raw;
     state.dirty = false;
     state.viewPath = null;
+    state.nestedArrayKey = null;
+    state.nestedArrayIndex = 0;
+    state.childArrayKey = null;
+    state.childArrayIndex = 0;
     els.fileTitle.textContent = file;
     els.filePath.textContent = data.path;
     els.rawEditor.value = data.raw;
@@ -394,6 +740,10 @@ async function loadFile(lang, file) {
     state.file = file;
     state.parsed = {};
     state.viewPath = null;
+    state.nestedArrayKey = null;
+    state.nestedArrayIndex = 0;
+    state.childArrayKey = null;
+    state.childArrayIndex = 0;
     updateRawFromParsed();
     renderTree();
     markDirty();

@@ -256,7 +256,73 @@ input {
 
 .fields {
   display: grid;
+  gap: 20px;
+}
+
+.field-section,
+.nested-editor {
+  display: grid;
   gap: 14px;
+}
+
+.field-section h3,
+.nested-editor h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.nested-editor,
+.child-array-editor {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.child-array-editor {
+  margin-top: 8px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.44);
+}
+
+.child-array-editor h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.nested-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nested-tabs button.active {
+  background: var(--panel-soft);
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.nested-toolbar {
+  margin-bottom: 2px;
+}
+
+.add-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.add-bar button {
+  min-height: 36px;
+}
+
+.danger-button {
+  color: var(--danger);
+}
+
+.danger-button:hover {
+  border-color: var(--danger);
 }
 
 .field-row {
@@ -309,6 +375,10 @@ input {
   border: 1px dashed var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.5);
+}
+
+.empty.compact {
+  padding: 22px;
 }
 
 .raw-view textarea {
