@@ -1,7 +1,6 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
-const url = require("url");
 
 const rootDir = path.resolve(__dirname, "..", "..");
 const i18nDir = path.join(rootDir, "js", "i18n");
@@ -236,10 +235,11 @@ function serveStatic(req, res, pathname) {
 }
 
 const server = http.createServer((req, res) => {
-  const parsed = url.parse(req.url, true);
+  const parsed = new URL(req.url || "/", `http://${req.headers.host || `localhost:${port}`}`);
+  const query = Object.fromEntries(parsed.searchParams.entries());
 
   if (parsed.pathname.startsWith("/api/")) {
-    handleApi(req, res, parsed.pathname, parsed.query);
+    handleApi(req, res, parsed.pathname, query);
     return;
   }
 

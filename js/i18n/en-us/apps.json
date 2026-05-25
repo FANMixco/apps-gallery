@@ -967,7 +967,15 @@
                 "tooltip": "Firebase Hosting"
               }
             ],
-            "mdi mdi-human"
+            "mdi mdi-human",
+            [
+              {
+                "type": "icon",
+                "id": "id_gamefication",
+                "icon": "fas fa-gamepad",
+                "tooltip": "Gamefication"
+              }
+            ]
           ],
           "order": 6
         },
@@ -1074,7 +1082,15 @@
                 "tooltip": "Firebase Hosting"
               }
             ],
-            "mdi mdi-human"
+            "mdi mdi-human",
+            [
+              {
+                "type": "icon",
+                "id": "id_gamefication",
+                "icon": "fas fa-gamepad",
+                "tooltip": "Gamefication"
+              }
+            ]
           ],
           "order": 6
         },
@@ -6133,6 +6149,14 @@
                 "icon": "mdi mdi-code-json",
                 "tooltip": "JSON/Web Service"
               }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_gamefication",
+                "icon": "fas fa-gamepad",
+                "tooltip": "Gamefication"
+              }
             ]
           ],
           "order": 10
@@ -6170,6 +6194,40 @@
             ]
           ],
           "order": 11
+        }
+      ]
+    },
+    {
+      "app": "Memory Game",
+      "link": "tstories.federiconavarrete.com/memory-game.html",
+      "description": "Official Spanish Mirrors - Memory Game.",
+      "logo": "tstories",
+      "edition": [
+        {
+          "yearStart": 2026,
+          "yearEnd": null,
+          "storeLink": "",
+          "mainTech": "web",
+          "isSupported": true,
+          "link": "",
+          "preview": "",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            "fab fa-git",
+            "mdi mdi-github",
+            "mdi mdi-google-analytics",
+            [
+              {
+                "type": "icon",
+                "id": "id_gamefication",
+                "icon": "fas fa-gamepad",
+                "tooltip": "Gamefication"
+              }
+            ]
+          ],
+          "order": 12
         }
       ]
     }

@@ -195,6 +195,107 @@ function itemLabel(item, index) {
   return `${index + 1}. ${Array.isArray(item) ? "Array" : typeof item}`;
 }
 
+function makeTopLevelItemTemplate(collection) {
+  if (collection === "apps") {
+    return {
+      app: "New app",
+      link: "",
+      description: "",
+      logo: "",
+      edition: [
+        {
+          yearStart: new Date().getFullYear(),
+          yearEnd: null,
+          mainTech: "web",
+          isSupported: true,
+          storeLink: "",
+          preview: "",
+          technologies: [],
+          order: 1
+        }
+      ]
+    };
+  }
+
+  if (collection === "tabsOptions") {
+    return {
+      id: "new-tab",
+      name: "New tab",
+      isVisible: true,
+      isActive: false,
+      order: 999
+    };
+  }
+
+  if (collection === "panesOptions") {
+    return {
+      id: "new-pane",
+      mainTitle: "",
+      divs: [],
+      techsInvolvedId: "",
+      isActive: false,
+      order: 999
+    };
+  }
+
+  return {};
+}
+
+function topLevelItemName(collection) {
+  if (collection === "apps") {
+    return "app";
+  }
+  if (collection === "tabsOptions") {
+    return "tab";
+  }
+  if (collection === "panesOptions") {
+    return "pane";
+  }
+  return "item";
+}
+
+function appendTopLevelItem(collection) {
+  const items = state.parsed?.[collection];
+  if (!Array.isArray(items)) {
+    setStatus(`${collection} is not an array.`, true);
+    return;
+  }
+
+  items.push(makeTopLevelItemTemplate(collection));
+  state.viewPath = [collection, items.length - 1];
+  state.nestedArrayKey = null;
+  state.nestedArrayIndex = 0;
+  state.childArrayKey = null;
+  state.childArrayIndex = 0;
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus(`Added ${topLevelItemName(collection)}. Save when you are ready.`);
+}
+
+function removeTopLevelItem(collection, index) {
+  const items = state.parsed?.[collection];
+  if (!Array.isArray(items) || !items.length) {
+    return;
+  }
+
+  const label = itemLabel(items[index], index);
+  if (!confirm(`Remove ${label}?`)) {
+    return;
+  }
+
+  items.splice(index, 1);
+  state.viewPath = items.length ? [collection, Math.max(0, Math.min(index, items.length - 1))] : [collection];
+  state.nestedArrayKey = null;
+  state.nestedArrayIndex = 0;
+  state.childArrayKey = null;
+  state.childArrayIndex = 0;
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus("Removed item. Save when you are ready.");
+}
+
 function normalizeViewPath() {
   if (!state.parsed) {
     state.viewPath = null;
@@ -321,17 +422,18 @@ function renderNavigator(view) {
 
   const [collection, index] = view.path;
   const items = state.parsed[collection];
-  if (!Array.isArray(items) || !items.length) {
+  if (!Array.isArray(items)) {
     return;
   }
+  const selectedIndex = Number.isInteger(index) ? index : 0;
 
   const toolbar = document.createElement("div");
   toolbar.className = "item-toolbar";
 
   const previous = document.createElement("button");
   previous.textContent = "Previous";
-  previous.disabled = index <= 0;
-  previous.addEventListener("click", () => selectView([collection, index - 1]));
+  previous.disabled = !items.length || selectedIndex <= 0;
+  previous.addEventListener("click", () => selectView([collection, selectedIndex - 1]));
 
   const select = document.createElement("select");
   items.forEach((item, itemIndex) => {
@@ -340,19 +442,30 @@ function renderNavigator(view) {
     option.textContent = itemLabel(item, itemIndex);
     select.append(option);
   });
-  select.value = String(index);
+  select.disabled = !items.length;
+  select.value = String(selectedIndex);
   select.addEventListener("change", () => selectView([collection, Number(select.value)]));
 
   const next = document.createElement("button");
   next.textContent = "Next";
-  next.disabled = index >= items.length - 1;
-  next.addEventListener("click", () => selectView([collection, index + 1]));
+  next.disabled = !items.length || selectedIndex >= items.length - 1;
+  next.addEventListener("click", () => selectView([collection, selectedIndex + 1]));
 
   const position = document.createElement("span");
   position.className = "item-position";
-  position.textContent = `${index + 1} / ${items.length}`;
+  position.textContent = items.length ? `${selectedIndex + 1} / ${items.length}` : "0 / 0";
 
-  toolbar.append(previous, select, next, position);
+  const addButton = document.createElement("button");
+  addButton.textContent = `Add ${topLevelItemName(collection)}`;
+  addButton.addEventListener("click", () => appendTopLevelItem(collection));
+
+  const removeButton = document.createElement("button");
+  removeButton.textContent = "Remove selected";
+  removeButton.className = "danger-button";
+  removeButton.disabled = !items.length;
+  removeButton.addEventListener("click", () => removeTopLevelItem(collection, selectedIndex));
+
+  toolbar.append(previous, select, next, position, addButton, removeButton);
   els.navigator.append(toolbar);
 }
 
@@ -656,6 +769,7 @@ function renderTree() {
 
   document.querySelector("#rootLabel").textContent = viewLabel;
   els.rootMeta.textContent = state.parsed === null ? "" : rootMeta(view.value);
+  els.addFieldButton.textContent = "Add field";
   renderNavigator(view);
   els.fields.innerHTML = "";
 
@@ -834,6 +948,7 @@ els.minifyAllButton.addEventListener("click", async () => {
 
 els.addFieldButton.addEventListener("click", () => {
   const view = currentView();
+
   if (!view.value || Array.isArray(view.value) || typeof view.value !== "object") {
     setStatus("Add field is available for objects.", true);
     return;
