@@ -467,7 +467,15 @@
                 "tooltip": "Dark Mode support"
               }
             ],
-            "mdi mdi-human"
+            "mdi mdi-human",
+            [
+              {
+                "type": "icon",
+                "id": "id_gamefication",
+                "icon": "fas fa-gamepad",
+                "tooltip": "Gamefication"
+              }
+            ]
           ],
           "order": 1
         },
@@ -5583,6 +5591,14 @@
                 "id": "id_json",
                 "icon": "mdi mdi-code-json",
                 "tooltip": "JSON/Web Service"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_gamefication",
+                "icon": "fas fa-gamepad",
+                "tooltip": "Gamefication"
               }
             ]
           ],
