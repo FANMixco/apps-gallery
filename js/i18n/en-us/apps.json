@@ -6027,6 +6027,14 @@
                 "icon": "mdi mdi-code-json",
                 "tooltip": "JSON/Web Service"
               }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_gamefication",
+                "icon": "fas fa-gamepad",
+                "tooltip": "Gamefication"
+              }
             ]
           ],
           "order": 7
@@ -6086,9 +6094,9 @@
       ]
     },
     {
-      "app": "Books",
+      "app": "Books Official Hub",
       "link": "books.federiconavarrete.com",
-      "description": "Books collection.",
+      "description": "Books official hub collection.",
       "logo": "tstories",
       "edition": [
         {
@@ -6105,7 +6113,15 @@
             "fab fa-js-square",
             "fab fa-git",
             "mdi mdi-github",
-            "mdi mdi-google-analytics"
+            "mdi mdi-google-analytics",
+            [
+              {
+                "type": "icon",
+                "id": "id_gamefication",
+                "icon": "fas fa-gamepad",
+                "tooltip": "Gamefication"
+              }
+            ]
           ],
           "order": 9
         }
