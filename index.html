@@ -28,6 +28,7 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <meta name="description" content="Federico Navarrete's - Projects Gallery. A portfolio of Apps, Libraries and Websites.">
       <meta name="keywords" content="Windows Phone,Windows 8,Windows 10,Windows 11,Apps,Play Store,Microsoft Store,Azure,Web,ASP,Java,ASP MVC,Innovation,Gallery,Google Maps,HTML,CSS,JS,jQuery,Android,PhoneGap,Cordova,Visual Basic,C#,Xamarin,Lodzarts,Federico Navarrete">
       <meta name="author" content="Federico Navarrete">
+      <link rel="canonical" href="https://apps.federiconavarrete.com/" />
 
       <!--favicons-->
       <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
@@ -82,17 +83,30 @@ https://goo.gl/forms/JArck4uzbGGmTuG72
       <script src="js/libs/tabGenerator.min.js"></script>
       <script src="js/apps.min.js"></script>
       <script type="application/ld+json">
-         {
-           "@context": "https://schema.org/",
-           "@type": "WebSite",
-           "name": "Federico Navarrete's — Projects Gallery",
-           "url": "https://apps.federiconavarrete.com",
-           "potentialAction": {
-            "@type": "SearchAction",
-            "target": "{search_term_string}",
-            "query-input": "required name=search_term_string"
-           }
+      {
+         "@context": "https://schema.org",
+         "@type": "CollectionPage",
+         "name": "Federico Navarrete's Projects Gallery",
+         "url": "https://apps.federiconavarrete.com",
+         "description": "A portfolio gallery featuring web applications and projects developed by Federico Navarrete.",
+         "publisher": {
+            "@type": "Person",
+            "name": "Federico Navarrete",
+            "url": "https://federiconavarrete.com"
+         },
+         "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+               {
+               "@type": "ListItem",
+               "position": 1,
+               "name": "Toastmasters Timer",
+               "url": "https://tmtimer.federiconavarrete.com"
+               }
+               // Add other projects here in the same format
+            ]
          }
+      }
       </script>
    </body>
 </html>
