@@ -1,0 +1,1120 @@
+{
+  "updatedAt": "2026-07-02T10:21:53.265Z",
+  "count": 115,
+  "technologies": [
+    {
+      "label": ".NET",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_dot_net_plus",
+          "tooltip": ".NET",
+          "icon": "net.svg"
+        }
+      ]
+    },
+    {
+      "label": "<sub>Access</sub>",
+      "kind": "mix-left-icon",
+      "value": [
+        {
+          "type": "mix-left-icon",
+          "id": "id_access",
+          "text": "<sub>Access</sub>",
+          "icon": "fas fa-database"
+        }
+      ]
+    },
+    {
+      "label": "<sub>Azure</sub>",
+      "kind": "mix-left-icon",
+      "value": [
+        {
+          "type": "mix-left-icon",
+          "id": "id_sqlAzure",
+          "text": "<sub>Azure</sub>",
+          "icon": "fas fa-database"
+        }
+      ]
+    },
+    {
+      "label": "<sub>Core</sub>",
+      "kind": "mix-left-icon",
+      "value": [
+        {
+          "type": "mix-left-icon",
+          "id": "id_netCore",
+          "icon": "mdi mdi-dot-net",
+          "text": "<sub>Core</sub>"
+        }
+      ]
+    },
+    {
+      "label": "<sub>Hibernate</sub>",
+      "kind": "mix-left-img",
+      "value": [
+        {
+          "type": "mix-left-img",
+          "id": "id_hibernate",
+          "text": "<sub>Hibernate</sub>",
+          "icon": "orm.svg"
+        }
+      ]
+    },
+    {
+      "label": "<sub>IndexedDB</sub>",
+      "kind": "mix-left-icon",
+      "value": [
+        {
+          "type": "mix-left-icon",
+          "id": "id_iDB",
+          "text": "<sub>IndexedDB</sub>",
+          "icon": "fas fa-database"
+        }
+      ]
+    },
+    {
+      "label": "<sub>maps</sub>",
+      "kind": "mix-left-icon",
+      "value": [
+        {
+          "type": "mix-left-icon",
+          "id": "id_bMaps",
+          "text": "<sub>maps</sub>",
+          "icon": "mdi mdi-microsoft-bing"
+        }
+      ]
+    },
+    {
+      "label": "<sub>MySQL</sub>",
+      "kind": "mix-left-icon",
+      "value": [
+        {
+          "type": "mix-left-icon",
+          "id": "id_mysql",
+          "text": "<sub>MySQL</sub>",
+          "icon": "fas fa-database"
+        }
+      ]
+    },
+    {
+      "label": "<sub>SQL Server</sub>",
+      "kind": "mix-left-icon",
+      "value": [
+        {
+          "type": "mix-left-icon",
+          "id": "id_sqlServer",
+          "text": "<sub>SQL Server</sub>",
+          "icon": "fas fa-database"
+        }
+      ]
+    },
+    {
+      "label": "<sub>SQLite</sub>",
+      "kind": "mix-left-icon",
+      "value": [
+        {
+          "type": "mix-left-icon",
+          "id": "id_sqlite",
+          "text": "<sub>SQLite</sub>",
+          "icon": "fas fa-database"
+        }
+      ]
+    },
+    {
+      "label": "7 segment OCR",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_7segment",
+          "tooltip": "7 segment OCR",
+          "icon": "7segment.svg"
+        }
+      ]
+    },
+    {
+      "label": "Ads",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_ads",
+          "text": "Ads",
+          "icon": "ad.svg"
+        }
+      ]
+    },
+    {
+      "label": "Android Automotive support",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_Car",
+          "icon": "mdi mdi-car",
+          "tooltip": "Android Automotive support"
+        }
+      ]
+    },
+    {
+      "label": "Android TV support",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_TV",
+          "icon": "mdi mdi-television",
+          "tooltip": "Android TV support"
+        }
+      ]
+    },
+    {
+      "label": "Android XR support",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_XR",
+          "icon": "mdi mdi-sunglasses",
+          "tooltip": "Android XR support"
+        }
+      ]
+    },
+    {
+      "label": "asp.svg",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_asp",
+          "icon": "asp.svg"
+        }
+      ]
+    },
+    {
+      "label": "Azure DevOps",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_azureDevOps",
+          "icon": "mdi mdi-microsoft-azure-devops",
+          "tooltip": "Azure DevOps"
+        }
+      ]
+    },
+    {
+      "label": "Bitbucket",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_bitbucket",
+          "icon": "mdi mdi-bitbucket",
+          "tooltip": "Bitbucket"
+        }
+      ]
+    },
+    {
+      "label": "C++",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_c_plus_plus",
+          "icon": "c-plus-plus.svg",
+          "tooltip": "C++"
+        }
+      ]
+    },
+    {
+      "label": "Calculus and/or Statistics",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_calculus",
+          "icon": "fas fa-calculator",
+          "tooltip": "Calculus and/or Statistics"
+        }
+      ]
+    },
+    {
+      "label": "ChromeOS support",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_CROS",
+          "icon": "fab fa-chrome",
+          "tooltip": "ChromeOS support"
+        }
+      ]
+    },
+    {
+      "label": "Color blindness optimized",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_eyeblind",
+          "tooltip": "Color blindness optimized",
+          "icon": "mdi mdi-eye-settings-outline"
+        }
+      ]
+    },
+    {
+      "label": "Cortana",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_cortana",
+          "icon": "mdi mdi-circle-double",
+          "tooltip": "Cortana"
+        }
+      ]
+    },
+    {
+      "label": "Dark Mode support",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_darkMode",
+          "icon": "mdi mdi-invert-colors",
+          "tooltip": "Dark Mode support"
+        }
+      ]
+    },
+    {
+      "label": "Dialog/Modal",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_dialog",
+          "icon": "mdi mdi-message-reply",
+          "tooltip": "Dialog/Modal"
+        }
+      ]
+    },
+    {
+      "label": "Docker",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_docker",
+          "icon": "docker.svg",
+          "tooltip": "Docker",
+          "text": "Docker"
+        }
+      ]
+    },
+    {
+      "label": "e-Textile",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_eTextile",
+          "icon": "mdi mdi-tshirt-crew",
+          "tooltip": "e-Textile"
+        }
+      ]
+    },
+    {
+      "label": "Eco-friendly",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_eco",
+          "icon": "mdi mdi-sprout",
+          "tooltip": "Eco-friendly"
+        }
+      ]
+    },
+    {
+      "label": "Entity Framework Core",
+      "kind": "mix-left-img",
+      "value": [
+        {
+          "type": "mix-left-img",
+          "id": "id_entity",
+          "text": "<sub>Entity</sub>",
+          "icon": "orm.svg",
+          "tooltip": "Entity Framework Core"
+        }
+      ]
+    },
+    {
+      "label": "Excel export",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_excelExport",
+          "icon": "mdi mdi-file-excel-box",
+          "tooltip": "Excel export"
+        }
+      ]
+    },
+    {
+      "label": "fab fa-angular",
+      "kind": "class",
+      "value": "fab fa-angular"
+    },
+    {
+      "label": "fab fa-blogger-b",
+      "kind": "class",
+      "value": "fab fa-blogger-b"
+    },
+    {
+      "label": "fab fa-bootstrap",
+      "kind": "class",
+      "value": "fab fa-bootstrap"
+    },
+    {
+      "label": "fab fa-css3-alt",
+      "kind": "class",
+      "value": "fab fa-css3-alt"
+    },
+    {
+      "label": "fab fa-foursquare",
+      "kind": "class",
+      "value": "fab fa-foursquare"
+    },
+    {
+      "label": "fab fa-git",
+      "kind": "class",
+      "value": "fab fa-git"
+    },
+    {
+      "label": "fab fa-html5",
+      "kind": "class",
+      "value": "fab fa-html5"
+    },
+    {
+      "label": "fab fa-java",
+      "kind": "class",
+      "value": "fab fa-java"
+    },
+    {
+      "label": "fab fa-js-square",
+      "kind": "class",
+      "value": "fab fa-js-square"
+    },
+    {
+      "label": "fab fa-microsoft",
+      "kind": "class",
+      "value": "fab fa-microsoft"
+    },
+    {
+      "label": "fab fa-npm",
+      "kind": "class",
+      "value": "fab fa-npm"
+    },
+    {
+      "label": "fas fa-chart-bar",
+      "kind": "class",
+      "value": "fas fa-chart-bar"
+    },
+    {
+      "label": "fas fa-leaf",
+      "kind": "class",
+      "value": "fas fa-leaf"
+    },
+    {
+      "label": "fas fa-route",
+      "kind": "class",
+      "value": "fas fa-route"
+    },
+    {
+      "label": "fas fa-sms",
+      "kind": "class",
+      "value": "fas fa-sms"
+    },
+    {
+      "label": "Firebase Hosting",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_firebase_h",
+          "icon": "firebase_h.svg",
+          "tooltip": "Firebase Hosting"
+        }
+      ]
+    },
+    {
+      "label": "Firebase Realtime Database",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_firebase_db",
+          "icon": "firebase_db.svg",
+          "tooltip": "Firebase Realtime Database"
+        }
+      ]
+    },
+    {
+      "label": "Gamefication",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_gamefication",
+          "icon": "fas fa-gamepad",
+          "tooltip": "Gamefication"
+        }
+      ]
+    },
+    {
+      "label": "Google Gemini",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_gemini",
+          "icon": "gemini.svg",
+          "tooltip": "Google Gemini",
+          "text": "Google Gemini"
+        }
+      ]
+    },
+    {
+      "label": "Google Play Services",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_play_services",
+          "icon": "mdi mdi-puzzle",
+          "tooltip": "Google Play Services"
+        }
+      ]
+    },
+    {
+      "label": "here",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_here",
+          "text": "here",
+          "icon": "here.svg"
+        }
+      ]
+    },
+    {
+      "label": "HMS Core",
+      "kind": "text",
+      "value": [
+        {
+          "type": "text",
+          "id": "id_hms_services",
+          "text": "HMS",
+          "tooltip": "HMS Core"
+        }
+      ]
+    },
+    {
+      "label": "In-App Purchases",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_inApp",
+          "icon": "mdi mdi-currency-usd",
+          "tooltip": "In-App Purchases"
+        }
+      ]
+    },
+    {
+      "label": "Internet of Things",
+      "kind": "text",
+      "value": [
+        {
+          "type": "text",
+          "id": "id_iot",
+          "text": "IoT",
+          "tooltip": "Internet of Things"
+        }
+      ]
+    },
+    {
+      "label": "jQuery Mobile",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_jMobile",
+          "tooltip": "jQuery Mobile",
+          "icon": "jMobile.svg"
+        }
+      ]
+    },
+    {
+      "label": "JSON/Web Service",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_json",
+          "icon": "mdi mdi-code-json",
+          "tooltip": "JSON/Web Service"
+        }
+      ]
+    },
+    {
+      "label": "jsp.svg",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_jsp",
+          "icon": "jsp.svg"
+        }
+      ]
+    },
+    {
+      "label": "kotlin.svg",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_kotlin",
+          "icon": "kotlin.svg"
+        }
+      ]
+    },
+    {
+      "label": "Large screens optimized",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_tablets",
+          "tooltip": "Large screens optimized",
+          "icon": "mdi mdi-tablet-cellphone"
+        }
+      ]
+    },
+    {
+      "label": "Material Design",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_material",
+          "icon": "mdi mdi-material-design",
+          "tooltip": "Material Design"
+        }
+      ]
+    },
+    {
+      "label": "Material Design Lite",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_material_design_lite",
+          "tooltip": "Material Design Lite",
+          "icon": "material_design_lite.svg"
+        }
+      ]
+    },
+    {
+      "label": "mdi mdi-android",
+      "kind": "class",
+      "value": "mdi mdi-android"
+    },
+    {
+      "label": "mdi mdi-apple-ios",
+      "kind": "class",
+      "value": "mdi mdi-apple-ios"
+    },
+    {
+      "label": "mdi mdi-barcode-scan",
+      "kind": "class",
+      "value": "mdi mdi-barcode-scan"
+    },
+    {
+      "label": "mdi mdi-camera-enhance",
+      "kind": "class",
+      "value": "mdi mdi-camera-enhance"
+    },
+    {
+      "label": "mdi mdi-cellphone-sound",
+      "kind": "class",
+      "value": "mdi mdi-cellphone-sound"
+    },
+    {
+      "label": "mdi mdi-cordova",
+      "kind": "class",
+      "value": "mdi mdi-cordova"
+    },
+    {
+      "label": "mdi mdi-crosshairs-gps",
+      "kind": "class",
+      "value": "mdi mdi-crosshairs-gps"
+    },
+    {
+      "label": "mdi mdi-github",
+      "kind": "class",
+      "value": "mdi mdi-github"
+    },
+    {
+      "label": "mdi mdi-google-ads",
+      "kind": "class",
+      "value": "mdi mdi-google-ads"
+    },
+    {
+      "label": "mdi mdi-google-analytics",
+      "kind": "class",
+      "value": "mdi mdi-google-analytics"
+    },
+    {
+      "label": "mdi mdi-google-maps",
+      "kind": "class",
+      "value": "mdi mdi-google-maps"
+    },
+    {
+      "label": "mdi mdi-human",
+      "kind": "class",
+      "value": "mdi mdi-human"
+    },
+    {
+      "label": "mdi mdi-jquery",
+      "kind": "class",
+      "value": "mdi mdi-jquery"
+    },
+    {
+      "label": "mdi mdi-language-csharp",
+      "kind": "class",
+      "value": "mdi mdi-language-csharp"
+    },
+    {
+      "label": "mdi mdi-language-php",
+      "kind": "class",
+      "value": "mdi mdi-language-php"
+    },
+    {
+      "label": "mdi mdi-language-typescript",
+      "kind": "class",
+      "value": "mdi mdi-language-typescript"
+    },
+    {
+      "label": "mdi mdi-led-on",
+      "kind": "class",
+      "value": "mdi mdi-led-on"
+    },
+    {
+      "label": "mdi mdi-microsoft-azure",
+      "kind": "class",
+      "value": "mdi mdi-microsoft-azure"
+    },
+    {
+      "label": "mdi mdi-ocr",
+      "kind": "class",
+      "value": "mdi mdi-ocr"
+    },
+    {
+      "label": "mdi mdi-upload",
+      "kind": "class",
+      "value": "mdi mdi-upload"
+    },
+    {
+      "label": "mdi mdi-vibrate",
+      "kind": "class",
+      "value": "mdi mdi-vibrate"
+    },
+    {
+      "label": "mdi mdi-volume-high",
+      "kind": "class",
+      "value": "mdi mdi-volume-high"
+    },
+    {
+      "label": "mdi mdi-xamarin",
+      "kind": "class",
+      "value": "mdi mdi-xamarin"
+    },
+    {
+      "label": "Microsoft WebView 2",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_webview2",
+          "icon": "webview2.svg",
+          "tooltip": "Microsoft WebView 2"
+        }
+      ]
+    },
+    {
+      "label": "Multi-language",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_multiLanguage",
+          "icon": "fas fa-language",
+          "tooltip": "Multi-language"
+        }
+      ]
+    },
+    {
+      "label": "Node JS",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_node_js",
+          "icon": "node-js.svg",
+          "tooltip": "Node JS",
+          "text": "Node JS"
+        }
+      ]
+    },
+    {
+      "label": "Notifications",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_notification",
+          "icon": "message-badge.svg",
+          "tooltip": "Notifications"
+        }
+      ]
+    },
+    {
+      "label": "NuGet",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_nuget",
+          "icon": "nuget.svg",
+          "tooltip": "NuGet"
+        }
+      ]
+    },
+    {
+      "label": "Open AI",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_ai",
+          "tooltip": "Open AI",
+          "icon": "openai.svg"
+        }
+      ]
+    },
+    {
+      "label": "Open AI Codex",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_codex",
+          "icon": "codex.svg",
+          "tooltip": "Open AI Codex",
+          "text": "Open AI Codex"
+        }
+      ]
+    },
+    {
+      "label": "osm",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_osm",
+          "text": "osm",
+          "icon": "osm.svg"
+        }
+      ]
+    },
+    {
+      "label": "outsystems",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_out",
+          "text": "outsystems",
+          "icon": "out.svg"
+        }
+      ]
+    },
+    {
+      "label": "PDF export",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_pdfExport",
+          "icon": "fas fa-file-pdf",
+          "tooltip": "PDF export"
+        }
+      ]
+    },
+    {
+      "label": "Petal Maps",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_petal_maps",
+          "icon": "mdi mdi-map-marker",
+          "tooltip": "Petal Maps"
+        }
+      ]
+    },
+    {
+      "label": "Petal Maps",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_petal_maps",
+          "icon": "fas fa-map-marked-alt",
+          "tooltip": "Petal Maps"
+        }
+      ]
+    },
+    {
+      "label": "Progressive Web App",
+      "kind": "text",
+      "value": [
+        {
+          "type": "text",
+          "id": "id_pwa",
+          "text": "PWA",
+          "tooltip": "Progressive Web App"
+        }
+      ]
+    },
+    {
+      "label": "PWA Builder",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_pwa_builder",
+          "tooltip": "PWA Builder",
+          "icon": "pwa.svg"
+        }
+      ]
+    },
+    {
+      "label": "Small screens optimized",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_phones",
+          "tooltip": "Small screens optimized",
+          "icon": "mdi mdi-tablet-cellphone"
+        }
+      ]
+    },
+    {
+      "label": "Smartphones optimized",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_smartphone_opt",
+          "tooltip": "Smartphones optimized",
+          "icon": "mdi mdi-cellphone"
+        }
+      ]
+    },
+    {
+      "label": "Text to speech",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_text_speech",
+          "icon": "speaker-message.svg",
+          "tooltip": "Text to speech"
+        }
+      ]
+    },
+    {
+      "label": "Universal Windows Platform",
+      "kind": "text",
+      "value": [
+        {
+          "type": "text",
+          "id": "id_uwp",
+          "text": "UWP",
+          "tooltip": "Universal Windows Platform"
+        }
+      ]
+    },
+    {
+      "label": "VB.net",
+      "kind": "text",
+      "value": [
+        {
+          "type": "text",
+          "id": "id_vbNet",
+          "text": "VB.net"
+        }
+      ]
+    },
+    {
+      "label": "VB6",
+      "kind": "text",
+      "value": [
+        {
+          "type": "text",
+          "id": "id_vb6",
+          "text": "VB6"
+        }
+      ]
+    },
+    {
+      "label": "Voice recognition",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_voiceR",
+          "icon": "microphone-message.svg",
+          "tooltip": "Voice recognition"
+        }
+      ]
+    },
+    {
+      "label": "Wikipedia API",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_wikipediaAPI",
+          "icon": "fab fa-wikipedia-w",
+          "tooltip": "Wikipedia API"
+        }
+      ]
+    },
+    {
+      "label": "Windows 10",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_windows10",
+          "icon": "mdi mdi-microsoft-windows",
+          "tooltip": "Windows 10"
+        }
+      ]
+    },
+    {
+      "label": "Windows 10 &amp; Mobile",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_windows10Mobile",
+          "icon": "mdi mdi-microsoft-windows",
+          "tooltip": "Windows 10 &amp; Mobile"
+        }
+      ]
+    },
+    {
+      "label": "Windows 8.x",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_windows8",
+          "icon": "mdi mdi-microsoft-windows",
+          "tooltip": "Windows 8.x"
+        }
+      ]
+    },
+    {
+      "label": "Windows Phone 7.x &amp; 8.x",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_windows7",
+          "icon": "mdi mdi-microsoft-windows",
+          "tooltip": "Windows Phone 7.x &amp; 8.x"
+        }
+      ]
+    },
+    {
+      "label": "Windows XP",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_windowsXP",
+          "icon": "windowsXP.svg",
+          "tooltip": "Windows XP"
+        }
+      ]
+    },
+    {
+      "label": "XAML",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_xaml",
+          "icon": "mdi mdi-language-xaml",
+          "tooltip": "XAML"
+        }
+      ]
+    },
+    {
+      "label": "XML",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_xml",
+          "icon": "mdi mdi-xml",
+          "tooltip": "XML"
+        }
+      ]
+    },
+    {
+      "label": "xUnit",
+      "kind": "text",
+      "value": [
+        {
+          "type": "text",
+          "id": "id_xUnit",
+          "text": "xUnit",
+          "tooltip": "xUnit"
+        }
+      ]
+    },
+    {
+      "label": "YouTube tutorials",
+      "kind": "icon",
+      "value": [
+        {
+          "type": "icon",
+          "id": "id_uTubeTutorials",
+          "icon": "mdi mdi-youtube",
+          "tooltip": "YouTube tutorials"
+        }
+      ]
+    }
+  ]
+}

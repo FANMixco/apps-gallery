@@ -4,6 +4,7 @@ const path = require("path");
 
 const rootDir = path.resolve(__dirname, "..", "..");
 const i18nDir = path.join(rootDir, "js", "i18n");
+const technologyCatalogPath = path.join(i18nDir, "technologies.json");
 const publicDir = path.join(__dirname, "public");
 const port = Number(process.env.PORT || 4173);
 
@@ -115,6 +116,102 @@ function parseJson(raw) {
   return JSON.parse(raw);
 }
 
+function readJsonFile(filePath) {
+  return parseJson(fs.readFileSync(filePath, "utf8").replace(/^\uFEFF/, ""));
+}
+
+function technologyLabel(entry) {
+  if (typeof entry === "string") {
+    return entry;
+  }
+
+  if (Array.isArray(entry)) {
+    const first = entry[0];
+    if (first && typeof first === "object" && !Array.isArray(first)) {
+      return first.tooltip || first.text || first.icon || first.id || first.type || "Technology";
+    }
+    return `Array (${entry.length})`;
+  }
+
+  if (entry && typeof entry === "object") {
+    return entry.tooltip || entry.text || entry.icon || entry.id || entry.type || "Technology";
+  }
+
+  return String(entry);
+}
+
+function technologyKind(entry) {
+  if (typeof entry === "string") {
+    return "class";
+  }
+
+  if (Array.isArray(entry)) {
+    const first = entry[0];
+    return first?.type || "group";
+  }
+
+  return entry?.type || typeof entry;
+}
+
+function collectTechnologies(value, found) {
+  if (!value || typeof value !== "object") {
+    return;
+  }
+
+  if (Array.isArray(value)) {
+    value.forEach(item => collectTechnologies(item, found));
+    return;
+  }
+
+  Object.entries(value).forEach(([key, child]) => {
+    if (key === "technologies" && Array.isArray(child)) {
+      child.forEach(entry => {
+        const serialized = JSON.stringify(entry);
+        if (!found.has(serialized)) {
+          found.set(serialized, {
+            label: technologyLabel(entry),
+            kind: technologyKind(entry),
+            value: entry
+          });
+        }
+      });
+      return;
+    }
+
+    collectTechnologies(child, found);
+  });
+}
+
+function refreshTechnologyCatalog() {
+  ensureI18nDir();
+  const found = new Map();
+
+  getOverview().languages.forEach(language => {
+    listJsonFiles(language.name).forEach(file => {
+      collectTechnologies(readJsonFile(sourceFilePath(language.name, file)), found);
+    });
+  });
+
+  const technologies = Array.from(found.values())
+    .sort((a, b) => a.label.localeCompare(b.label) || a.kind.localeCompare(b.kind));
+  const catalog = {
+    updatedAt: new Date().toISOString(),
+    count: technologies.length,
+    technologies
+  };
+
+  fs.writeFileSync(technologyCatalogPath, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
+  return catalog;
+}
+
+function loadTechnologyCatalog() {
+  if (!fs.existsSync(technologyCatalogPath)) {
+    return refreshTechnologyCatalog();
+  }
+
+  return readJsonFile(technologyCatalogPath);
+}
+
 function formatJson(raw) {
   return `${JSON.stringify(parseJson(raw), null, 2)}\n`;
 }
@@ -144,6 +241,21 @@ async function handleApi(req, res, pathname, query) {
   try {
     if (req.method === "GET" && pathname === "/api/i18n") {
       send(res, 200, getOverview());
+      return;
+    }
+
+    if (req.method === "GET" && pathname === "/api/technologies") {
+      send(res, 200, loadTechnologyCatalog());
+      return;
+    }
+
+    if (req.method === "POST" && pathname === "/api/technologies/refresh") {
+      const catalog = refreshTechnologyCatalog();
+      send(res, 200, {
+        ok: true,
+        path: path.relative(rootDir, technologyCatalogPath).replace(/\\/g, "/"),
+        ...catalog
+      });
       return;
     }
 

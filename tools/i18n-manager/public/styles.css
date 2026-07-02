@@ -317,6 +317,57 @@ input {
   min-height: 36px;
 }
 
+.tech-picker {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.tech-picker-header {
+  display: grid;
+  grid-template-columns: auto minmax(220px, 360px);
+  gap: 12px;
+  align-items: center;
+}
+
+.tech-picker-header strong {
+  font-size: 15px;
+}
+
+.tech-picker-header input {
+  min-height: 40px;
+}
+
+.tech-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 220px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.tech-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 10px;
+  border-radius: 999px;
+}
+
+.tech-chip small {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.tech-empty {
+  color: var(--muted);
+}
+
 .danger-button {
   color: var(--danger);
 }
@@ -430,6 +481,10 @@ input {
   }
 
   .tree-header {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-picker-header {
     grid-template-columns: 1fr;
   }
 }

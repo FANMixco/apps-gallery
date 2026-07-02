@@ -3030,7 +3030,16 @@
             ],
             "fab fa-git",
             "mdi mdi-github",
-            "mdi mdi-google-analytics"
+            "mdi mdi-google-analytics",
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ]
           ],
           "order": 2
         },
@@ -5600,6 +5609,42 @@
                 "icon": "fas fa-gamepad",
                 "tooltip": "Gamefication"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_node_js",
+                "icon": "node-js.svg",
+                "tooltip": "Node JS",
+                "text": "Node JS"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_node_js",
+                "icon": "node-js.svg",
+                "tooltip": "Node JS",
+                "text": "Node JS"
+              }
             ]
           ],
           "order": 5
@@ -5635,6 +5680,24 @@
                 "id": "id_json",
                 "icon": "mdi mdi-code-json",
                 "tooltip": "JSON/Web Service"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_node_js",
+                "icon": "node-js.svg",
+                "tooltip": "Node JS",
+                "text": "Node JS"
               }
             ]
           ],
@@ -6035,6 +6098,15 @@
                 "icon": "fas fa-gamepad",
                 "tooltip": "Gamefication"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
             ]
           ],
           "order": 7
@@ -6061,7 +6133,16 @@
             "fab fa-js-square",
             "fab fa-git",
             "mdi mdi-github",
-            "mdi mdi-google-analytics"
+            "mdi mdi-google-analytics",
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ]
           ],
           "order": 8
         }
@@ -6120,6 +6201,15 @@
                 "id": "id_gamefication",
                 "icon": "fas fa-gamepad",
                 "tooltip": "Gamefication"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
               }
             ]
           ],
@@ -6189,6 +6279,24 @@
                 "icon": "fas fa-gamepad",
                 "tooltip": "Gamefication"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_node_js",
+                "icon": "node-js.svg",
+                "tooltip": "Node JS",
+                "text": "Node JS"
+              }
             ]
           ],
           "order": 10
@@ -6257,9 +6365,95 @@
                 "icon": "fas fa-gamepad",
                 "tooltip": "Gamefication"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_node_js",
+                "icon": "node-js.svg",
+                "tooltip": "Node JS",
+                "text": "Node JS"
+              }
             ]
           ],
           "order": 12
+        }
+      ]
+    },
+    {
+      "app": "Career Signal",
+      "link": "github.com/FANMixco/career-signal",
+      "description": "Career Signal Engine reviews CVs and builds evidence-based plans for target jobs.",
+      "logo": "career-signal",
+      "edition": [
+        {
+          "yearStart": 2026,
+          "yearEnd": null,
+          "mainTech": "web",
+          "isSupported": true,
+          "storeLink": "hub.docker.com/r/fanmixco/career-signal",
+          "preview": "",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            [
+              {
+                "type": "img",
+                "id": "id_node_js",
+                "icon": "node-js.svg",
+                "tooltip": "Node JS",
+                "text": "Node JS"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_ai",
+                "tooltip": "Open AI",
+                "icon": "openai.svg"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_gemini",
+                "icon": "gemini.svg",
+                "tooltip": "Google Gemini",
+                "text": "Google Gemini"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_docker",
+                "icon": "docker.svg",
+                "tooltip": "Docker",
+                "text": "Docker"
+              }
+            ],
+            "fab fa-git",
+            "mdi mdi-github"
+          ],
+          "order": 1
         }
       ]
     }

@@ -10,7 +10,8 @@ const state = {
   nestedArrayKey: null,
   nestedArrayIndex: 0,
   childArrayKey: null,
-  childArrayIndex: 0
+  childArrayIndex: 0,
+  techCatalog: []
 };
 
 const els = {
@@ -24,6 +25,7 @@ const els = {
   refreshButton: document.querySelector("#refreshButton"),
   fileTitle: document.querySelector("#fileTitle"),
   filePath: document.querySelector("#filePath"),
+  refreshTechsButton: document.querySelector("#refreshTechsButton"),
   rawButton: document.querySelector("#rawButton"),
   validateButton: document.querySelector("#validateButton"),
   minifyLanguageButton: document.querySelector("#minifyLanguageButton"),
@@ -159,6 +161,10 @@ function topLevelArrays() {
   }
 
   return Object.keys(state.parsed).filter(key => Array.isArray(state.parsed[key]));
+}
+
+function cloneValue(value) {
+  return JSON.parse(JSON.stringify(value));
 }
 
 function itemLabel(item, index) {
@@ -609,6 +615,93 @@ function makeTechnologyTemplate(kind) {
   return [{ type: "icon", id: "", icon: "", tooltip: "" }];
 }
 
+async function loadTechnologyCatalog() {
+  const catalog = await api("/api/technologies");
+  state.techCatalog = Array.isArray(catalog.technologies) ? catalog.technologies : [];
+  return catalog;
+}
+
+function appendTechnologyOption(arrayPath, option) {
+  appendTechnologyItem(arrayPath, cloneValue(option.value));
+}
+
+function technologyKey(item) {
+  return JSON.stringify(item);
+}
+
+function hasTechnology(arrayPath, item) {
+  const array = getAtPath(state.parsed, arrayPath);
+  const nextKey = technologyKey(item);
+  return array.some(existing => technologyKey(existing) === nextKey);
+}
+
+function appendTechnologyItem(arrayPath, item) {
+  if (hasTechnology(arrayPath, item)) {
+    setStatus("That technology is already in this edition.", true);
+    return;
+  }
+
+  appendArrayItem(arrayPath, item);
+}
+
+function renderTechnologyPicker(arrayPath) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "tech-picker";
+
+  const header = document.createElement("div");
+  header.className = "tech-picker-header";
+
+  const title = document.createElement("strong");
+  title.textContent = `Available technologies (${state.techCatalog.length})`;
+
+  const search = document.createElement("input");
+  search.type = "search";
+  search.placeholder = "Filter technologies";
+  search.autocomplete = "off";
+
+  const chips = document.createElement("div");
+  chips.className = "tech-chip-list";
+
+  function renderChips() {
+    const query = search.value.trim().toLowerCase();
+    const matches = state.techCatalog
+      .filter(option => {
+        const haystack = `${option.label} ${option.kind} ${JSON.stringify(option.value)}`.toLowerCase();
+        return !query || haystack.includes(query);
+      })
+      .slice(0, 80);
+
+    chips.innerHTML = "";
+    if (!matches.length) {
+      const empty = document.createElement("span");
+      empty.className = "tech-empty";
+      empty.textContent = "No technologies found.";
+      chips.append(empty);
+      return;
+    }
+
+    matches.forEach(option => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "tech-chip";
+      button.disabled = hasTechnology(arrayPath, option.value);
+      const label = document.createElement("span");
+      label.textContent = option.label;
+      const kind = document.createElement("small");
+      kind.textContent = option.kind;
+      button.append(label, kind);
+      button.addEventListener("click", () => appendTechnologyOption(arrayPath, option));
+      chips.append(button);
+    });
+  }
+
+  search.addEventListener("input", renderChips);
+  header.append(title, search);
+  wrapper.append(header, chips);
+  renderChips();
+  return wrapper;
+}
+
 function appendArrayItem(arrayPath, item) {
   const array = getAtPath(state.parsed, arrayPath);
   array.push(item);
@@ -697,6 +790,7 @@ function renderChildArrays(parent, value, basePath) {
   const addBar = document.createElement("div");
   addBar.className = "add-bar";
   const arrayPath = [...basePath, child.key];
+  let picker = null;
   if (child.key === "technologies") {
     [
       ["Class", "class"],
@@ -706,7 +800,7 @@ function renderChildArrays(parent, value, basePath) {
     ].forEach(([label, kind]) => {
       const button = document.createElement("button");
       button.textContent = `Add ${label}`;
-      button.addEventListener("click", () => appendArrayItem(arrayPath, makeTechnologyTemplate(kind)));
+      button.addEventListener("click", () => appendTechnologyItem(arrayPath, makeTechnologyTemplate(kind)));
       addBar.append(button);
     });
     const removeButton = document.createElement("button");
@@ -715,6 +809,7 @@ function renderChildArrays(parent, value, basePath) {
     removeButton.disabled = !child.items.length;
     removeButton.addEventListener("click", () => removeArrayItem(arrayPath));
     addBar.append(removeButton);
+    picker = renderTechnologyPicker(arrayPath);
   } else {
     const button = document.createElement("button");
     button.textContent = "Add item";
@@ -736,7 +831,11 @@ function renderChildArrays(parent, value, basePath) {
     rows = [{ path: itemPath, value: currentItem }];
   }
 
-  shell.append(tabs, toolbar, addBar, title);
+  shell.append(tabs, toolbar, addBar);
+  if (picker) {
+    shell.append(picker);
+  }
+  shell.append(title);
   appendRows(shell, rows, "This item has no editable fields yet.");
   parent.append(shell);
 }
@@ -946,6 +1045,17 @@ els.minifyAllButton.addEventListener("click", async () => {
   }
 });
 
+els.refreshTechsButton.addEventListener("click", async () => {
+  try {
+    const catalog = await api("/api/technologies/refresh", { method: "POST" });
+    state.techCatalog = Array.isArray(catalog.technologies) ? catalog.technologies : [];
+    renderTree();
+    setStatus(`Updated ${catalog.path} with ${state.techCatalog.length} technologies.`);
+  } catch (error) {
+    setStatus(error.message, true);
+  }
+});
+
 els.addFieldButton.addEventListener("click", () => {
   const view = currentView();
 
@@ -1014,4 +1124,6 @@ els.fileForm.addEventListener("submit", async event => {
 
 els.refreshButton.addEventListener("click", () => refresh(true).catch(error => setStatus(error.message, true)));
 
-refresh(false).catch(error => setStatus(error.message, true));
+loadTechnologyCatalog()
+  .then(() => refresh(false))
+  .catch(error => setStatus(error.message, true));
