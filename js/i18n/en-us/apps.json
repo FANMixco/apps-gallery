@@ -6451,7 +6451,23 @@
               }
             ],
             "fab fa-git",
-            "mdi mdi-github"
+            "mdi mdi-github",
+            [
+              {
+                "type": "img",
+                "id": "id_electron",
+                "icon": "electron.svg",
+                "tooltip": ""
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_windows10",
+                "icon": "mdi mdi-microsoft-windows",
+                "tooltip": "Windows 10"
+              }
+            ]
           ],
           "order": 1
         }
