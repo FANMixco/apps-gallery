@@ -6467,6 +6467,14 @@
                 "icon": "mdi mdi-microsoft-windows",
                 "tooltip": "Windows 10"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_githubactions",
+                "icon": "githubactions.svg",
+                "tooltip": "GitHub Actions"
+              }
             ]
           ],
           "order": 1
