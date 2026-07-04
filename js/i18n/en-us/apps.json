@@ -6039,7 +6039,7 @@
           "storeLink": "",
           "mainTech": "web",
           "isSupported": true,
-          "link": "",
+          "link": "linktree.federiconavarrete.com",
           "preview": "",
           "technologies": [
             "fab fa-html5",
@@ -6423,15 +6423,6 @@
                 "text": "Google Gemini"
               }
             ],
-            [
-              {
-                "type": "img",
-                "id": "id_docker",
-                "icon": "docker.svg",
-                "tooltip": "Docker",
-                "text": "Docker"
-              }
-            ],
             "fab fa-git",
             "mdi mdi-github",
             [
@@ -6530,82 +6521,6 @@
           ],
           "order": 3,
           "link": "github.com/FANMixco/career-signal"
-        },
-        {
-          "yearStart": 2026,
-          "yearEnd": null,
-          "mainTech": "windows11",
-          "isSupported": true,
-          "storeLink": "",
-          "preview": "fanmixco.github.io/career-signal/frontend",
-          "technologies": [
-            "fab fa-html5",
-            "fab fa-css3-alt",
-            "fab fa-js-square",
-            [
-              {
-                "type": "img",
-                "id": "id_node_js",
-                "icon": "node-js.svg",
-                "tooltip": "Node JS",
-                "text": "Node JS"
-              }
-            ],
-            [
-              {
-                "type": "img",
-                "id": "id_ai",
-                "tooltip": "Open AI",
-                "icon": "openai.svg"
-              }
-            ],
-            [
-              {
-                "type": "img",
-                "id": "id_codex",
-                "icon": "codex.svg",
-                "tooltip": "Open AI Codex",
-                "text": "Open AI Codex"
-              }
-            ],
-            [
-              {
-                "type": "img",
-                "id": "id_gemini",
-                "icon": "gemini.svg",
-                "tooltip": "Google Gemini",
-                "text": "Google Gemini"
-              }
-            ],
-            "fab fa-git",
-            "mdi mdi-github",
-            [
-              {
-                "type": "img",
-                "id": "id_electron",
-                "icon": "electron.svg",
-                "tooltip": ""
-              }
-            ],
-            [
-              {
-                "type": "icon",
-                "id": "id_windows10",
-                "icon": "mdi mdi-microsoft-windows",
-                "tooltip": "Windows 10"
-              }
-            ],
-            [
-              {
-                "type": "img",
-                "id": "id_githubactions",
-                "icon": "githubactions.svg",
-                "tooltip": "GitHub Actions"
-              }
-            ]
-          ],
-          "order": 1,
-          "link": ""
         }
       ]
     }

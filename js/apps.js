@@ -386,7 +386,7 @@ function load() {
     function createElem(item, edition) {
         return {
             app: item.app,
-            link: edition.link !== undefined ? edition.link : item.link,
+            link: edition.link || item.link,
             description: item.description,
             logo: item.logo,
             preview: edition.preview,
