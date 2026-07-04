@@ -6401,7 +6401,7 @@
           "mainTech": "web",
           "isSupported": true,
           "storeLink": "hub.docker.com/r/fanmixco/career-signal",
-          "preview": "",
+          "preview": "fanmixco.github.io/career-signal/frontend",
           "technologies": [
             "fab fa-html5",
             "fab fa-css3-alt",
