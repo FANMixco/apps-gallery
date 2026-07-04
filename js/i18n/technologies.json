@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-02T10:21:53.265Z",
-  "count": 115,
+  "updatedAt": "2026-07-04T16:32:55.054Z",
+  "count": 117,
   "technologies": [
     {
       "label": ".NET",
@@ -339,6 +339,18 @@
       ]
     },
     {
+      "label": "electron.svg",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_electron",
+          "icon": "electron.svg",
+          "tooltip": ""
+        }
+      ]
+    },
+    {
       "label": "Entity Framework Core",
       "kind": "mix-left-img",
       "value": [
@@ -471,6 +483,18 @@
           "id": "id_gamefication",
           "icon": "fas fa-gamepad",
           "tooltip": "Gamefication"
+        }
+      ]
+    },
+    {
+      "label": "GitHub Actions",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_githubactions",
+          "icon": "githubactions.svg",
+          "tooltip": "GitHub Actions"
         }
       ]
     },

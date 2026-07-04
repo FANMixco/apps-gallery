@@ -5627,24 +5627,6 @@
                 "tooltip": "Node JS",
                 "text": "Node JS"
               }
-            ],
-            [
-              {
-                "type": "img",
-                "id": "id_codex",
-                "icon": "codex.svg",
-                "tooltip": "Open AI Codex",
-                "text": "Open AI Codex"
-              }
-            ],
-            [
-              {
-                "type": "img",
-                "id": "id_node_js",
-                "icon": "node-js.svg",
-                "tooltip": "Node JS",
-                "text": "Node JS"
-              }
             ]
           ],
           "order": 5
@@ -6391,10 +6373,87 @@
     },
     {
       "app": "Career Signal",
-      "link": "github.com/FANMixco/career-signal",
+      "link": "",
       "description": "Career Signal Engine reviews CVs and builds evidence-based plans for target jobs.",
       "logo": "career-signal",
       "edition": [
+        {
+          "yearStart": 2026,
+          "yearEnd": null,
+          "mainTech": "windowsGithubStore",
+          "isSupported": true,
+          "storeLink": "github.com/FANMixco/career-signal",
+          "preview": "fanmixco.github.io/career-signal/frontend",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            [
+              {
+                "type": "img",
+                "id": "id_node_js",
+                "icon": "node-js.svg",
+                "tooltip": "Node JS",
+                "text": "Node JS"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_ai",
+                "tooltip": "Open AI",
+                "icon": "openai.svg"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_gemini",
+                "icon": "gemini.svg",
+                "tooltip": "Google Gemini",
+                "text": "Google Gemini"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_docker",
+                "icon": "docker.svg",
+                "tooltip": "Docker",
+                "text": "Docker"
+              }
+            ],
+            "fab fa-git",
+            "mdi mdi-github",
+            [
+              {
+                "type": "img",
+                "id": "id_electron",
+                "icon": "electron.svg",
+                "tooltip": ""
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_githubactions",
+                "icon": "githubactions.svg",
+                "tooltip": "GitHub Actions"
+              }
+            ]
+          ],
+          "order": 1,
+          "link": "github.com/FANMixco/career-signal"
+        },
         {
           "yearStart": 2026,
           "yearEnd": null,
@@ -6462,6 +6521,74 @@
             ],
             [
               {
+                "type": "img",
+                "id": "id_githubactions",
+                "icon": "githubactions.svg",
+                "tooltip": "GitHub Actions"
+              }
+            ]
+          ],
+          "order": 3,
+          "link": "github.com/FANMixco/career-signal"
+        },
+        {
+          "yearStart": 2026,
+          "yearEnd": null,
+          "mainTech": "windows11",
+          "isSupported": true,
+          "storeLink": "",
+          "preview": "fanmixco.github.io/career-signal/frontend",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            [
+              {
+                "type": "img",
+                "id": "id_node_js",
+                "icon": "node-js.svg",
+                "tooltip": "Node JS",
+                "text": "Node JS"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_ai",
+                "tooltip": "Open AI",
+                "icon": "openai.svg"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_gemini",
+                "icon": "gemini.svg",
+                "tooltip": "Google Gemini",
+                "text": "Google Gemini"
+              }
+            ],
+            "fab fa-git",
+            "mdi mdi-github",
+            [
+              {
+                "type": "img",
+                "id": "id_electron",
+                "icon": "electron.svg",
+                "tooltip": ""
+              }
+            ],
+            [
+              {
                 "type": "icon",
                 "id": "id_windows10",
                 "icon": "mdi mdi-microsoft-windows",
@@ -6477,7 +6604,8 @@
               }
             ]
           ],
-          "order": 1
+          "order": 1,
+          "link": ""
         }
       ]
     }
@@ -6542,6 +6670,10 @@
             {
               "id": "samsungStore",
               "subTitle": "<i class='mdi mdi-shopping'></i> Samsung Galaxy Store"
+            },
+            {
+              "id": "androidGithubStore",
+              "subTitle": "<i class='mdi mdi-github'></i> GitHub"
             }
           ]
         }
@@ -6560,6 +6692,10 @@
             {
               "id": "msStore",
               "subTitle": "<i class='fab fa-microsoft'></i> Microsoft Store"
+            },
+            {
+              "id": "windowsGithubStore",
+              "subTitle": "<i class='mdi mdi-github'></i> GitHub"
             }
           ]
         }
@@ -6578,6 +6714,10 @@
             {
               "id": "webStore",
               "subTitle": "<i class='fas fa-globe'></i> Web"
+            },
+            {
+              "id": "githubStore",
+              "subTitle": "<i class='mdi mdi-github'></i> GitHub"
             }
           ]
         }
@@ -6588,7 +6728,7 @@
     },
     {
       "id": "libraries",
-      "mainTitle": "<i class='mdi mdi-library-shelves'></i> Libraries",
+      "mainTitle": "",
       "divs": [
         {
           "divsTitle": "",
@@ -6614,19 +6754,37 @@
     },
     {
       "id": "others",
-      "mainTitle": "<i class='mdi mdi-application'></i> Unsupported projects",
+      "mainTitle": "",
       "divs": [
         {
-          "divsTitle": "",
+          "divsTitle": "<img class='icons' src='img/icons/multiplatform.svg' /> Multiplatform",
           "stores": [
             {
               "id": "unsupportedXamarinForms",
               "subTitle": "<i class='mdi mdi-xamarin'></i> Xamarin.Forms"
+            }
+          ]
+        },
+        {
+          "divsTitle": "<i class='mdi mdi-android'></i> Android",
+          "stores": [
+            {
+              "id": "unsupportedAndroidPlayStore",
+              "subTitle": "<i class='mdi mdi-google-play'></i> Play Store"
             },
             {
-              "id": "unsupportedAndroid",
-              "subTitle": "<i class='mdi mdi-android'></i> Android"
+              "id": "unsupportedAndroidHuawei",
+              "subTitle": "<i class='mdi mdi-shopping'></i> Huawei AppGallery"
             },
+            {
+              "id": "unsupportedAndroidSamsung",
+              "subTitle": "<i class='mdi mdi-shopping'></i> Samsung Galaxy Store"
+            }
+          ]
+        },
+        {
+          "divsTitle": "<i class='fab fa-microsoft'></i> Microsoft",
+          "stores": [
             {
               "id": "unsupportedWindows10Mobile",
               "subTitle": "<i class='fab fa-windows'></i> Windows 10 &amp; Mobile"
@@ -6644,12 +6802,17 @@
               "subTitle": "<i class='fab fa-windows'></i> Windows Phone 7.x &amp; 8.x"
             },
             {
-              "id": "unsupportedWeb",
-              "subTitle": "<i class='fas fa-globe'></i> Web"
-            },
-            {
               "id": "unsupportedVB",
               "subTitle": "<img class='icons' src='img/icons/windowsXP.svg' /> Windows XP"
+            }
+          ]
+        },
+        {
+          "divsTitle": "",
+          "stores": [
+            {
+              "id": "unsupportedWeb",
+              "subTitle": "<i class='fas fa-globe'></i> Web"
             }
           ]
         },
@@ -6661,12 +6824,12 @@
               "subTitle": "<img class='icons' src='img/icons/nuget.svg' /> NuGet"
             },
             {
-              "id": "unSuppportedJsLibStore",
-              "subTitle": "<i class='fab fa-js-square'></i> JavaScript"
+              "id": "unsupportedGithubLibStore",
+              "subTitle": "<i class='mdi mdi-github'></i> GitHub"
             },
             {
-              "id": "unsupportedUwpLibStore",
-              "subTitle": "<i class='mdi mdi-microsoft-windows'></i> Windows 10 &amp; Mobile"
+              "id": "unsupportedOutLibStore",
+              "subTitle": "<img class='icons' src='img/icons/out.svg' /> OutSystems"
             }
           ]
         }

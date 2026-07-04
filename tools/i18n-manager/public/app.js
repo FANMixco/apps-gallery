@@ -527,6 +527,377 @@ function appendRows(container, rows, emptyMessage) {
   rows.forEach(row => container.append(createFieldRow(row)));
 }
 
+function isPaneOptionsView(view) {
+  return view.path[0] === "panesOptions" && view.value && typeof view.value === "object" && !Array.isArray(view.value);
+}
+
+function stripHtml(value) {
+  return String(value || "").replace(/<[^>]*>/g, "").trim();
+}
+
+function slugifyId(value) {
+  return stripHtml(value)
+    .replace(/&amp;/g, "and")
+    .replace(/[^a-zA-Z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+(.)/g, (_, char) => char.toUpperCase())
+    .replace(/^(.)/, (_, char) => char.toLowerCase()) || "store";
+}
+
+function collectPaneStoreIds(excludedPath = null) {
+  const ids = new Set();
+  const panes = state.parsed?.panesOptions;
+  if (!Array.isArray(panes)) {
+    return ids;
+  }
+
+  panes.forEach((pane, paneIndex) => {
+    (pane.divs || []).forEach((section, sectionIndex) => {
+      (section.stores || []).forEach((store, storeIndex) => {
+        const path = ["panesOptions", paneIndex, "divs", sectionIndex, "stores", storeIndex, "id"];
+        if (excludedPath && formatPath(path) === formatPath(excludedPath)) {
+          return;
+        }
+        if (store.id) {
+          ids.add(store.id);
+        }
+      });
+    });
+  });
+
+  return ids;
+}
+
+function uniquePaneStoreId(base, excludedPath = null) {
+  const ids = collectPaneStoreIds(excludedPath);
+  const cleanBase = slugifyId(base);
+  let candidate = cleanBase;
+  let suffix = 2;
+  while (ids.has(candidate)) {
+    candidate = `${cleanBase}${suffix}`;
+    suffix += 1;
+  }
+  return candidate;
+}
+
+function updatePaneValue(path, value) {
+  setAtPath(state.parsed, path, value);
+  updateRawFromParsed();
+  markDirty();
+}
+
+function appendPaneSection(panePath) {
+  const pane = getAtPath(state.parsed, panePath);
+  if (!Array.isArray(pane.divs)) {
+    pane.divs = [];
+  }
+
+  pane.divs.push({ divsTitle: "New section", stores: [] });
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus("Added section. Save when you are ready.");
+}
+
+function removePaneSection(panePath, sectionIndex) {
+  const pane = getAtPath(state.parsed, panePath);
+  if (!Array.isArray(pane.divs) || !pane.divs.length) {
+    return;
+  }
+
+  const section = pane.divs[sectionIndex];
+  const label = stripHtml(section.divsTitle) || `section ${sectionIndex + 1}`;
+  if (!confirm(`Remove ${label} and its stores?`)) {
+    return;
+  }
+
+  pane.divs.splice(sectionIndex, 1);
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus("Removed section. Save when you are ready.");
+}
+
+function appendPaneStore(panePath, sectionIndex) {
+  const pane = getAtPath(state.parsed, panePath);
+  const section = pane.divs?.[sectionIndex];
+  if (!section) {
+    setStatus("Select a section before adding a store.", true);
+    return;
+  }
+
+  if (!Array.isArray(section.stores)) {
+    section.stores = [];
+  }
+
+  const sectionLabel = stripHtml(section.divsTitle) || pane.id || "store";
+  section.stores.push({
+    id: uniquePaneStoreId(`${pane.id || sectionLabel}${sectionLabel}Store`),
+    subTitle: "New store"
+  });
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus("Added store. Save when you are ready.");
+}
+
+function removePaneStore(panePath, sectionIndex, storeIndex) {
+  const pane = getAtPath(state.parsed, panePath);
+  const stores = pane.divs?.[sectionIndex]?.stores;
+  if (!Array.isArray(stores) || !stores.length) {
+    return;
+  }
+
+  const label = stripHtml(stores[storeIndex].subTitle) || stores[storeIndex].id || `store ${storeIndex + 1}`;
+  if (!confirm(`Remove ${label}?`)) {
+    return;
+  }
+
+  stores.splice(storeIndex, 1);
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus("Removed store. Save when you are ready.");
+}
+
+function renderPaneStructureEditor(parent, view) {
+  const pane = view.value;
+  if (!Array.isArray(pane.divs)) {
+    pane.divs = [];
+  }
+
+  const shell = document.createElement("section");
+  shell.className = "pane-structure-editor";
+
+  const header = document.createElement("div");
+  header.className = "pane-structure-header";
+  const title = document.createElement("h3");
+  title.textContent = "Pane sections";
+  const addSection = document.createElement("button");
+  addSection.textContent = "Add section";
+  addSection.addEventListener("click", () => appendPaneSection(view.path));
+  header.append(title, addSection);
+  shell.append(header);
+
+  if (!pane.divs.length) {
+    const empty = document.createElement("div");
+    empty.className = "empty compact";
+    empty.textContent = "This pane has no sections yet.";
+    shell.append(empty);
+    parent.append(shell);
+    return;
+  }
+
+  pane.divs.forEach((section, sectionIndex) => {
+    if (!Array.isArray(section.stores)) {
+      section.stores = [];
+    }
+
+    const sectionCard = document.createElement("div");
+    sectionCard.className = "pane-section-card";
+
+    const sectionHeader = document.createElement("div");
+    sectionHeader.className = "pane-section-header";
+
+    const sectionTitle = document.createElement("label");
+    sectionTitle.innerHTML = `<span>Section title</span>`;
+    const sectionInput = document.createElement("input");
+    sectionInput.value = section.divsTitle || "";
+    sectionInput.placeholder = "Leave blank when the store title is enough";
+    sectionInput.addEventListener("input", () => {
+      updatePaneValue([...view.path, "divs", sectionIndex, "divsTitle"], sectionInput.value);
+      setStatus("Edited section. Save when you are ready.");
+    });
+    sectionTitle.append(sectionInput);
+
+    const sectionActions = document.createElement("div");
+    sectionActions.className = "pane-section-actions";
+    const addStore = document.createElement("button");
+    addStore.textContent = "Add store";
+    addStore.addEventListener("click", () => appendPaneStore(view.path, sectionIndex));
+    const removeSection = document.createElement("button");
+    removeSection.textContent = "Remove section";
+    removeSection.className = "danger-button";
+    removeSection.addEventListener("click", () => removePaneSection(view.path, sectionIndex));
+    sectionActions.append(addStore, removeSection);
+
+    sectionHeader.append(sectionTitle, sectionActions);
+    sectionCard.append(sectionHeader);
+
+    const stores = document.createElement("div");
+    stores.className = "pane-store-list";
+    if (!section.stores.length) {
+      const empty = document.createElement("div");
+      empty.className = "empty compact";
+      empty.textContent = "This section has no stores yet.";
+      stores.append(empty);
+    }
+
+    section.stores.forEach((store, storeIndex) => {
+      const storePath = [...view.path, "divs", sectionIndex, "stores", storeIndex];
+      const row = document.createElement("div");
+      row.className = "pane-store-row";
+
+      const idLabel = document.createElement("label");
+      idLabel.innerHTML = "<span>Store ID</span>";
+      const idInput = document.createElement("input");
+      idInput.value = store.id || "";
+      idInput.addEventListener("input", () => {
+        const nextId = idInput.value.trim();
+        const idPath = [...storePath, "id"];
+        if (!nextId) {
+          idInput.classList.add("invalid");
+          setStatus("Store ID cannot be empty.", true);
+          return;
+        }
+        if (collectPaneStoreIds(idPath).has(nextId)) {
+          idInput.classList.add("invalid");
+          setStatus(`Store ID "${nextId}" is already used.`, true);
+          return;
+        }
+        idInput.classList.remove("invalid");
+        updatePaneValue(idPath, nextId);
+        setStatus("Edited store ID. Save when you are ready.");
+      });
+      idLabel.append(idInput);
+
+      const titleLabel = document.createElement("label");
+      titleLabel.innerHTML = "<span>Store title</span>";
+      const titleInput = document.createElement("input");
+      titleInput.value = store.subTitle || "";
+      titleInput.addEventListener("input", () => {
+        updatePaneValue([...storePath, "subTitle"], titleInput.value);
+        setStatus("Edited store title. Save when you are ready.");
+      });
+      titleLabel.append(titleInput);
+
+      const actions = document.createElement("div");
+      actions.className = "pane-store-actions";
+      const regenerate = document.createElement("button");
+      regenerate.textContent = "Unique ID";
+      regenerate.addEventListener("click", () => {
+        const idPath = [...storePath, "id"];
+        const nextId = uniquePaneStoreId(store.subTitle || store.id || pane.id, idPath);
+        updatePaneValue(idPath, nextId);
+        renderTree();
+        setStatus("Generated a unique store ID. Save when you are ready.");
+      });
+      const removeStore = document.createElement("button");
+      removeStore.textContent = "Remove";
+      removeStore.className = "danger-button";
+      removeStore.addEventListener("click", () => removePaneStore(view.path, sectionIndex, storeIndex));
+      actions.append(regenerate, removeStore);
+
+      row.append(idLabel, titleLabel, actions);
+      stores.append(row);
+    });
+
+    sectionCard.append(stores);
+    shell.append(sectionCard);
+  });
+
+  parent.append(shell);
+}
+
+function nestedItemName(key) {
+  if (key === "edition") {
+    return "edition";
+  }
+  return "item";
+}
+
+function makeNestedItemTemplate(key, items) {
+  if (key === "edition") {
+    const first = items[0] || {};
+    return {
+      yearStart: new Date().getFullYear(),
+      yearEnd: null,
+      mainTech: first.mainTech || "web",
+      isSupported: true,
+      storeLink: "",
+      link: "",
+      preview: "",
+      technologies: [],
+      order: items.length + 1
+    };
+  }
+
+  return {};
+}
+
+function appendNestedArrayItem(arrayPath, key) {
+  const array = getAtPath(state.parsed, arrayPath);
+  array.push(makeNestedItemTemplate(key, array));
+  state.nestedArrayIndex = array.length - 1;
+  state.childArrayKey = null;
+  state.childArrayIndex = 0;
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus(`Added ${nestedItemName(key)}. Save when you are ready.`);
+}
+
+function duplicateNestedArrayItem(arrayPath, key, index) {
+  const array = getAtPath(state.parsed, arrayPath);
+  if (!array.length) {
+    return;
+  }
+
+  const copy = cloneValue(array[index]);
+  if (key === "edition") {
+    copy.order = array.length + 1;
+  }
+  array.splice(index + 1, 0, copy);
+  state.nestedArrayIndex = index + 1;
+  state.childArrayKey = null;
+  state.childArrayIndex = 0;
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus(`Duplicated ${nestedItemName(key)}. Save when you are ready.`);
+}
+
+function removeNestedArrayItem(arrayPath, key, index) {
+  const array = getAtPath(state.parsed, arrayPath);
+  if (!array.length) {
+    return;
+  }
+
+  if (!confirm(`Remove ${nestedItemName(key)} ${index + 1}?`)) {
+    return;
+  }
+
+  array.splice(index, 1);
+  state.nestedArrayIndex = Math.max(0, Math.min(index, array.length - 1));
+  state.childArrayKey = null;
+  state.childArrayIndex = 0;
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus(`Removed ${nestedItemName(key)}. Save when you are ready.`);
+}
+
+function copyTechnologiesFromFirstEdition(arrayPath, index) {
+  const editions = getAtPath(state.parsed, arrayPath);
+  if (!editions.length || index === 0) {
+    return;
+  }
+
+  const source = editions[0]?.technologies;
+  if (!Array.isArray(source)) {
+    setStatus("The first edition does not have technologies to copy.", true);
+    return;
+  }
+
+  editions[index].technologies = cloneValue(source);
+  state.childArrayKey = "technologies";
+  state.childArrayIndex = 0;
+  updateRawFromParsed();
+  markDirty();
+  renderTree();
+  setStatus("Copied technologies from the first edition. Save when you are ready.");
+}
+
 function renderNestedArrays(view) {
   const nested = normalizeNestedArray(view.value);
   if (!nested) {
@@ -586,6 +957,36 @@ function renderNestedArrays(view) {
   position.className = "item-position";
   position.textContent = nested.items.length ? `${nested.index + 1} / ${nested.items.length}` : "0 / 0";
 
+  const arrayPath = [...view.path, nested.key];
+  const actionBar = document.createElement("div");
+  actionBar.className = "add-bar nested-action-bar";
+
+  const addButton = document.createElement("button");
+  addButton.textContent = `Add ${nestedItemName(nested.key)}`;
+  addButton.addEventListener("click", () => appendNestedArrayItem(arrayPath, nested.key));
+  actionBar.append(addButton);
+
+  const duplicateButton = document.createElement("button");
+  duplicateButton.textContent = `Duplicate ${nestedItemName(nested.key)}`;
+  duplicateButton.disabled = !nested.items.length;
+  duplicateButton.addEventListener("click", () => duplicateNestedArrayItem(arrayPath, nested.key, nested.index));
+  actionBar.append(duplicateButton);
+
+  if (nested.key === "edition") {
+    const copyTechsButton = document.createElement("button");
+    copyTechsButton.textContent = "Copy techs from first";
+    copyTechsButton.disabled = nested.index === 0 || nested.items.length < 2;
+    copyTechsButton.addEventListener("click", () => copyTechnologiesFromFirstEdition(arrayPath, nested.index));
+    actionBar.append(copyTechsButton);
+  }
+
+  const removeButton = document.createElement("button");
+  removeButton.textContent = "Remove selected";
+  removeButton.className = "danger-button";
+  removeButton.disabled = !nested.items.length;
+  removeButton.addEventListener("click", () => removeNestedArrayItem(arrayPath, nested.key, nested.index));
+  actionBar.append(removeButton);
+
   const title = document.createElement("h3");
   title.textContent = `${nested.key}[${nested.index}]`;
 
@@ -594,7 +995,7 @@ function renderNestedArrays(view) {
     : [];
 
   toolbar.append(previous, select, next, position);
-  shell.append(tabs, toolbar, title);
+  shell.append(tabs, toolbar, actionBar, title);
   appendRows(shell, rows, "This nested item has no editable fields yet.");
   if (nested.items.length) {
     renderChildArrays(shell, nested.items[nested.index], [...view.path, nested.key, nested.index]);
@@ -896,9 +1297,13 @@ function renderTree() {
     els.fields.append(section);
   }
 
-  renderNestedArrays(view);
+  if (isPaneOptionsView(view)) {
+    renderPaneStructureEditor(els.fields, view);
+  } else {
+    renderNestedArrays(view);
+  }
 
-  if (!nested.length && collectEditableLeaves(view.value, view.path).length > rows.length) {
+  if (!isPaneOptionsView(view) && !nested.length && collectEditableLeaves(view.value, view.path).length > rows.length) {
     const note = document.createElement("div");
     note.className = "empty";
     note.textContent = "Showing the first 500 editable values in this item. Use Raw JSON for the full file.";

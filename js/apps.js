@@ -40,64 +40,14 @@ function load() {
     let unsupportedTechs = [];
 
     let customIconsArray = [];
-    const routes = {
-        android: {
-            supported: { control: 'playStore', techsUsed: androidSupportedTechs },
-            unsupported: { control: 'unsupportedAndroidPlayStore', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-google-play'></i> Play Store", beforeControl: 'unsupportedWindows10Mobile', sectionControl: 'unsupportedAndroid' }
-        },
-        android_amazon: {
-            supported: { control: 'amazonStore', techsUsed: androidSupportedTechs },
-            unsupported: { control: 'unsupportedAndroidAmazon', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-amazon'></i> Amazon Appstore", beforeControl: 'unsupportedWindows10Mobile', sectionControl: 'unsupportedAndroid' }
-        },
-        android_huawei: {
-            supported: { control: 'huaweiStore', techsUsed: androidSupportedTechs },
-            unsupported: { control: 'unsupportedAndroidHuawei', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Huawei AppGallery", beforeControl: 'unsupportedWindows10Mobile', sectionControl: 'unsupportedAndroid' }
-        },
-        android_samsung: {
-            supported: { control: 'samsungStore', techsUsed: androidSupportedTechs },
-            unsupported: { control: 'unsupportedAndroidSamsung', techsUsed: unsupportedTechs, title: "<i class='mdi mdi-shopping'></i> Samsung Galaxy Store", beforeControl: 'unsupportedWindows10Mobile', sectionControl: 'unsupportedAndroid' }
-        },
-        windows11: {
-            supported: { control: 'msStore', techsUsed: w11SupportedTechs }
-        },
-        web: {
-            supported: { control: 'webStore', techsUsed: webSupportedTechs },
-            unsupported: { control: 'unsupportedWeb', techsUsed: unsupportedTechs }
-        },
-        nuget: {
-            supported: { control: 'nugetsStore', techsUsed: libsSupportedTechs },
-            unsupported: { control: 'unsupportedNuget', techsUsed: unsupportedTechs }
-        },
-        js_lib: {
-            supported: { control: 'jsLibStore', techsUsed: libsSupportedTechs },
-            unsupported: { control: 'unSuppportedJsLibStore', techsUsed: unsupportedTechs }
-        },
-        out_lib: {
-            supported: { control: 'outLibStore', techsUsed: libsSupportedTechs },
-            unsupported: { control: 'unsupportedOutLibStore', techsUsed: unsupportedTechs, title: "<img class='icons' src='img/icons/out.svg' /> OutSystems" }
-        },
-        windows8: {
-            unsupported: { control: 'unsupportedWindows8', techsUsed: unsupportedTechs }
-        },
-        windows10: {
-            unsupported: { control: 'unsupportedWindows10', techsUsed: unsupportedTechs }
-        },
-        windows10Mobile: {
-            unsupported: { control: 'unsupportedWindows10Mobile', techsUsed: unsupportedTechs }
-        },
-        windowsPhone: {
-            unsupported: { control: 'unsupportedWindowsPhone', techsUsed: unsupportedTechs }
-        },
-        windowsXP: {
-            unsupported: { control: 'unsupportedVB', techsUsed: unsupportedTechs }
-        },
-        xamarin_forms: {
-            unsupported: { control: 'unsupportedXamarinForms', techsUsed: unsupportedTechs }
-        },
-        uwp_lib: {
-            unsupported: { control: 'unsupportedUwpLibStore', techsUsed: unsupportedTechs }
-        }
+    const techsByContainer = {
+        techsPlayStore: androidSupportedTechs,
+        techsMSStore: w11SupportedTechs,
+        techsWebStore: webSupportedTechs,
+        techsLibsStore: libsSupportedTechs,
+        techsOldStore: unsupportedTechs
     };
+    const routes = buildRoutes();
     const appBuckets = [];
     const appBucketsByControl = {};
     const activeSectionControls = {};
@@ -282,6 +232,91 @@ function load() {
         cleanupSectionControl('unsupportedAndroid');
     }
 
+    function buildRoutes() {
+        const generatedRoutes = {};
+
+        panesOptions.forEach(pane => {
+            const techsUsed = techsByContainer[pane.techsInvolvedId] || unsupportedTechs;
+            pane.divs.forEach(div => {
+                div.stores.forEach(store => {
+                    const route = { control: store.id, techsUsed };
+                    generatedRoutes[store.id] = store.id.startsWith('unsupported')
+                        ? { unsupported: route }
+                        : { supported: route };
+                });
+            });
+        });
+
+        Object.assign(generatedRoutes, {
+            android: {
+                supported: generatedRoutes.playStore?.supported,
+                unsupported: generatedRoutes.unsupportedAndroidPlayStore?.unsupported
+            },
+            android_amazon: {
+                supported: generatedRoutes.amazonStore?.supported
+            },
+            android_huawei: {
+                supported: generatedRoutes.huaweiStore?.supported,
+                unsupported: generatedRoutes.unsupportedAndroidHuawei?.unsupported
+            },
+            android_samsung: {
+                supported: generatedRoutes.samsungStore?.supported,
+                unsupported: generatedRoutes.unsupportedAndroidSamsung?.unsupported
+            },
+            windows11: {
+                supported: generatedRoutes.msStore?.supported
+            },
+            web: {
+                supported: generatedRoutes.webStore?.supported,
+                unsupported: generatedRoutes.unsupportedWeb?.unsupported
+            },
+            github: {
+                supported: generatedRoutes.githubStore?.supported
+            },
+            android_github: {
+                supported: generatedRoutes.androidGithubStore?.supported
+            },
+            windows11_github: {
+                supported: generatedRoutes.windowsGithubStore?.supported
+            },
+            nuget: {
+                supported: generatedRoutes.nugetsStore?.supported,
+                unsupported: generatedRoutes.unsupportedNuget?.unsupported
+            },
+            js_lib: {
+                supported: generatedRoutes.jsLibStore?.supported,
+                unsupported: generatedRoutes.unsupportedGithubLibStore?.unsupported
+            },
+            out_lib: {
+                supported: generatedRoutes.outLibStore?.supported,
+                unsupported: generatedRoutes.unsupportedOutLibStore?.unsupported
+            },
+            windows8: {
+                unsupported: generatedRoutes.unsupportedWindows8?.unsupported
+            },
+            windows10: {
+                unsupported: generatedRoutes.unsupportedWindows10?.unsupported
+            },
+            windows10Mobile: {
+                unsupported: generatedRoutes.unsupportedWindows10Mobile?.unsupported
+            },
+            windowsPhone: {
+                unsupported: generatedRoutes.unsupportedWindowsPhone?.unsupported
+            },
+            windowsXP: {
+                unsupported: generatedRoutes.unsupportedVB?.unsupported
+            },
+            xamarin_forms: {
+                unsupported: generatedRoutes.unsupportedXamarinForms?.unsupported
+            },
+            uwp_lib: {
+                unsupported: generatedRoutes.unsupportedGithubLibStore?.unsupported
+            }
+        });
+
+        return generatedRoutes;
+    }
+
     function cleanupSectionControl(controlId) {
         let control = document.getElementById(controlId);
         if (control === null)
@@ -351,7 +386,7 @@ function load() {
     function createElem(item, edition) {
         return {
             app: item.app,
-            link: item.link,
+            link: edition.link !== undefined ? edition.link : item.link,
             description: item.description,
             logo: item.logo,
             preview: edition.preview,
