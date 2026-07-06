@@ -6372,7 +6372,7 @@
       ]
     },
     {
-      "app": "Career Signal",
+      "app": "Career Signal Engine",
       "link": "",
       "description": "Career Signal Engine reviews CVs and builds evidence-based plans for target jobs.",
       "logo": "career-signal",
@@ -6382,7 +6382,7 @@
           "yearEnd": null,
           "mainTech": "windowsGithubStore",
           "isSupported": true,
-          "storeLink": "github.com/FANMixco/career-signal",
+          "storeLink": "github.com/FANMixco/career-signal/releases",
           "preview": "fanmixco.github.io/career-signal/frontend",
           "technologies": [
             "fab fa-html5",
@@ -6447,6 +6447,114 @@
                 "id": "id_windows10",
                 "icon": "mdi mdi-microsoft-windows",
                 "tooltip": "Windows 10"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_mistral",
+                "icon": "mistral.svg",
+                "tooltip": "Mistral"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_ollama",
+                "icon": "ollama.svg",
+                "tooltip": "Ollama"
+              }
+            ]
+          ],
+          "order": 1,
+          "link": "github.com/FANMixco/career-signal"
+        },
+        {
+          "yearStart": 2026,
+          "yearEnd": null,
+          "mainTech": "appleGithubStore",
+          "isSupported": true,
+          "storeLink": "github.com/FANMixco/career-signal/releases",
+          "preview": "fanmixco.github.io/career-signal/frontend",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            [
+              {
+                "type": "img",
+                "id": "id_node_js",
+                "icon": "node-js.svg",
+                "tooltip": "Node JS",
+                "text": "Node JS"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_ai",
+                "tooltip": "Open AI",
+                "icon": "openai.svg"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_gemini",
+                "icon": "gemini.svg",
+                "tooltip": "Google Gemini",
+                "text": "Google Gemini"
+              }
+            ],
+            "fab fa-git",
+            "mdi mdi-github",
+            [
+              {
+                "type": "img",
+                "id": "id_electron",
+                "icon": "electron.svg",
+                "tooltip": ""
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_githubactions",
+                "icon": "githubactions.svg",
+                "tooltip": "GitHub Actions"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_mistral",
+                "icon": "mistral.svg",
+                "tooltip": "Mistral"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_ollama",
+                "icon": "ollama.svg",
+                "tooltip": "Ollama"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_apple",
+                "icon": "apple.svg",
+                "tooltip": "Apple"
               }
             ]
           ],
@@ -6525,6 +6633,22 @@
                 "icon": "githubactions.svg",
                 "tooltip": "GitHub Actions"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_mistral",
+                "icon": "mistral.svg",
+                "tooltip": "Mistral"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_ollama",
+                "icon": "ollama.svg",
+                "tooltip": "Ollama"
+              }
             ]
           ],
           "order": 3,
@@ -6549,18 +6673,25 @@
       "order": 2
     },
     {
+      "id": "macos",
+      "name": "macOS",
+      "isVisible": true,
+      "isActive": false,
+      "order": 3
+    },
+    {
       "id": "web",
       "name": "Web",
       "isVisible": true,
       "isActive": false,
-      "order": 3
+      "order": 4
     },
     {
       "id": "libraries",
       "name": "Libraries",
       "isVisible": true,
       "isActive": false,
-      "order": 4
+      "order": 5
     },
     {
       "id": "others",
@@ -6647,6 +6778,24 @@
       ],
       "techsInvolvedId": "techsWebStore",
       "isActive": false,
+      "order": 4
+    },
+    {
+      "id": "macos",
+      "mainTitle": "",
+      "divs": [
+        {
+          "divsTitle": "",
+          "stores": [
+            {
+              "id": "appleGithubStore",
+              "subTitle": "<i class='mdi mdi-github'></i> GitHub"
+            }
+          ]
+        }
+      ],
+      "techsInvolvedId": "techsAppleStore",
+      "isActive": false,
       "order": 3
     },
     {
@@ -6673,7 +6822,7 @@
       ],
       "techsInvolvedId": "techsLibsStore",
       "isActive": false,
-      "order": 4
+      "order": 5
     },
     {
       "id": "others",

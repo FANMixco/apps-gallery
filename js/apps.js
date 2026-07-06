@@ -34,6 +34,7 @@ function load() {
 
     let androidSupportedTechs = [];
     let w11SupportedTechs = [];
+    let appleSupportedTechs = [];
     let webSupportedTechs = [];
     let libsSupportedTechs = [];
 
@@ -43,6 +44,7 @@ function load() {
     const techsByContainer = {
         techsPlayStore: androidSupportedTechs,
         techsMSStore: w11SupportedTechs,
+        techsAppleStore: appleSupportedTechs,
         techsWebStore: webSupportedTechs,
         techsLibsStore: libsSupportedTechs,
         techsOldStore: unsupportedTechs
@@ -74,6 +76,7 @@ function load() {
 
     setTechUsed(androidSupportedTechs, "techsPlayStore", customIconsArray);
     setTechUsed(w11SupportedTechs, "techsMSStore", customIconsArray);
+    setTechUsed(appleSupportedTechs, "techsAppleStore", customIconsArray);
     setTechUsed(webSupportedTechs, "techsWebStore", customIconsArray);
     setTechUsed(unsupportedTechs, "techsOldStore", customIconsArray);
     setTechUsed(libsSupportedTechs, "techsLibsStore", customIconsArray);
