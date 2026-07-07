@@ -6395,14 +6395,7 @@
                 "tooltip": "GitHub Actions"
               }
             ],
-            [
-              {
-                "type": "icon",
-                "id": "id_windows10",
-                "icon": "mdi mdi-microsoft-windows",
-                "tooltip": "Windows 10"
-              }
-            ],
+            "fab fa-microsoft",
             [
               {
                 "type": "img",
