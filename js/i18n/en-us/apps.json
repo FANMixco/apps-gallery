@@ -5619,15 +5619,7 @@
                 "text": "Open AI Codex"
               }
             ],
-            [
-              {
-                "type": "img",
-                "id": "id_node_js",
-                "icon": "node-js.svg",
-                "tooltip": "Node JS",
-                "text": "Node JS"
-              }
-            ]
+            "mdi mdi-nodejs"
           ],
           "order": 5
         }
@@ -5673,15 +5665,7 @@
                 "text": "Open AI Codex"
               }
             ],
-            [
-              {
-                "type": "img",
-                "id": "id_node_js",
-                "icon": "node-js.svg",
-                "tooltip": "Node JS",
-                "text": "Node JS"
-              }
-            ]
+            "mdi mdi-nodejs"
           ],
           "order": 6
         }
@@ -6271,15 +6255,7 @@
                 "text": "Open AI Codex"
               }
             ],
-            [
-              {
-                "type": "img",
-                "id": "id_node_js",
-                "icon": "node-js.svg",
-                "tooltip": "Node JS",
-                "text": "Node JS"
-              }
-            ]
+            "mdi mdi-nodejs"
           ],
           "order": 10
         }
@@ -6357,15 +6333,7 @@
                 "text": "Open AI Codex"
               }
             ],
-            [
-              {
-                "type": "img",
-                "id": "id_node_js",
-                "icon": "node-js.svg",
-                "tooltip": "Node JS",
-                "text": "Node JS"
-              }
-            ]
+            "mdi mdi-nodejs"
           ],
           "order": 12
         }
@@ -6388,15 +6356,8 @@
             "fab fa-html5",
             "fab fa-css3-alt",
             "fab fa-js-square",
-            [
-              {
-                "type": "img",
-                "id": "id_node_js",
-                "icon": "node-js.svg",
-                "tooltip": "Node JS",
-                "text": "Node JS"
-              }
-            ],
+            "mdi mdi-language-typescript",
+            "mdi mdi-nodejs",
             [
               {
                 "type": "img",
@@ -6425,14 +6386,7 @@
             ],
             "fab fa-git",
             "mdi mdi-github",
-            [
-              {
-                "type": "img",
-                "id": "id_electron",
-                "icon": "electron.svg",
-                "tooltip": ""
-              }
-            ],
+            "mdi mdi-electron-framework",
             [
               {
                 "type": "img",
@@ -6480,15 +6434,8 @@
             "fab fa-html5",
             "fab fa-css3-alt",
             "fab fa-js-square",
-            [
-              {
-                "type": "img",
-                "id": "id_node_js",
-                "icon": "node-js.svg",
-                "tooltip": "Node JS",
-                "text": "Node JS"
-              }
-            ],
+            "mdi mdi-language-typescript",
+            "mdi mdi-nodejs",
             [
               {
                 "type": "img",
@@ -6517,14 +6464,7 @@
             ],
             "fab fa-git",
             "mdi mdi-github",
-            [
-              {
-                "type": "img",
-                "id": "id_electron",
-                "icon": "electron.svg",
-                "tooltip": ""
-              }
-            ],
+            "mdi mdi-electron-framework",
             [
               {
                 "type": "img",
@@ -6549,14 +6489,7 @@
                 "tooltip": "Ollama"
               }
             ],
-            [
-              {
-                "type": "img",
-                "id": "id_apple",
-                "icon": "apple.svg",
-                "tooltip": "Apple"
-              }
-            ]
+            "mdi mdi-apple"
           ],
           "order": 1,
           "link": "github.com/FANMixco/career-signal"
@@ -6572,15 +6505,8 @@
             "fab fa-html5",
             "fab fa-css3-alt",
             "fab fa-js-square",
-            [
-              {
-                "type": "img",
-                "id": "id_node_js",
-                "icon": "node-js.svg",
-                "tooltip": "Node JS",
-                "text": "Node JS"
-              }
-            ],
+            "mdi mdi-language-typescript",
+            "mdi mdi-nodejs",
             [
               {
                 "type": "img",
@@ -6607,25 +6533,10 @@
                 "text": "Google Gemini"
               }
             ],
-            [
-              {
-                "type": "img",
-                "id": "id_docker",
-                "icon": "docker.svg",
-                "tooltip": "Docker",
-                "text": "Docker"
-              }
-            ],
+            "mdi mdi-docker",
             "fab fa-git",
             "mdi mdi-github",
-            [
-              {
-                "type": "img",
-                "id": "id_electron",
-                "icon": "electron.svg",
-                "tooltip": ""
-              }
-            ],
+            "mdi mdi-electron-framework",
             [
               {
                 "type": "img",
