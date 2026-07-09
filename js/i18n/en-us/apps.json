@@ -6411,6 +6411,30 @@
                 "icon": "ollama.svg",
                 "tooltip": "Ollama"
               }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_multiLanguage",
+                "icon": "fas fa-language",
+                "tooltip": "Multi-language"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_deepseek",
+                "icon": "deepseek.svg",
+                "tooltip": "DeepSeek"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_openrouter",
+                "icon": "openrouter.svg",
+                "tooltip": "OpenRouter"
+              }
             ]
           ],
           "order": 1,
@@ -6481,6 +6505,30 @@
                 "id": "id_ollama",
                 "icon": "ollama.svg",
                 "tooltip": "Ollama"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_deepseek",
+                "icon": "deepseek.svg",
+                "tooltip": "DeepSeek"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_openrouter",
+                "icon": "openrouter.svg",
+                "tooltip": "OpenRouter"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_multiLanguage",
+                "icon": "fas fa-language",
+                "tooltip": "Multi-language"
               }
             ]
           ],
@@ -6553,7 +6601,31 @@
                 "tooltip": "Ollama"
               }
             ],
-            "mdi mdi-apple"
+            "mdi mdi-apple",
+            [
+              {
+                "type": "icon",
+                "id": "id_multiLanguage",
+                "icon": "fas fa-language",
+                "tooltip": "Multi-language"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_deepseek",
+                "icon": "deepseek.svg",
+                "tooltip": "DeepSeek"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_openrouter",
+                "icon": "openrouter.svg",
+                "tooltip": "OpenRouter"
+              }
+            ]
           ],
           "order": 1,
           "link": "github.com/FANMixco/career-signal"
@@ -6623,6 +6695,30 @@
                 "id": "id_ollama",
                 "icon": "ollama.svg",
                 "tooltip": "Ollama"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_openrouter",
+                "icon": "openrouter.svg",
+                "tooltip": "OpenRouter"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_multiLanguage",
+                "icon": "fas fa-language",
+                "tooltip": "Multi-language"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_deepseek",
+                "icon": "deepseek.svg",
+                "tooltip": "DeepSeek"
               }
             ]
           ],
