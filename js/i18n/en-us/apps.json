@@ -6419,6 +6419,77 @@
         {
           "yearStart": 2026,
           "yearEnd": null,
+          "mainTech": "windows11",
+          "isSupported": true,
+          "storeLink": "apps.microsoft.com/detail/9p4nqtp3mj0r",
+          "preview": "fanmixco.github.io/career-signal/frontend",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            "mdi mdi-language-typescript",
+            "mdi mdi-nodejs",
+            [
+              {
+                "type": "img",
+                "id": "id_ai",
+                "tooltip": "Open AI",
+                "icon": "openai.svg"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_gemini",
+                "icon": "gemini.svg",
+                "tooltip": "Google Gemini",
+                "text": "Google Gemini"
+              }
+            ],
+            "fab fa-git",
+            "mdi mdi-github",
+            "mdi mdi-electron-framework",
+            [
+              {
+                "type": "img",
+                "id": "id_githubactions",
+                "icon": "githubactions.svg",
+                "tooltip": "GitHub Actions"
+              }
+            ],
+            "fab fa-microsoft",
+            [
+              {
+                "type": "img",
+                "id": "id_mistral",
+                "icon": "mistral.svg",
+                "tooltip": "Mistral"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_ollama",
+                "icon": "ollama.svg",
+                "tooltip": "Ollama"
+              }
+            ]
+          ],
+          "order": 4,
+          "link": "github.com/FANMixco/career-signal"
+        },
+        {
+          "yearStart": 2026,
+          "yearEnd": null,
           "mainTech": "appleGithubStore",
           "isSupported": true,
           "storeLink": "github.com/FANMixco/career-signal/releases",
