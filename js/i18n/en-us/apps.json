@@ -6333,9 +6333,70 @@
                 "text": "Open AI Codex"
               }
             ],
-            "mdi mdi-nodejs"
+            "mdi mdi-nodejs",
+            [
+              {
+                "type": "text",
+                "id": "id_pwa",
+                "text": "PWA",
+                "tooltip": "Progressive Web App"
+              }
+            ]
           ],
           "order": 12
+        },
+        {
+          "yearStart": 2026,
+          "yearEnd": null,
+          "storeLink": "play.google.com/store/apps/details?id=com.federiconavarrete.tstories.twa",
+          "mainTech": "android",
+          "isSupported": true,
+          "link": "",
+          "preview": "",
+          "technologies": [
+            "fab fa-html5",
+            "fab fa-css3-alt",
+            "fab fa-js-square",
+            "fab fa-git",
+            "mdi mdi-github",
+            "mdi mdi-google-analytics",
+            [
+              {
+                "type": "icon",
+                "id": "id_gamefication",
+                "icon": "fas fa-gamepad",
+                "tooltip": "Gamefication"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            "mdi mdi-nodejs",
+            "mdi mdi-android",
+            [
+              {
+                "type": "img",
+                "id": "id_pwa_builder",
+                "tooltip": "PWA Builder",
+                "icon": "pwa.svg"
+              }
+            ],
+            [
+              {
+                "type": "text",
+                "id": "id_pwa",
+                "text": "PWA",
+                "tooltip": "Progressive Web App"
+              }
+            ]
+          ],
+          "order": 2
         }
       ]
     },
