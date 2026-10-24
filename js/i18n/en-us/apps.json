@@ -6394,14 +6394,7 @@
                 "icon": "pwa.svg"
               }
             ],
-            [
-              {
-                "type": "icon",
-                "id": "id_windows10",
-                "icon": "mdi mdi-microsoft-windows",
-                "tooltip": "Windows 11"
-              }
-            ]
+            "fab fa-microsoft"
           ],
           "order": 3
         },
