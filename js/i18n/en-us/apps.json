@@ -18,25 +18,9 @@
             [
               {
                 "type": "icon",
-                "id": "id_TV",
-                "icon": "mdi mdi-television",
-                "tooltip": "Android TV support"
-              }
-            ],
-            [
-              {
-                "type": "icon",
                 "id": "id_XR",
                 "icon": "mdi mdi-sunglasses",
                 "tooltip": "Android XR support"
-              }
-            ],
-            [
-              {
-                "type": "icon",
-                "id": "id_Car",
-                "icon": "mdi mdi-car",
-                "tooltip": "Android Automotive support"
               }
             ],
             [
@@ -198,7 +182,25 @@
                 "tooltip": "PDF export"
               }
             ],
-            "mdi mdi-human"
+            "mdi mdi-human",
+            [
+              {
+                "type": "icon",
+                "id": "id_TV",
+                "icon": "mdi mdi-television",
+                "tooltip": "Android TV support"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_codex",
+                "icon": "codex.svg",
+                "tooltip": "Open AI Codex",
+                "text": "Open AI Codex"
+              }
+            ],
+            "mdi mdi-xamarin"
           ],
           "order": 1
         },
@@ -6341,6 +6343,22 @@
                 "text": "PWA",
                 "tooltip": "Progressive Web App"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id-foldable",
+                "icon": "map-legend.svg",
+                "tooltip": "Support foldables"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
             ]
           ],
           "order": 12
@@ -6394,7 +6412,15 @@
                 "icon": "pwa.svg"
               }
             ],
-            "fab fa-microsoft"
+            "fab fa-microsoft",
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
+              }
+            ]
           ],
           "order": 3
         },
@@ -6446,6 +6472,54 @@
                 "id": "id_pwa",
                 "text": "PWA",
                 "tooltip": "Progressive Web App"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_TV",
+                "icon": "mdi mdi-television",
+                "tooltip": "Android TV support"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_XR",
+                "icon": "mdi mdi-sunglasses",
+                "tooltip": "Android XR support"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_Car",
+                "icon": "mdi mdi-car",
+                "tooltip": "Android Automotive support"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id_google-play-games",
+                "icon": "google-play-games.svg",
+                "tooltip": "Google Play Games on PC"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id-foldable",
+                "icon": "map-legend.svg",
+                "tooltip": "Support foldables"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
               }
             ]
           ],
@@ -6499,6 +6573,30 @@
                 "id": "id_pwa",
                 "text": "PWA",
                 "tooltip": "Progressive Web App"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_TV",
+                "icon": "mdi mdi-television",
+                "tooltip": "Android TV support"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id-foldable",
+                "icon": "map-legend.svg",
+                "tooltip": "Support foldables"
+              }
+            ],
+            [
+              {
+                "type": "icon",
+                "id": "id_tablets",
+                "tooltip": "Large screens optimized",
+                "icon": "mdi mdi-tablet-cellphone"
               }
             ]
           ],

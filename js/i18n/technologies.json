@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-09T21:58:47.807Z",
-  "count": 122,
+  "updatedAt": "2026-11-21T15:22:05.871Z",
+  "count": 124,
   "technologies": [
     {
       "label": ".NET",
@@ -499,6 +499,18 @@
       ]
     },
     {
+      "label": "Google Play Games on PC",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id_google-play-games",
+          "icon": "google-play-games.svg",
+          "tooltip": "Google Play Games on PC"
+        }
+      ]
+    },
+    {
       "label": "Google Play Services",
       "kind": "icon",
       "value": [
@@ -989,6 +1001,18 @@
           "id": "id_smartphone_opt",
           "tooltip": "Smartphones optimized",
           "icon": "mdi mdi-cellphone"
+        }
+      ]
+    },
+    {
+      "label": "Support foldables",
+      "kind": "img",
+      "value": [
+        {
+          "type": "img",
+          "id": "id-foldable",
+          "icon": "map-legend.svg",
+          "tooltip": "Support foldables"
         }
       ]
     },
