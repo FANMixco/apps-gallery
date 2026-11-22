@@ -5621,7 +5621,15 @@
                 "text": "Open AI Codex"
               }
             ],
-            "mdi mdi-nodejs"
+            "mdi mdi-nodejs",
+            [
+              {
+                "type": "img",
+                "id": "id-foldable",
+                "icon": "map-legend.svg",
+                "tooltip": "Support foldables"
+              }
+            ]
           ],
           "order": 5
         }
@@ -6075,6 +6083,14 @@
                 "tooltip": "Open AI Codex",
                 "text": "Open AI Codex"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id-foldable",
+                "icon": "map-legend.svg",
+                "tooltip": "Support foldables"
+              }
             ]
           ],
           "order": 7
@@ -6179,6 +6195,14 @@
                 "tooltip": "Open AI Codex",
                 "text": "Open AI Codex"
               }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id-foldable",
+                "icon": "map-legend.svg",
+                "tooltip": "Support foldables"
+              }
             ]
           ],
           "order": 9
@@ -6257,7 +6281,15 @@
                 "text": "Open AI Codex"
               }
             ],
-            "mdi mdi-nodejs"
+            "mdi mdi-nodejs",
+            [
+              {
+                "type": "img",
+                "id": "id-foldable",
+                "icon": "map-legend.svg",
+                "tooltip": "Support foldables"
+              }
+            ]
           ],
           "order": 10
         }
