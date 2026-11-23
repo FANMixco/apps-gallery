@@ -80,6 +80,43 @@ footer {
   text-align: center
 }
 
+@media (horizontal-viewport-segments: 2) {
+  body {
+    --left-segment-width: env(viewport-segment-width 0 0);
+    --hinge-width: calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0));
+  }
+
+  /* Span the gallery across both segments while keeping it in the page scroll. */
+  #galleryApps {
+    max-width: none;
+    padding-inline: 0;
+  }
+
+  #galleryApps > :is(.heading, .nav-tabs),
+  #galleryApps .tab-pane > :is(.full-width, .store),
+  footer {
+    width: var(--left-segment-width);
+    padding-inline: 12px;
+  }
+
+  footer {
+    margin-left: 0;
+  }
+
+  #galleryApps .tab-pane > .row-container.justify-content-center:not(.store) {
+    display: grid;
+    grid-template-columns: var(--left-segment-width) minmax(0, 1fr);
+    column-gap: var(--hinge-width);
+    justify-items: center;
+  }
+
+  #galleryApps .card {
+    max-width: calc(100% - 24px);
+    margin-inline: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     background-color: #FAFAFA;
