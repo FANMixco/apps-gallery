@@ -58,14 +58,6 @@
             [
               {
                 "type": "img",
-                "id": "id_material_design_lite",
-                "tooltip": "Material Design Lite",
-                "icon": "material_design_lite.svg"
-              }
-            ],
-            [
-              {
-                "type": "img",
                 "id": "id_dot_net_plus",
                 "tooltip": ".NET",
                 "icon": "net.svg"
@@ -200,7 +192,14 @@
                 "text": "Open AI Codex"
               }
             ],
-            "mdi mdi-xamarin"
+            [
+              {
+                "type": "img",
+                "id": "id-foldable",
+                "icon": "map-legend.svg",
+                "tooltip": "Support foldables"
+              }
+            ]
           ],
           "order": 1
         },
@@ -415,14 +414,6 @@
             ],
             [
               {
-                "type": "img",
-                "id": "id_material_design_lite",
-                "tooltip": "Material Design Lite",
-                "icon": "material_design_lite.svg"
-              }
-            ],
-            [
-              {
                 "type": "mix-left-icon",
                 "id": "id_iDB",
                 "text": "<sub>IndexedDB</sub>",
@@ -476,6 +467,14 @@
                 "id": "id_gamefication",
                 "icon": "fas fa-gamepad",
                 "tooltip": "Gamefication"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id-foldable",
+                "icon": "map-legend.svg",
+                "tooltip": "Support foldables"
               }
             ]
           ],
@@ -893,14 +892,6 @@
             ],
             [
               {
-                "type": "img",
-                "id": "id_material_design_lite",
-                "tooltip": "Material Design Lite",
-                "icon": "material_design_lite.svg"
-              }
-            ],
-            [
-              {
                 "type": "text",
                 "id": "id_pwa",
                 "text": "PWA",
@@ -984,6 +975,14 @@
                 "id": "id_gamefication",
                 "icon": "fas fa-gamepad",
                 "tooltip": "Gamefication"
+              }
+            ],
+            [
+              {
+                "type": "img",
+                "id": "id-foldable",
+                "icon": "map-legend.svg",
+                "tooltip": "Support foldables"
               }
             ]
           ],
